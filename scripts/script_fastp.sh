@@ -35,8 +35,10 @@ for fwd in *_1.fq.gz; do
 		--detect_adapter_for_pe \
 		--trim_poly_g \
 		--trim_poly_x \
-		--cut_front \
+		--cut_front 10 \OB
 		--cut_tail \
+		--n_base_limit \
+		--qualified_quality_phred 33 \
 		--html "fastp_results/${base}_report.html" \
 		--json "fastp_results/${base}_report.json" \
 		--failed_out "fastp_failed/${base}_failed_R1.fq.gz" \
