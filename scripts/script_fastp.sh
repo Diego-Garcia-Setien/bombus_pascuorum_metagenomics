@@ -29,13 +29,23 @@
 #SBATCH --ntasks-per-node=1
 
 #Le decimos el límite de tiempo que queremos que tarde el script
-#SBATCH --time=03:00:00
+#SBATCH --time=01:00:00
 
 #Le decimos la memoria RAM para dedicar al trabajo, en este caso 12GB o 12000MB
 #SBATCH --mem=12000
 
 #Le decimos que cree un Job Array o matriz de tareas, para que el cluster haga 93 tareas al mismo tiempo
 #SBATCH --array=1-93%93
+
+CPU=8
+
+#Data
+
+WORKDIR=$(pwd)
+
+INPUT_DIR="$WORKDIR/data/raw_data"
+OUTPUT_DIR="$WORKDIR/data/fastp_results"
+#FAILED=
 
 #Creamos la carpeta para guardar los resultados de fastp
 
@@ -48,6 +58,9 @@ mkdir -p ./bombus_pascuorum_metagenomics/data/fastp_failed
 #Vamos a utilizar fastp
 #Tenemos que trabajar con los archivos forward y reverse
 #Primero buscamos los archivos forward
+
+cd $"INPUT_DIR"
+
 for fwd in *_1.fq.gz; do
 	
 	#Asegurar que el archivo existe
@@ -57,7 +70,7 @@ for fwd in *_1.fq.gz; do
 	rev="${fwd/_1.fq.gz/_2.fq.gz}"
 
 	#Cambiamos el nombre corto y limpio para la muestra resultante
-	base=$(basename "$fwd" _1-fq.gz)
+	base=$(basename "$fwd" _1.fq.gz)
 
 	echo "Procesando muestra: $base"
 	echo " -> [R1]: $fwd"
@@ -67,8 +80,8 @@ for fwd in *_1.fq.gz; do
 	fastp \
 		-i "$fwd" \
 		-I "$rev" \
-		-o "fastp_results/${base}_clean_R1.fq.gz" \
-		-O "fastp_results/${base}_clean_R2.fq.gz"\
+		-o "/data/fastp_results/${base}_clean_R1.fq.gz" \
+		-O "/data/fastp_results/${base}_clean_R2.fq.gz"\
 		--detect_adapter_for_pe \
 		--trim_poly_g \
 		--trim_poly_x \
@@ -76,8 +89,8 @@ for fwd in *_1.fq.gz; do
 		--cut_tail \
 		--n_base_limit \
 		--qualified_quality_phred 33 \
-		--html "fastp_results/${base}_report.html" \
-		--json "fastp_results/${base}_report.json" \
-		--failed_out "fastp_failed/${base}_failed_R1.fq.gz" \
-		--failed_out_R2 "fastp_failed/${base}_failed_R2.fq.gz" \
-		--thread 8
+		--html "/data/fastp_results/${base}_report.html" \
+		--json "/data/fastp_results/${base}_report.json" \
+		--failed_out "/data/fastp_failed/${base}_failed_R1.fq.gz" \
+		--failed_out_R2 "/data/fastp_failed/${base}_failed_R2.fq.gz" \
+		--thread "$CPU"
