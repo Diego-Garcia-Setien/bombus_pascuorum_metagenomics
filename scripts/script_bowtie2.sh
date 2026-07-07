@@ -12,17 +12,33 @@
 #SBATCH --mem=12000
 #SBATCH --array=1-93%93
 
+#################################
+# Load software
+#################################
+
+module load Miniforge3/24.11.3-2
+
+conda activate /scratch/lchueca/conda-env/fastp
+
+CPU=8
+
+
+
+
 WORKDIR=$(pwd)
 
 IMPUT_DIR="$WORKDIR/data/fastp_results"
 OUTPUT_DIR="$WORKDIR/data/bowtie2_results"
 FAILED_DIR="$WORKDIR/data/bowtie2_failed"
+GENOME= "WORKDIR/data/BP_GENOME"
 
 mkdir -p ./data/bowtie2_results
 
 mkdir -p ./data/bowtie2_failed
 
 #Indexación de un genoma/ secuencia de referencia
+
+cd "$GENOME"
 
 $ bowtie2-build bombus_pascuorum_genome.fasta bp_index
 
