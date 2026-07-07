@@ -72,7 +72,7 @@ for fwd in *_1.fq.gz; do
 		--detect_adapter_for_pe \
 		--trim_poly_g \
 		--trim_poly_x \
-		--cut_front 10 \OB
+		--cut_front 10 \
 		--cut_tail \
 		--n_base_limit \
 		--qualified_quality_phred 33 \
