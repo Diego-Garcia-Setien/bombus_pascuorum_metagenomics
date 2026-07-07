@@ -1,5 +1,27 @@
 #!/bin/bash
 
+#SBATCH --job-name=bp_mapping
+#SBATCH --error=logs/%x-%j.err
+#SBATCH --output=logs/%x-%j.out
+#SBATCH --partition=general
+#SBATCH --qos=regular
+#SBATCH --cpus-per-task=8
+#SBATCH --nodes=1
+#SBATCH --ntask-per-node=1
+#SBATCH --time=01:00:00
+#SBATCH --mem=12000
+#SBATCH --array=1-93%93
+
+WORKDIR=$(pwd)
+
+IMPUT_DIR="$WORKDIR/data/fastp_results"
+OUTPUT_DIR="$WORKDIR/data/bowtie2_results"
+FAILED_DIR="$WORKDIR/data/bowtie2_failed"
+
+mkdir -p ./data/bowtie2_results
+
+mkdir -p ./data/bowtie2_failed
+
 #Indexación de un genoma/ secuencia de referencia
 
 $ bowtie2-build bombus_pascuorum_genome.fasta bp_index
