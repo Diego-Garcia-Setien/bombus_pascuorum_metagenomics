@@ -7,7 +7,7 @@
 #SBATCH --qos=regular
 #SBATCH --cpus-per-task=8
 #SBATCH --nodes=1
-#SBATCH --ntask-per-node=1
+#SBATCH --ntasks-per-node=1
 #SBATCH --time=01:00:00
 #SBATCH --mem=12000
 #SBATCH --array=1-93%93
@@ -35,7 +35,7 @@ WORKDIR=$(pwd)
 IMPUT_DIR="$WORKDIR/data/fastp_results"
 OUTPUT_DIR="$WORKDIR/data/bowtie2_results"
 FAILED_DIR="$WORKDIR/data/bowtie2_failed"
-GENOME= "WORKDIR/data/BP_GENOME"
+GENOME="$WORKDIR/data/BP_GENOME"
 
 mkdir -p ./data/bowtie2_results
 
@@ -45,11 +45,11 @@ mkdir -p ./data/bowtie2_failed
 
 cd "$GENOME"
 
-$ bowtie2-build bombus_pascuorum_genome.fasta bp_index
+bowtie2-build bombus_pascuorum_genome.fasta bp_index
 
 #Alineación de un genoma/ secuancia indexada
 
-$ bowtie2 --no-unal -p n -x bp_index -1 reads_1.fastq -2 reads_2.fastq -S output.sam
+bowtie2 --no-unal -p n -x bp_index -1 reads_1.fastq -2 reads_2.fastq -S output.sam
 
 #-- no-unal es opcional, es para indicar que las lecturas que no se alineen con el genoma de referencia no se escribiram en la sam salida.
 
