@@ -17,7 +17,7 @@
 module load Miniforge3/24.11.3-2
 conda activate /scratch/lchueca/conda-env/samtools
 
-CPU=$SLURM_CPUS_PER_TASK
+CPU=8
 
 ######################################
 # Script: script_samtools_extract_unmapped.sh
