@@ -10,7 +10,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --time=01:00:00
-#SBATCH --mem=12000
+#SBATCH --mem=2000
 
 #######################################
 # Load software
@@ -18,7 +18,7 @@
 
 module load Miniforge3/24.11.3-2
 
-conda activate /scratch/lchueca/conda-env/multiqc
+conda activate /scratch/lchueca/conda-env/MultiQC
 
 CPU=8
 
@@ -31,8 +31,8 @@ OUTPUT_DIR="$WORKDIR/data/multiqc_fastp_report"
 
 #Creamos la carpeta para guardar el report de multiqc
 
-mkdir -p ./data/multiqc_fastp_report
+mkdir -p "$WORKDIR"/data/multiqc_fastp_report
 
 #Vamos a utilizar MultiQC, hay que trabajar con los archivos .json de fastp
 
-multiqc "$INPUT_DIR" --outdir "$OUTPUT_DIR" --force --filename "multiqc_report" 
+multiqc "$INPUT_DIR" --outdir "$OUTPUT_DIR" --force  
