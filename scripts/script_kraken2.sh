@@ -18,7 +18,6 @@ set -euo pipefail
 #################################
 module load Miniforge3/24.11.3-2
 conda activate /scratch/lchueca/conda-env/kraken2
-conda activate /scratch/lchueca/conda-env/bracken
 
 CPU=$SLURM_CPUS_PER_TASK
 
@@ -76,13 +75,12 @@ echo "Clasificación taxonómica de $SAMPLE terminada"
 # Vamos a usar Bracken, que es un programa complementario de Kraken2, 
 # Sirve para estimar la abundancia en un solo nivel taxonómico
 
-conda activate /scratch/lchueca/conda-env/bracken
 
-KRAKEN2_DATA="$WORKDIR/data/microbiota_taxonomy"
 BRACKEN_DATA="$WORKDIR/data/bracken_taxonomy_results"
 
 mkdir -p "$BRACKEN_DATA"
 
 bracken -d "$DATABASE" -i "$OUTPUT_DATA/${SAMPLE}.kraken2.report" \
-      -o "$BRACKEN_DATA/${SAMPLE}.bracken_output" -w "$BRACKEN_DATA/${SAMPLE}.bracken.kreport" -r 150 -l S -t 10
+      -o "$BRACKEN_DATA/${SAMPLE}.bracken_output" -w "$BRACKEN_DATA/${SAMPLE}.bracken.kreport" -l S \
+      -t "$CPU"
 
