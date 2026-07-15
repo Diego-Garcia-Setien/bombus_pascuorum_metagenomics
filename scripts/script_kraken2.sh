@@ -59,10 +59,16 @@ echo
 
 # Procesando la muestra con kraken2
 
-# Las secuencias clasificadas o no clasificadas se pueden enviar a un archivo para su posterior procesamiento, utilizando los interruptores --classified-out y , respectivamente.--unclassified-out
+# Las secuencias clasificadas o no clasificadas se pueden 
+# enviar a un archivo para su posterior procesamiento, utilizando los interruptores --classified-out y, 
+#respectivamente.--unclassified-out
 
 
-kraken2 --db "$DATABASE" --threads "$CPU" --paired --minimum-hit-groups 2 --output "$OUTPUT_DATA/${SAMPLE}.kraken2.out" --report "$OUTPUT_DATA/${SAMPLE}.kraken2.report" --gzip-compressed "$R1" "$R2"
+kraken2 --db "$DATABASE" \
+      --threads "$CPU" --paired --minimum-hit-groups 2 \
+      --output "$OUTPUT_DATA/${SAMPLE}.kraken2.out" \
+      --report "$OUTPUT_DATA/${SAMPLE}.kraken2.report" \
+      --gzip-compressed "$R1" "$R2"
 
 
 echo "Clasificación taxonómica de $SAMPLE terminada"
@@ -77,5 +83,6 @@ BRACKEN_DATA="$WORKDIR/data/bracken_taxonomy_results"
 
 mkdir -p "$BRACKEN_DATA"
 
-bracken -d "$DATABASE" -i "$OUTPUT_DATA/${SAMPLE}.kraken2.report" -o "$BRACKEN_DATA/${SAMPLE}.bracken_output" -w "$BRACKEN_DATA/${SAMPLE}.bracken.kreport" -r 150 -l S -t 10
+bracken -d "$DATABASE" -i "$OUTPUT_DATA/${SAMPLE}.kraken2.report" \
+      -o "$BRACKEN_DATA/${SAMPLE}.bracken_output" -w "$BRACKEN_DATA/${SAMPLE}.bracken.kreport" -r 150 -l S -t 10
 
