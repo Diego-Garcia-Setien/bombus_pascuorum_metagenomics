@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=06_host_depletion
+#SBATCH --job-name=05_host_depletion
 #SBATCH --error=logs/%x-%A_%a.err
 #SBATCH --output=logs/%x-%A_%a.out
 
@@ -9,9 +9,9 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --time=04:00:00
-#SBATCH --mem=32000
-#SBATCH --array=1-3%3
+#SBATCH --time=08:00:00
+#SBATCH --mem=40000
+#SBATCH --array=1-93%25
 
 ###############################################################################
 # Remove host reads while keeping BOTH host and microbiome reads
@@ -46,16 +46,12 @@
 # Outputs:
 #
 #   data/
-#      bam/
-#      bam/*.bai
+#      03.bamFiles/*.bai
+#      03.HostReads
+#      03.MicrobiomeReads
 #
-#      host_reads/
-#
-#      microbiome_reads/
-#
-#      logs_alignment/
-#
-#      mapping_summary/
+#      03_Mapping.Stats/logs_alignment/
+#      03_Mapping.Stats/mapping_summary/
 #
 ###############################################################################
 
@@ -69,36 +65,30 @@ CPU_SAMTOOLS=6
 
 WORKDIR=$(pwd)
 
-INPUT_DIR="$WORKDIR/data/fastp_results"
-
+INPUT_DIR="$WORKDIR/data/02.CleanReads"
 INDEX="$WORKDIR/data/references/BombusPasc"
-
-BAM_DIR="$WORKDIR/data/bam"
-
-HOST_DIR="$WORKDIR/data/host_reads"
-
-MICRO_DIR="$WORKDIR/data/microbiome_reads"
-
-ALIGN_DIR="$WORKDIR/data/logs_alignment"
-
-SUMMARY_DIR="$WORKDIR/data/mapping_summary"
-
-mkdir -p "$BAM_DIR"
-mkdir -p "$HOST_DIR"
-mkdir -p "$MICRO_DIR"
-mkdir -p "$ALIGN_DIR"
-mkdir -p "$SUMMARY_DIR"
+BAM_DIR="$WORKDIR/data/03.bamFiles"
+HOST_DIR="$WORKDIR/data/03.HostReads"
+MICRO_DIR="$WORKDIR/data/03.MicrobiomeReads"
+ALIGN_DIR="$WORKDIR/data/03_Mapping.Stats/logs_alignment"
+SUMMARY_DIR="$WORKDIR/data/03_Mapping.Stats/mapping_summary"
 
 ########################################
-# Detect sample automatically
+# Detect sample automatically (one subdirectory per sample,
+# same layout as 01_quality_check.sh / 02_fastp.sh)
 ########################################
 
-SAMPLE=$(find "$INPUT_DIR" -maxdepth 1 -name "*_R1.fq.gz" \
-        | sort \
-        | sed -n "${SLURM_ARRAY_TASK_ID}p")
+cd "$INPUT_DIR"
 
-SAMPLE=$(basename "$SAMPLE")
-SAMPLE=${SAMPLE%_R1.fq.gz}
+SAMPLE=$(find . -mindepth 1 -maxdepth 1 -type d | sort | sed -n "${SLURM_ARRAY_TASK_ID}p")
+SAMPLE=${SAMPLE#./}
+
+if [[ -z "$SAMPLE" ]]; then
+    echo "ERROR: Sample not found."
+    exit 1
+fi
+
+SAMPLE_DIR="$INPUT_DIR/$SAMPLE"
 
 echo
 echo "======================================"
@@ -106,15 +96,30 @@ echo "Processing sample: $SAMPLE"
 echo "======================================"
 echo
 
-R1="$INPUT_DIR/${SAMPLE}_R1.fq.gz"
-R2="$INPUT_DIR/${SAMPLE}_R2.fq.gz"
+R1=$(find "$SAMPLE_DIR" -maxdepth 1 -name "*_1.fq.gz" | head -1 || true)
+R2=$(find "$SAMPLE_DIR" -maxdepth 1 -name "*_2.fq.gz" | head -1 || true)
 
-if [[ ! -f "$R1" || ! -f "$R2" ]]; then
-    echo "FASTQ files not found"
-    echo "$R1"
-    echo "$R2"
+if [[ -z "$R1" || -z "$R2" ]]; then
+    echo "ERROR: FASTQ files not found."
+    echo "$SAMPLE_DIR"
     exit 1
 fi
+
+########################################
+# Per-sample output directories
+########################################
+
+SAMPLE_BAM_DIR="$BAM_DIR/$SAMPLE"
+SAMPLE_HOST_DIR="$HOST_DIR/$SAMPLE"
+SAMPLE_MICRO_DIR="$MICRO_DIR/$SAMPLE"
+SAMPLE_ALIGN_DIR="$ALIGN_DIR/$SAMPLE"
+SAMPLE_SUMMARY_DIR="$SUMMARY_DIR/$SAMPLE"
+
+mkdir -p "$SAMPLE_BAM_DIR"
+mkdir -p "$SAMPLE_HOST_DIR"
+mkdir -p "$SAMPLE_MICRO_DIR"
+mkdir -p "$SAMPLE_ALIGN_DIR"
+mkdir -p "$SAMPLE_SUMMARY_DIR"
 
 ########################################
 # Alignment
@@ -127,13 +132,13 @@ bowtie2 \
     -x "$INDEX" \
     -1 "$R1" \
     -2 "$R2" \
-    2> "$ALIGN_DIR/${SAMPLE}.bowtie2.log" \
+    2> "$SAMPLE_ALIGN_DIR/${SAMPLE}.bowtie2.log" \
     | samtools view \
         -@ "$CPU_SAMTOOLS" \
         -b - \
     | samtools sort \
         -@ "$CPU_SAMTOOLS" \
-        -o "$BAM_DIR/${SAMPLE}.sorted.bam"
+        -o "$SAMPLE_BAM_DIR/${SAMPLE}.sorted.bam"
 
 ########################################
 # Index BAM
@@ -141,7 +146,7 @@ bowtie2 \
 
 samtools index \
     -@ "$CPU_SAMTOOLS" \
-    "$BAM_DIR/${SAMPLE}.sorted.bam"
+    "$SAMPLE_BAM_DIR/${SAMPLE}.sorted.bam"
 
 ########################################
 # Collate (group mates together) before FASTQ extraction
@@ -149,12 +154,12 @@ samtools index \
 # collate is much faster than a full name-sort for this purpose.
 ########################################
 
-COLLATE_TMP="$BAM_DIR/${SAMPLE}.collate_tmp"
+COLLATE_TMP="$SAMPLE_BAM_DIR/${SAMPLE}.collate_tmp"
 
 samtools collate \
     -@ "$CPU_SAMTOOLS" \
-    -o "$BAM_DIR/${SAMPLE}.collated.bam" \
-    "$BAM_DIR/${SAMPLE}.sorted.bam" \
+    -o "$SAMPLE_BAM_DIR/${SAMPLE}.collated.bam" \
+    "$SAMPLE_BAM_DIR/${SAMPLE}.sorted.bam" \
     "$COLLATE_TMP"
 
 ########################################
@@ -166,9 +171,9 @@ samtools collate \
 samtools fastq \
     -@ "$CPU_SAMTOOLS" \
     -G 12 \
-    "$BAM_DIR/${SAMPLE}.collated.bam" \
-    -1 "$HOST_DIR/${SAMPLE}_host_R1.fastq.gz" \
-    -2 "$HOST_DIR/${SAMPLE}_host_R2.fastq.gz" \
+    "$SAMPLE_BAM_DIR/${SAMPLE}.collated.bam" \
+    -1 "$SAMPLE_HOST_DIR/${SAMPLE}_host_R1.fastq.gz" \
+    -2 "$SAMPLE_HOST_DIR/${SAMPLE}_host_R2.fastq.gz" \
     -0 /dev/null \
     -s /dev/null \
     -n
@@ -182,9 +187,9 @@ samtools fastq \
 samtools fastq \
     -@ "$CPU_SAMTOOLS" \
     -f 12 \
-    "$BAM_DIR/${SAMPLE}.collated.bam" \
-    -1 "$MICRO_DIR/${SAMPLE}_microbiome_R1.fastq.gz" \
-    -2 "$MICRO_DIR/${SAMPLE}_microbiome_R2.fastq.gz" \
+    "$SAMPLE_BAM_DIR/${SAMPLE}.collated.bam" \
+    -1 "$SAMPLE_MICRO_DIR/${SAMPLE}_microbiome_R1.fastq.gz" \
+    -2 "$SAMPLE_MICRO_DIR/${SAMPLE}_microbiome_R2.fastq.gz" \
     -0 /dev/null \
     -s /dev/null \
     -n
@@ -194,7 +199,7 @@ samtools fastq \
 # extraction; the coordinate-sorted+indexed BAM above is kept)
 ########################################
 
-rm -f "$BAM_DIR/${SAMPLE}.collated.bam"
+rm -f "$SAMPLE_BAM_DIR/${SAMPLE}.collated.bam"
 
 ########################################
 # Mapping summary
@@ -203,10 +208,10 @@ rm -f "$BAM_DIR/${SAMPLE}.collated.bam"
 ########################################
 
 TOTAL_READS=$(grep "reads; of these:" \
-    "$ALIGN_DIR/${SAMPLE}.bowtie2.log" | awk '{print $1}')
+    "$SAMPLE_ALIGN_DIR/${SAMPLE}.bowtie2.log" | awk '{print $1}')
 
-HOST_PAIRS=$(( $(zcat "$HOST_DIR/${SAMPLE}_host_R1.fastq.gz" | wc -l) / 4 ))
-MICRO_PAIRS=$(( $(zcat "$MICRO_DIR/${SAMPLE}_microbiome_R1.fastq.gz" | wc -l) / 4 ))
+HOST_PAIRS=$(( $(zcat "$SAMPLE_HOST_DIR/${SAMPLE}_host_R1.fastq.gz" | wc -l) / 4 ))
+MICRO_PAIRS=$(( $(zcat "$SAMPLE_MICRO_DIR/${SAMPLE}_microbiome_R1.fastq.gz" | wc -l) / 4 ))
 
 HOST_PERCENT=$(awk "BEGIN {printf \"%.2f\",100*$HOST_PAIRS/$TOTAL_READS}")
 MICRO_PERCENT=$(awk "BEGIN {printf \"%.2f\",100*$MICRO_PAIRS/$TOTAL_READS}")
@@ -214,10 +219,10 @@ MICRO_PERCENT=$(awk "BEGIN {printf \"%.2f\",100*$MICRO_PAIRS/$TOTAL_READS}")
 CHECK_SUM=$((HOST_PAIRS+MICRO_PAIRS))
 
 echo -e "Sample\tTotal_pairs\tHost_pairs\tHost_percent\tMicrobiome_pairs\tMicrobiome_percent\tSum_check" \
-> "$SUMMARY_DIR/${SAMPLE}.summary.tsv"
+> "$SAMPLE_SUMMARY_DIR/${SAMPLE}.summary.tsv"
 
 echo -e "${SAMPLE}\t${TOTAL_READS}\t${HOST_PAIRS}\t${HOST_PERCENT}\t${MICRO_PAIRS}\t${MICRO_PERCENT}\t${CHECK_SUM}" \
->> "$SUMMARY_DIR/${SAMPLE}.summary.tsv"
+>> "$SAMPLE_SUMMARY_DIR/${SAMPLE}.summary.tsv"
 
 if [[ "$CHECK_SUM" -ne "$TOTAL_READS" ]]; then
     echo "WARNING: Host_pairs + Microbiome_pairs ($CHECK_SUM) does not equal Total_pairs ($TOTAL_READS) for $SAMPLE"
