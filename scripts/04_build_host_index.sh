@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=05_build_host_index
+#SBATCH --job-name=04_build_host_index
 #SBATCH --error=logs/%x-%j.err
 #SBATCH --output=logs/%x-%j.out
 
@@ -13,7 +13,7 @@
 #SBATCH --mem=24000
 
 ###############################################################################
-# Script: 05_build_host_index.sh
+# Script: 04_build_host_index.sh
 #
 # Description:
 #   Build the Bowtie2 index for the Bombus pascuorum reference genome.
