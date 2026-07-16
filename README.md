@@ -11,9 +11,10 @@ bombus_pascuorum_metagenomics/
 ├── data/
 │   ├── 01.RawReads/            # Raw fastq files (one subdirectory per sample)
 │   ├── 02.CleanReads/          # Trimmed reads (fastp output)
+│   ├── 03.bamFiles/            # Alignment bam files
 │   ├── 03.HostReads/           # Reads mapped to the host genome
 │   ├── 03.MicrobiomeReads/     # Non-host reads (microbiome fraction)
-│   ├── 03_Mapping.Stats/       # Host-mapping statistics
+│   ├── 03.Mapping.Stats/       # Host-mapping statistics
 │   │   ├── logs_alignment/
 │   │   └── mapping_summary/
 │   ├── 06.MicrobiotaTaxonomy/  # Kraken2 taxonomic classification
