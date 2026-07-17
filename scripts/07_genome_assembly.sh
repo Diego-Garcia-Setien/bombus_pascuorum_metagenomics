@@ -13,9 +13,9 @@
 
 set -euo pipefail
 
-#################################
+##################################
 # Cargar software
-#################################
+##################################
 module load Miniforge3/24.11.3-2
 conda activate /scratch/lchueca/conda-env/megahit
 
