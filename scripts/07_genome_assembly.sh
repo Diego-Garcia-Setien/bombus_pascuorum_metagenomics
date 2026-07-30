@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=bp_megahit_tfm
+#SBATCH --job-name=07_genome_assembly
 #SBATCH --error=logs/%x-%A_%a.err
 #SBATCH --output=logs/%x-%A_%a.out
 #SBATCH --partition=general
@@ -7,9 +7,9 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --time=01:00:00
-#SBATCH --mem=12000
-#SBATCH --array=1-93%93
+#SBATCH --time=08:00:00
+#SBATCH --mem=32000
+#SBATCH --array=1-93%25
 
 set -euo pipefail
 
@@ -29,25 +29,38 @@ CPU=$SLURM_CPUS_PER_TASK
 
 WORKDIR=$(pwd)
 
-INPUT_DIR="$WORKDIR/data/microbiome_reads"
-OUTPUT_DIR="$WORKDIR/data/megahit_results"
-SAMPLES_LIST="$WORKDIR/data/samples.txt"
+INPUT_DIR="$WORKDIR/data/03.MicrobiomeReads"
+OUTPUT_DIR="$WORKDIR/data/06.MegahitResults"
 
 mkdir -p "$OUTPUT_DIR"
 mkdir -p logs
 
 ###############################################################################
-# Detectar la muestra automáticamente
+# Detectar la muestra automáticamente (una subcarpeta por muestra, mismo
+# esquema que 01_quality_check.sh / 02_fastp.sh / 05_host_depletion.sh)
 ###############################################################################
-R1=$(find "$INPUT_DIR" -maxdepth 1 -name "*_microbiota_1.fastq.gz" \
-      | sort \
-      | sed -n "${SLURM_ARRAY_TASK_ID}p")
 
-SAMPLE=$(basename "$R1")
-SAMPLE=${SAMPLE%_microbiota_1.fastq.gz}
+cd "$INPUT_DIR"
 
-R1="$INPUT_DIR/${SAMPLE}_microbiota_1.fastq.gz"
-R2="$INPUT_DIR/${SAMPLE}_microbiota_2.fastq.gz"
+SAMPLE=$(find . -mindepth 1 -maxdepth 1 -type d | sort | sed -n "${SLURM_ARRAY_TASK_ID}p")
+SAMPLE=${SAMPLE#./}
+
+if [[ -z "$SAMPLE" ]]; then
+    echo "ERROR: Sample not found."
+    exit 1
+fi
+
+SAMPLE_DIR="$INPUT_DIR/$SAMPLE"
+
+R1=$(find "$SAMPLE_DIR" -maxdepth 1 -name "*_microbiome_R1.fastq.gz" | head -1 || true)
+R2=$(find "$SAMPLE_DIR" -maxdepth 1 -name "*_microbiome_R2.fastq.gz" | head -1 || true)
+
+if [[ -z "$R1" || -z "$R2" ]]; then
+    echo "ERROR: FASTQ files not found."
+    echo "$SAMPLE_DIR"
+    exit 1
+fi
+
 OUT_DIR="$OUTPUT_DIR/${SAMPLE}"
 
 megahit -1 "$R1" -2 "$R2" -o "$OUT_DIR" -t "$CPU" --presets meta-large
