@@ -17,7 +17,7 @@ set -euo pipefail
 # Script: 11_bowtie2_mapping.sh
 #
 # Maps every sample's microbiome reads against the dereplicated MAG
-# catalog produced by 10.2_checkm2.sh (dRep's dereplicated_genomes/),
+# catalog produced by 10.1_checkm2.sh (dRep's dereplicated_genomes/),
 # so their abundance across all 93 samples can be quantified
 # afterwards with 11.2_coverm.sh.
 #
@@ -82,7 +82,7 @@ if [[ "$SLURM_ARRAY_TASK_ID" -eq 1 ]]; then
     if [[ ! -f "$INDEX_DONE" ]]; then
         N_GENOMES=$(find "$DEREP_DIR" -name "*.fa" | wc -l)
         if [[ "$N_GENOMES" -eq 0 ]]; then
-            echo "ERROR: no dereplicated genomes found in $DEREP_DIR (run 10.2_checkm2.sh first)"
+            echo "ERROR: no dereplicated genomes found in $DEREP_DIR (run 10.1_checkm2.sh first)"
             exit 1
         fi
         echo "Building combined MAG reference from $N_GENOMES dereplicated genomes"

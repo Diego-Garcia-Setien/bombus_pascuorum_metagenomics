@@ -15,7 +15,7 @@ set -euo pipefail
 ######################################
 # Script: 11.2_coverm.sh
 #
-# Quantifies the abundance of every dereplicated MAG (10.2_checkm2.sh)
+# Quantifies the abundance of every dereplicated MAG (10.1_checkm2.sh)
 # across all 93 samples, using the BAM files produced by
 # 11_bowtie2_mapping.sh (reads mapped against the combined MAG
 # catalog) and CoverM's "genome" mode.
