@@ -231,3 +231,21 @@ fi
 echo
 echo "Finished $SAMPLE"
 echo
+
+########################################
+# Combine every sample's summary into one file, once they're all done.
+# This is a SLURM array (one task per sample), so there's no single
+# task that "runs last" on purpose - instead, every task checks after
+# writing its own summary whether all of them are now present, and
+# (re)writes the combined file if so. Safe to do redundantly: the
+# awk command is deterministic, so if two tasks finish at nearly the
+# same time and both regenerate it, the output is identical either way.
+########################################
+
+TOTAL_SAMPLES=$(find "$INPUT_DIR" -mindepth 1 -maxdepth 1 -type d | wc -l)
+N_SUMMARIES=$(find "$SUMMARY_DIR" -name "*.summary.tsv" | wc -l)
+
+if [[ "$N_SUMMARIES" -eq "$TOTAL_SAMPLES" ]]; then
+    awk 'FNR==1 && NR!=1 {next} {print}' "$SUMMARY_DIR"/*/*.summary.tsv > "$SUMMARY_DIR/all_samples.summary.tsv"
+    echo "All $TOTAL_SAMPLES sample summaries present - wrote $SUMMARY_DIR/all_samples.summary.tsv"
+fi
