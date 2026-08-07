@@ -93,3 +93,52 @@ bracken -d "$DATABASE" -i "$KRAKEN_OUT/${SAMPLE}.kraken2.report" \
       -o "$BRACKEN_OUT/${SAMPLE}.bracken_output" -w "$BRACKEN_OUT/${SAMPLE}.bracken.kreport" -l S \
       -t "$CPU"
 
+###############################################################################
+# Combine every sample's kreport into the family/genus/species table and
+# the per-sample bacterial fraction summary, once they're all done.
+#
+# This is a SLURM array (one task per sample), so there's no single task
+# that "runs last" on purpose - instead, every task checks after finishing
+# its own sample whether all of them are now present, and (re)writes the
+# combined files if so. Safe to do redundantly: the logic is deterministic
+# (same as the standalone combine_bracken.sh), so it doesn't matter if
+# several tasks race to regenerate it at nearly the same time.
+#
+# "cellular organisms" (taxid 131567) and "Bacteria" (taxid 2) are matched
+# by their fixed NCBI taxonomy IDs rather than rank code: in this Kraken2
+# database Bacteria sits under a no-rank R1/R2 lineage (cellular organisms
+# -> Bacteria), not the "D" (domain) rank code you might expect.
+###############################################################################
+
+TOTAL_SAMPLES=$(find "$INPUT_DIR" -mindepth 1 -maxdepth 1 -type d | wc -l)
+N_KREPORTS=$(find "$BRACKEN_OUT" -name "*.bracken.kreport" | wc -l)
+
+if [[ "$N_KREPORTS" -eq "$TOTAL_SAMPLES" ]]; then
+    TAXONOMY_OUT="$BRACKEN_OUT/combined_bracken_family_genus_species.tsv"
+    BACTERIA_OUT="$BRACKEN_OUT/bacteria_fraction_per_sample.tsv"
+
+    echo -e "Sample\tRank\tTaxID\tName\tPercentage\tReads_clade" > "$TAXONOMY_OUT"
+    echo -e "Sample\tCellular_organisms_pct\tBacteria_pct\tNonBacteria_pct" > "$BACTERIA_OUT"
+
+    for KREPORT in "$BRACKEN_OUT"/*.bracken.kreport; do
+        S=$(basename "$KREPORT" .bracken.kreport)
+
+        awk -F'\t' -v sample="$S" '$4=="F" || $4=="G" || $4=="S" {
+            name=$6
+            sub(/^[ \t]+/, "", name)
+            print sample"\t"$4"\t"$5"\t"name"\t"$1"\t"$2
+        }' "$KREPORT" >> "$TAXONOMY_OUT"
+
+        awk -F'\t' -v sample="$S" '
+            $5=="131567" { cellular=$1 }
+            $5=="2"      { bacteria=$1 }
+            END {
+                nonbacteria = cellular - bacteria
+                printf "%s\t%.2f\t%.2f\t%.2f\n", sample, cellular, bacteria, nonbacteria
+            }
+        ' "$KREPORT" >> "$BACTERIA_OUT"
+    done
+
+    echo "All $TOTAL_SAMPLES sample kreports present - wrote $TAXONOMY_OUT and $BACTERIA_OUT"
+fi
+
