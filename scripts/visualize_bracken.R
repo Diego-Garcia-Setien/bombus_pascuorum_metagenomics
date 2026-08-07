@@ -27,7 +27,7 @@ library(vegan)
 library(pheatmap)
 
 # Adjust to your local path
-bracken_file <- "combined_bracken_family_genus_species.tsv"
+bracken_file <- "visualize/combined_bracken_family_genus_species.tsv"
 bacteria_fraction_file <- "bacteria_fraction_per_sample.tsv"
 
 ## ---- 2) Load + split ------------------------------------------------------
