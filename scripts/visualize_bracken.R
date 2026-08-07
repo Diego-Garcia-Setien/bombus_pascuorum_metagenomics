@@ -172,6 +172,7 @@ print(head(prevalence_genus, 20))
 # Bacteria_pct (host DNA, Archaea, or anything else non-bacterial
 # still counted as a cellular organism).
 
+bacteria_fraction_file <- "visualize/bacteria_fraction_per_sample.tsv"
 bacteria_fraction <- read_tsv(bacteria_fraction_file, show_col_types = FALSE)
 
 print(bacteria_fraction |> arrange(desc(NonBacteria_pct)))
