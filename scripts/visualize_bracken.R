@@ -34,15 +34,31 @@ bacteria_fraction_file <- "bacteria_fraction_per_sample.tsv"
 
 bracken <- read_tsv(bracken_file, show_col_types = FALSE)
 
+# Non-bacterial contamination filter: Kraken2/Bracken databases built
+# against NCBI RefSeq/GTDB can pick up host or reagent-contaminant
+# reads even after host-depletion (05_host_depletion.sh already
+# removes most Bombus host DNA, but some non-bacterial reads can still
+# slip through, e.g. human handling contamination). Checked against
+# the full dataset (not just the top 15): "Homo" (genus) / "Hominidae"
+# (family) / "Homo sapiens" (species) are the only clearly
+# non-bacterial names present among the 2179 genera and 620 families
+# recovered here. This list is NOT exhaustive by design (it's not
+# derived from the actual domain-level lineage, just from what was
+# observed) - re-check top_genus/top_family (section 3b/3e) after
+# re-running combine_bracken.sh on new data and extend it if needed.
+EXCLUDED_GENERA <- c("Homo")
+EXCLUDED_FAMILIES <- c("Hominidae")
+
+bracken <- bracken |>
+    filter(
+        !(Rank == "G" & Name %in% EXCLUDED_GENERA),
+        !(Rank == "F" & Name %in% EXCLUDED_FAMILIES),
+        !(Rank == "S" & str_starts(Name, paste0(EXCLUDED_GENERA, " ", collapse = "|")))
+    )
+
 family <- bracken |> filter(Rank == "F") |> select(Sample, Name, Percentage)
 genus <- bracken |> filter(Rank == "G") |> select(Sample, Name, Percentage)
 species <- bracken |> filter(Rank == "S") |> select(Sample, Name, Percentage)
-
-# QC note: Kraken2/Bracken databases built against NCBI RefSeq/GTDB
-# often pick up some host (Homo, Bombus, etc.) or reagent-contaminant
-# reads. Check the top genera below (section 3b) and decide whether to
-# filter any of them out before downstream analysis - this script does
-# NOT filter them automatically.
 
 # Wide matrices (Taxon x Sample), used for diversity/ordination below.
 # values_fill = 0 because a missing Sample/Name row means that taxon
@@ -79,8 +95,9 @@ richness <- tibble(
 )
 print(richness)
 
-# 3b. Top genera overall (check here for host/contaminant genera like
-# "Homo" before doing any filtering)
+# 3b. Top genera overall (Homo already excluded in section 2 - check
+# here for any other host/contaminant genus that might need adding to
+# EXCLUDED_GENERA)
 top_genus <- genus |>
     group_by(Name) |>
     summarise(mean_pct = mean(Percentage)) |>
