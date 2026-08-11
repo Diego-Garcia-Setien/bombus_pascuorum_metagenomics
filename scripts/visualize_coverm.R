@@ -198,11 +198,56 @@ ggplot(nmds_meta, aes(x = NMDS1, y = NMDS2, color = Habitat)) +
     ) +
     theme_minimal()
 
+# 5c. PCoA (Principal Coordinates Analysis) of the same Bray-Curtis
+# distances used for NMDS, colored by habitat. Unlike NMDS (which only
+# preserves rank-order distances and reports "stress"), PCoA is an
+# eigen-decomposition of the distance matrix, so each axis has a
+# defined %-of-variance-explained, shown on the axis labels below.
+bray_dist <- vegdist(ordination_matrix, method = "bray")
+pcoa <- cmdscale(bray_dist, k = 2, eig = TRUE)
+
+pcoa_var_explained <- round(100 * pcoa$eig[1:2] / sum(pcoa$eig[pcoa$eig > 0]), 1)
+
+pcoa_scores <- as_tibble(pcoa$points, rownames = "Sample") |>
+    rename(PCoA1 = V1, PCoA2 = V2) |>
+    left_join(metadata, by = "Sample")
+
+# 5c-i. PCoA colored by habitat, WITH sample labels
+ggplot(pcoa_scores, aes(x = PCoA1, y = PCoA2, color = Habitat, label = Sample)) +
+    geom_point(size = 2.5) +
+    ggrepel::geom_text_repel(size = 2, max.overlaps = 15, show.legend = FALSE) +
+    scale_color_manual(values = habitat_colors) +
+    labs(
+        title = "PCoA of MAG community by habitat (Bray-Curtis)",
+        x = sprintf("PCoA1 (%.1f%%)", pcoa_var_explained[1]),
+        y = sprintf("PCoA2 (%.1f%%)", pcoa_var_explained[2]),
+        color = "Habitat"
+    ) +
+    theme_minimal()
+
+# 5c-ii. Same PCoA colored by habitat, WITHOUT sample labels
+ggplot(pcoa_scores, aes(x = PCoA1, y = PCoA2, color = Habitat)) +
+    geom_point(size = 2.5) +
+    scale_color_manual(values = habitat_colors) +
+    labs(
+        title = "PCoA of MAG community by habitat (Bray-Curtis)",
+        x = sprintf("PCoA1 (%.1f%%)", pcoa_var_explained[1]),
+        y = sprintf("PCoA2 (%.1f%%)", pcoa_var_explained[2]),
+        color = "Habitat"
+    ) +
+    theme_minimal()
+
 # Diversity by habitat
 diversity_meta <- diversity_df |> left_join(metadata, by = "Sample")
 
+# Violin (distribution shape) + narrow boxplot (median/IQR) + jittered
+# points (individual samples), all overlaid - same idea as
+# ggpubr::ggviolin(add = c("boxplot", "jitter")), built with plain
+# ggplot2 to avoid adding ggpubr as a dependency for a single plot.
 ggplot(diversity_meta, aes(x = Habitat, y = Shannon, fill = Habitat)) +
-    geom_boxplot() +
+    geom_violin(alpha = 0.5, trim = FALSE) +
+    geom_boxplot(width = 0.15, fill = "white", outlier.shape = NA) +
+    geom_jitter(width = 0.05, size = 1.5, alpha = 0.6) +
     scale_fill_manual(values = habitat_colors) +
     labs(title = "MAG Shannon diversity by habitat") +
     theme_minimal()
