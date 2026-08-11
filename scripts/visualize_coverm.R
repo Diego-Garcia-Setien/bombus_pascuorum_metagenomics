@@ -29,7 +29,7 @@ library(vegan)
 library(pheatmap)
 
 # Adjust to your local path
-coverm_file <- "coverm_relative_abundance.tsv"
+coverm_file <- "visualize/coverm_relative_abundance.tsv"
 
 ## ---- 2) Load + tidy the CoverM table -----------------------------------
 
