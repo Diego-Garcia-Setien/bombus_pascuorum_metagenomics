@@ -1,5 +1,9 @@
 data/*
 logs/*
+plots/*
 CLAUDE.md
 graphify-out/*
 .claude/*
+
+*.RData
+*.rds
