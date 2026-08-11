@@ -7,3 +7,5 @@ graphify-out/*
 
 *.RData
 *.rds
+
+.DS_Store

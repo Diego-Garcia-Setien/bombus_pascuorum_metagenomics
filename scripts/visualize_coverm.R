@@ -10,12 +10,11 @@
 #   2) Load + tidy the CoverM table
 #   3) Community composition (stacked bars, heatmap, prevalence)
 #   4) Diversity (Shannon/Simpson) and ordination (NMDS, Bray-Curtis)
-#   5) Metadata integration (TEMPLATE - needs the real metadata file)
-#
-# Section 5 is a skeleton: it needs the metadata table (locality,
-# habitat type, collection year, host size) to be finished. Once
-# that file is available, join it in step 5 and re-run steps 3-4
-# with color/facet by the relevant metadata column.
+#   5) Metadata integration: NMDS, PCoA, diversity violin plot and
+#      PERMANOVA by Habitat
+#   6) Same comparison as section 5, but by Provincia (Navarra folded
+#      into Gipuzkoa for this grouping only; Provincias column itself
+#      is untouched)
 ######################################
 
 ## ---- 1) Setup ----------------------------------------------------------
@@ -170,7 +169,11 @@ ggplot(nmds_scores, aes(x = NMDS1, y = NMDS2, label = Sample)) +
 # "Code" is the column that matches the "Sample" values used above.
 
 metadata <- read_csv2("visualize/B.pascuorum_samples_metadata.csv", show_col_types = FALSE) |>
-    rename(Sample = Code)
+    rename(Sample = Code) |>
+    # Provincia_grouped: same as Provincias, but Navarra samples are
+    # folded into Gipuzkoa for analysis/plots (too few Navarra samples
+    # to treat as its own group). Provincias itself is left untouched.
+    mutate(Provincia_grouped = if_else(Provincias == "Navarra", "Gipuzkoa", Provincias))
 
 nmds_meta <- nmds_scores |>
     left_join(metadata, by = "Sample")
@@ -258,3 +261,72 @@ ggplot(diversity_meta, aes(x = Habitat, y = Shannon, fill = Habitat)) +
 # they're just absent from ordination_matrix already)
 permanova_metadata <- metadata[match(rownames(ordination_matrix), metadata$Sample), ]
 adonis2(ordination_matrix ~ Habitat, data = permanova_metadata, method = "bray")
+
+## ---- 6) Provincia comparison (Navarra folded into Gipuzkoa) --------------
+#
+# Same NMDS/PCoA/diversity/PERMANOVA as section 5, but grouped by
+# Provincia_grouped instead of Habitat. Reuses nmds_meta/pcoa_scores/
+# diversity_meta from section 5, which already carry Provincia_grouped
+# via the metadata join.
+
+provincia_colors <- c(
+    "Araba" = "#1b9e77", "Bizkaia" = "#d95f02", "Gipuzkoa" = "#7570b3"
+)
+
+# 6a. NMDS colored by provincia, WITH sample labels
+ggplot(nmds_meta, aes(x = NMDS1, y = NMDS2, color = Provincia_grouped, label = Sample)) +
+    geom_point(size = 2.5) +
+    ggrepel::geom_text_repel(size = 2, max.overlaps = 15, show.legend = FALSE) +
+    scale_color_manual(values = provincia_colors) +
+    labs(
+        title = sprintf("NMDS of MAG community by provincia (stress = %.3f)", nmds$stress),
+        color = "Provincia"
+    ) +
+    theme_minimal()
+
+# 6b. Same NMDS colored by provincia, WITHOUT sample labels
+ggplot(nmds_meta, aes(x = NMDS1, y = NMDS2, color = Provincia_grouped)) +
+    geom_point(size = 2.5) +
+    scale_color_manual(values = provincia_colors) +
+    labs(
+        title = sprintf("NMDS of MAG community by provincia (stress = %.3f)", nmds$stress),
+        color = "Provincia"
+    ) +
+    theme_minimal()
+
+# 6c-i. PCoA colored by provincia, WITH sample labels
+ggplot(pcoa_scores, aes(x = PCoA1, y = PCoA2, color = Provincia_grouped, label = Sample)) +
+    geom_point(size = 2.5) +
+    ggrepel::geom_text_repel(size = 2, max.overlaps = 15, show.legend = FALSE) +
+    scale_color_manual(values = provincia_colors) +
+    labs(
+        title = "PCoA of MAG community by provincia (Bray-Curtis)",
+        x = sprintf("PCoA1 (%.1f%%)", pcoa_var_explained[1]),
+        y = sprintf("PCoA2 (%.1f%%)", pcoa_var_explained[2]),
+        color = "Provincia"
+    ) +
+    theme_minimal()
+
+# 6c-ii. Same PCoA colored by provincia, WITHOUT sample labels
+ggplot(pcoa_scores, aes(x = PCoA1, y = PCoA2, color = Provincia_grouped)) +
+    geom_point(size = 2.5) +
+    scale_color_manual(values = provincia_colors) +
+    labs(
+        title = "PCoA of MAG community by provincia (Bray-Curtis)",
+        x = sprintf("PCoA1 (%.1f%%)", pcoa_var_explained[1]),
+        y = sprintf("PCoA2 (%.1f%%)", pcoa_var_explained[2]),
+        color = "Provincia"
+    ) +
+    theme_minimal()
+
+# 6d. Diversity by provincia
+ggplot(diversity_meta, aes(x = Provincia_grouped, y = Shannon, fill = Provincia_grouped)) +
+    geom_violin(alpha = 0.5, trim = FALSE) +
+    geom_boxplot(width = 0.15, fill = "white", outlier.shape = NA) +
+    geom_jitter(width = 0.05, size = 1.5, alpha = 0.6) +
+    scale_fill_manual(values = provincia_colors) +
+    labs(title = "MAG Shannon diversity by provincia") +
+    theme_minimal()
+
+# 6e. PERMANOVA: does community composition differ by provincia?
+adonis2(ordination_matrix ~ Provincia_grouped, data = permanova_metadata, method = "bray")
