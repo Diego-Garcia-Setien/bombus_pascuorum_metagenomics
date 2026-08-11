@@ -1,1022 +1,194 @@
-﻿Code;Species;Interaction;Year;Date;Locality;Habitat;Provincias;Latitude;Longitud;Altitude (m);Collectors (leg.);sex;Intertegular_distance (mm);;;;;;;;;;
-VAL240221;Bombus pascuorum;Anthyllis vulneraria;2024;23/5/2024;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8901508;-3,2464186;996,875;"AM; LC; ET";Female;5.2;;;;;;;;;;
-VAL240222;Bombus pascuorum;Acinus alpinus;2024;23/5/2024;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8901508;-3,2464186;996,875;"AM; LC; ET";Female;4.11;;;;;;;;;;
-VAL240223;Bombus pascuorum;Acinus alpinus;2024;23/5/2024;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8901508;-3,2464186;996,875;"AM; LC; ET";Female;4.92;;;;;;;;;;
-VAL240224;Bombus pascuorum;Acinus alpinus;2024;23/5/2024;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8901508;-3,2464186;996,875;"AM; LC; ET";Female;5.1;;;;;;;;;;
-VAL240225;Bombus pascuorum;Acinus alpinus;2024;23/5/2024;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8901508;-3,2464186;996,875;"AM; LC; ET";Female;3.58;;;;;;;;;;
-VAL240226;Bombus pascuorum;Acinus alpinus;2024;23/5/2024;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8901508;-3,2464186;996,875;"AM; LC; ET";Female;4.87;;;;;;;;;;
-VAL240227;Bombus pascuorum;Acinus alpinus;2024;23/5/2024;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8901508;-3,2464186;996,875;"AM; LC; ET";Female;3.33;;;;;;;;;;
-KAR240401;Bombus pascuorum;Genista hispanica;2024;28/5/2024;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;3.83;;;;;;;;;;
-KAR240404;Bombus pascuorum;Genista hispanica;2024;28/5/2024;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;3.42;;;;;;;;;;
-KAR240405;Bombus pascuorum;Echium vulgare;2024;28/5/2024;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;3.3;;;;;;;;;;
-KAR240406;Bombus pascuorum;Echium vulgare;2024;28/5/2024;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;3.47;;;;;;;;;;
-KAR240407;Bombus pascuorum;Echium vulgare;2024;28/5/2024;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;3.44;;;;;;;;;;
-KAR240408;Bombus pascuorum;Genista hispanica;2024;28/5/2024;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;3.42;;;;;;;;;;
-KAR240409;Bombus pascuorum;Coronilla minima;2024;28/5/2024;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;4.56;;;;;;;;;;
-KAR240410;Bombus pascuorum;Genista hispanica;2024;28/5/2024;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;4.57;;;;;;;;;;
-KAR240411;Bombus pascuorum;Echium vulgare;2024;28/5/2024;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;3.9;;;;;;;;;;
-KAR240512;Bombus pascuorum;Echium vulgare;2024;28/5/2024;Barrón, Ribera-Alta;Agrícola;Araba;42,8403908;-2,9832317;714,027;"LC; ET";Female;3.38;;;;;;;;;;
-GAS240901;Bombus pascuorum;Salvia officinalis;2024;28/5/2024;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.96;;;;;;;;;;
-GAS240902;Bombus pascuorum;Salvia officinalis;2024;28/5/2024;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;4.09;;;;;;;;;;
-GAS240903;Bombus pascuorum;Salvia officinalis;2024;28/5/2024;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.93;;;;;;;;;;
-GAS240904;Bombus pascuorum;Salvia officinalis;2024;28/5/2024;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.48;;;;;;;;;;
-GAS240905;Bombus pascuorum;Salvia officinalis;2024;28/5/2024;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;4.06;;;;;;;;;;
-GAS240906;Bombus pascuorum;Salvia officinalis;2024;28/5/2024;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.88;;;;;;;;;;
-GAS240907;Bombus pascuorum;Salvia officinalis;2024;28/5/2024;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.64;;;;;;;;;;
-GAS240908;Bombus pascuorum;Salvia officinalis;2024;28/5/2024;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.62;;;;;;;;;;
-GAS240909;Bombus pascuorum;Salvia officinalis;2024;28/5/2024;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.73;;;;;;;;;;
-GAS240910;Bombus pascuorum;Salvia officinalis;2024;28/5/2024;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.61;;;;;;;;;;
-GAS240911;Bombus pascuorum;Salvia officinalis;2024;28/5/2024;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.76;;;;;;;;;;
-GAS240912;Bombus pascuorum;Salvia officinalis;2024;28/5/2024;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.51;;;;;;;;;;
-GAS240913;Bombus pascuorum;Salvia officinalis;2024;28/5/2024;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.65;;;;;;;;;;
-ZEB240707;Bombus pascuorum;Rubus sp.;2024;29/5/2024;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;5.55;;;;;;;;;;
-ZEB240708;Bombus pascuorum;Rubus sp.;2024;29/5/2024;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;4.11;;;;;;;;;;
-ZEB240709;Bombus pascuorum;Rubus sp.;2024;29/5/2024;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;2.9;;;;;;;;;;
-ZEB240710;Bombus pascuorum;Scrophularia auriculata;2024;29/5/2024;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;3.93;;;;;;;;;;
-ZEB240711;Bombus pascuorum;Geranium sp.;2024;29/5/2024;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;3.51;;;;;;;;;;
-ZEB240712;Bombus pascuorum;Geranium sp.;2024;29/5/2024;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;3.58;;;;;;;;;;
-ZEB240713;Bombus pascuorum;Scrophularia auriculata;2024;29/5/2024;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;4.06;;;;;;;;;;
-ZEB240716;Bombus pascuorum;Scrophularia auriculata;2024;29/5/2024;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;3.41;;;;;;;;;;
-ZEB240717;Bombus pascuorum;Rubus sp.;2024;29/5/2024;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;3.92;;;;;;;;;;
-ZEB240720;Bombus pascuorum;Rubus sp.;2024;29/5/2024;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;2.8;;;;;;;;;;
-ZEB240723;Bombus pascuorum;Scrophularia auriculata;2024;29/5/2024;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;3.03;;;;;;;;;;
-BIL240801;Bombus pascuorum;Stachys sylvatica;2024;29/5/2024;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";Female;3.85;;;;;;;;;;
-BIL240804;Bombus pascuorum;Stachys sylvatica;2024;29/5/2024;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";Female;3.13;;;;;;;;;;
-BIL240811;Bombus pascuorum;Stachys sylvatica;2024;29/5/2024;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";Female;4.1;;;;;;;;;;
-BIL240815;Bombus pascuorum;Stachys sylvatica;2024;29/5/2024;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";Female;3.89;;;;;;;;;;
-BIL240816;Bombus pascuorum;Stachys sylvatica;2024;29/5/2024;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";Female;4.17;;;;;;;;;;
-BIL240817;Bombus pascuorum;Stachys sylvatica;2024;29/5/2024;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";Female;3.36;;;;;;;;;;
-BIL240818;Bombus pascuorum;Stachys sylvatica;2024;29/5/2024;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";Male;4.67;;;;;;;;;;
-BIL240819;Bombus pascuorum;Stachys sylvatica;2024;6/6/2024;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;LC;Female;2.51;;;;;;;;;;
-BIL240820;Bombus pascuorum;Stachys sylvatica;2024;6/6/2024;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;LC;Female;4.56;;;;;;;;;;
-BIL240821;Bombus pascuorum;Stachys sylvatica;2024;6/6/2024;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;LC;Female;3.58;;;;;;;;;;
-DON240901;Bombus pascuorum;Trifolium pratense;2024;31/5/2024;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;3.52;;;;;;;;;;
-DON240902;Bombus pascuorum;Trifolium pratense;2024;31/5/2024;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;3.98;;;;;;;;;;
-DON240903;Bombus pascuorum;Trifolium pratense;2024;31/5/2024;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;3.73;;;;;;;;;;
-DON240904;Bombus pascuorum;Trifolium pratense;2024;31/5/2024;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;4.03;;;;;;;;;;
-DON240905;Bombus pascuorum;Trifolium pratense;2024;31/5/2024;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;3.83;;;;;;;;;;
-DON240906;Bombus pascuorum;Trifolium pratense;2024;31/5/2024;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;3.75;;;;;;;;;;
-DON240907;Bombus pascuorum;Trifolium repens;2024;31/5/2024;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;3.5;;;;;;;;;;
-DON240908;Bombus pascuorum;Trifolium repens;2024;31/5/2024;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;3.33;;;;;;;;;;
-DON240909;Bombus pascuorum;Trifolium repens;2024;31/5/2024;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;2.9;;;;;;;;;;
-DON240910;Bombus pascuorum;Ligustrum sp. ;2024;31/5/2024;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;3.6;;;;;;;;;;
-ART241001;Bombus pascuorum;Trifolium repens;2024;5/6/2024;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.12;;;;;;;;;;
-ART241002;Bombus pascuorum;Trifolium repens;2024;5/6/2024;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.78;;;;;;;;;;
-ART241003;Bombus pascuorum;Trifolium repens;2024;5/6/2024;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.4;;;;;;;;;;
-ART241004;Bombus pascuorum;Trifolium repens;2024;5/6/2024;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.38;;;;;;;;;;
-ART241006;Bombus pascuorum;Pilosella sp.;2024;5/6/2024;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;5.64;;;;;;;;;;
-ART241007;Bombus pascuorum;Trifolium repens;2024;5/6/2024;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.35;;;;;;;;;;
-ART241010;Bombus pascuorum;Trifolium repens;2024;5/6/2024;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.85;;;;;;;;;;
-ART241013;Bombus pascuorum;Ajuga reptans;2024;5/6/2024;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.74;;;;;;;;;;
-ART241014;Bombus pascuorum;Ajuga reptans;2024;5/6/2024;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.95;;;;;;;;;;
-ART241016;Bombus pascuorum;Trifolium repens;2024;5/6/2024;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.84;;;;;;;;;;
-ART241017;Bombus pascuorum;Trifolium repens;2024;5/6/2024;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.8;;;;;;;;;;
-ART241018;Bombus pascuorum;;2024;6/6/2024;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.91;;;;;;;;;;
-ATZ241101;Bombus pascuorum;Lamium galeobdolon;2024;5/6/2024;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;3.59;;;;;;;;;;
-ATZ241114;Bombus pascuorum;Anthyllis vulneraria;2024;5/6/2024;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;3.63;;;;;;;;;;
-ATZ241115;Bombus pascuorum;Lotus corniculatus;2024;5/6/2024;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;3.62;;;;;;;;;;
-ATZ241116;Bombus pascuorum;Trifolium pratense;2024;5/6/2024;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;2.8;;;;;;;;;;
-ATZ241117;Bombus pascuorum;Lotus corniculatus;2024;5/6/2024;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;4.15;;;;;;;;;;
-ATZ241118;Bombus pascuorum;Trifolium pratense;2024;5/6/2024;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;3.6;;;;;;;;;;
-ATZ241119;Bombus pascuorum;Trifolium pratense;2024;5/6/2024;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;3.09;;;;;;;;;;
-ATZ241120;Bombus pascuorum;Trifolium pratense;2024;5/6/2024;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;4.22;;;;;;;;;;
-ATZ241121;Bombus pascuorum;Lotus corniculatus;2024;5/6/2024;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;3.96;;;;;;;;;;
-ATZ241122;Bombus pascuorum;Lotus corniculatus;2024;5/6/2024;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;3.64;;;;;;;;;;
-GOR241401;Bombus pascuorum;Lamium purpureum;2024;13/06/2024;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"JP;LC";Female;5.88;;;;;;;;;;
-GOR241402;Bombus pascuorum;Flying;2024;13/06/2024;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"JP;LC";Female;5.53;;;;;;;;;;
-GOR241403;Bombus pascuorum;Vicia pyrenaica;2024;13/06/2024;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"JP;LC";Female;5.28;;;;;;;;;;
-GOR241404;Bombus pascuorum;Lamium purpureum;2024;14/06/2024;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;JP;Female;5.02;;;;;;;;;;
-GOR241405;Bombus pascuorum;Lamium purpureum;2024;14/06/2024;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;JP;Female;5.88;;;;;;;;;;
-GOR241406;Bombus pascuorum;Lamium galeobdolon;2024;16/06/2024;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;LC;Female;5.53;;;;;;;;;;
-GOR241407;Bombus pascuorum;Lamium purpureum;2024;16/06/2024;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;LC;Female;5.87;;;;;;;;;;
-GOR241408;Bombus pascuorum;Lamium purpureum;2024;16/06/2024;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;LC;Female;5.79;;;;;;;;;;
-GOR241409;Bombus pascuorum;Scrophularia alpestris;2024;16/06/2024;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;LC;Female;5.57;;;;;;;;;;
-GOR241410;Bombus pascuorum;Scrophularia alpestris;2024;16/06/2024;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;LC;Female;5.34;;;;;;;;;;
-GOR241411;Bombus pascuorum;Scrophularia alpestris;2024;16/06/2024;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;LC;Female;6.17;;;;;;;;;;
-VAL250101;Bombus pascuorum;Prunella laciniata;2025;26/06/2025;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female;;;;;;;;;;
-VAL250102;Bombus pascuorum;Thymus sp.;2025;26/06/2025;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female;;;;;;;;;;
-VAL250103;Bombus pascuorum;Centaurium littorale;2025;26/06/2025;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female;;;;;;;;;;
-VAL250104;Bombus pascuorum;Centaurium littorale;2025;26/06/2025;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female;;;;;;;;;;
-VAL250105;Bombus pascuorum;Centaurium littorale;2025;26/06/2025;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female;;;;;;;;;;
-VAL250106;Bombus pascuorum;Centaurium littorale;2025;26/06/2025;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female;;;;;;;;;;
-VAL250107;Bombus pascuorum;Centaurium littorale;2025;26/06/2025;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female;;;;;;;;;;
-VAL250108;Bombus pascuorum;Trifolium pratense;2025;26/06/2025;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female;;;;;;;;;;
-VAL250109;Bombus pascuorum;Centaurium littorale;2025;26/06/2025;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female;;;;;;;;;;
-VAL250110;Bombus pascuorum;Centaurium littorale;2025;26/06/2025;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female;;;;;;;;;;
-VAL250111;Bombus pascuorum;Centaurium littorale;2025;26/06/2025;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female;;;;;;;;;;
-KAR250401;Bombus pascuorum;Trifolium pratense;2025;17/06/2025;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female;;;;;;;;;;
-KAR250402;Bombus pascuorum;Prunella vulgaris;2025;17/06/2025;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female;;;;;;;;;;
-KAR250403;Bombus pascuorum;Echium vulgare;2025;17/06/2025;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female;;;;;;;;;;
-KAR250404;Bombus pascuorum;Echium vulgare;2025;17/06/2025;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;;;;;;;;;;;
-KAR250405;Bombus pascuorum;na;2025;17/06/2025;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female;;;;;;;;;;
-KAR250406;Bombus pascuorum;Prunella vulgaris;2025;17/06/2025;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female;;;;;;;;;;
-KAR250407;Bombus pascuorum;Lotus sp.;2025;17/06/2025;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female;;;;;;;;;;
-KAR250408;Bombus pascuorum;Prunella vulgaris;2025;17/06/2025;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female;;;;;;;;;;
-KAR250409;Bombus pascuorum;Echium vulgare;2025;17/06/2025;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female;;;;;;;;;;
-KAR250410;Bombus pascuorum;Lathyrus latifolius;2025;17/06/2025;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female;;;;;;;;;;
-KAR250411;Bombus pascuorum;Lotus sp.;2025;17/06/2025;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female;;;;;;;;;;
-KAR250412;Bombus pascuorum;Trifolium pratense;2025;17/06/2025;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female;;;;;;;;;;
-GAS250901;Bombus pascuorum;Salvia officinalis;2025;26/06/2025;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female;;;;;;;;;;
-GAS250902;Bombus pascuorum;Salvia officinalis;2025;26/06/2025;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Male;;;;;;;;;;
-GAS250903;Bombus pascuorum;Salvia officinalis;2025;26/06/2025;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female;;;;;;;;;;
-GAS250904;Bombus pascuorum;Salvia officinalis;2025;26/06/2025;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female;;;;;;;;;;
-GAS250905;Bombus pascuorum;Salvia officinalis;2025;26/06/2025;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female;;;;;;;;;;
-GAS250906;Bombus pascuorum;Salvia officinalis;2025;26/06/2025;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female;;;;;;;;;;
-GAS250907;Bombus pascuorum;Salvia officinalis;2025;26/06/2025;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female;;;;;;;;;;
-GAS250908;Bombus pascuorum;Salvia officinalis;2025;26/06/2025;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female;;;;;;;;;;
-GAS250909;Bombus pascuorum;Salvia officinalis;2025;26/06/2025;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female;;;;;;;;;;
-GAS250910;Bombus pascuorum;Salvia officinalis;2025;26/06/2025;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female;;;;;;;;;;
-GAS250911;Bombus pascuorum;Salvia officinalis;2025;26/06/2025;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female;;;;;;;;;;
-GAS250912;Bombus pascuorum;Salvia officinalis;2025;26/06/2025;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female;;;;;;;;;;
-ZEB250701;Bombus pascuorum;Lotus corniculatus;2025;11/07/2025;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female;;;;;;;;;;
-ZEB250702;Bombus pascuorum;na;2025;11/07/2025;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female;;;;;;;;;;
-ZEB250703;Bombus pascuorum;Oenothera cf. glazioviana;2025;11/07/2025;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female;;;;;;;;;;
-ZEB250704;Bombus pascuorum;Dipsacus fullonum;2025;11/07/2025;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female;;;;;;;;;;
-ZEB250705;Bombus pascuorum;Dipsacus fullonum;2025;11/07/2025;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female;;;;;;;;;;
-ZEB250706;Bombus pascuorum;Dipsacus fullonum;2025;11/07/2025;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female;;;;;;;;;;
-ZEB250707;Bombus pascuorum;Rubus sp.;2025;11/07/2025;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female;;;;;;;;;;
-ZEB250708;Bombus pascuorum;Meliotus albus;2025;11/07/2025;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Male;;;;;;;;;;
-ZEB250709;Bombus pascuorum;Lotus corniculatus;2025;11/07/2025;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female;;;;;;;;;;
-ZEB250710;Bombus pascuorum;Dipsacus fullonum;2025;11/07/2025;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female;;;;;;;;;;
-ZEB250711;Bombus pascuorum;Mentha sp.;2025;11/07/2025;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female;;;;;;;;;;
-ZEB250712;Bombus pascuorum;Oenothera cf. glazioviana;2025;11/07/2025;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female;;;;;;;;;;
-BIL250801;Bombus pascuorum;Buddleja davidii;2025;11/07/2025;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female;;;;;;;;;;
-BIL250802;Bombus pascuorum;Origanum vulgare;2025;11/07/2025;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female;;;;;;;;;;
-BIL250803;Bombus pascuorum;Rubus sp.;2025;11/07/2025;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female;;;;;;;;;;
-BIL250804;Bombus pascuorum;Rubus sp.;2025;11/07/2025;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female;;;;;;;;;;
-BIL250805;Bombus pascuorum;Dipsacus fullonum;2025;11/07/2025;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Male;;;;;;;;;;
-BIL250806;Bombus pascuorum;Dipsacus fullonum;2025;11/07/2025;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female;;;;;;;;;;
-BIL250807;Bombus pascuorum;Trifolium repens;2025;11/07/2025;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female;;;;;;;;;;
-BIL250808;Bombus pascuorum;Trifolium repens;2025;11/07/2025;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female;;;;;;;;;;
-BIL250809;Bombus pascuorum;Trifolium repens;2025;11/07/2025;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female;;;;;;;;;;
-BIL250810;Bombus pascuorum;Trifolium repens;2025;11/07/2025;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female;;;;;;;;;;
-DON250901;Bombus pascuorum;Lotus corniculatus;2025;25/06/2025;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female;;;;;;;;;;
-DON250902;Bombus pascuorum;Lotus corniculatus;2025;25/06/2025;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female;;;;;;;;;;
-DON250903;Bombus pascuorum;Trifolium repens;2025;25/06/2025;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female;;;;;;;;;;
-DON250904;Bombus pascuorum;Trifolium repens;2025;25/06/2025;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female;;;;;;;;;;
-DON250905;Bombus pascuorum;Trifolium repens;2025;25/06/2025;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female;;;;;;;;;;
-DON250906;Bombus pascuorum;Prunella vulgaris;2025;25/06/2025;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female;;;;;;;;;;
-DON250907;Bombus pascuorum;Prunella vulgaris;2025;25/06/2025;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female;;;;;;;;;;
-DON250908;Bombus pascuorum;Trifolium pratense;2025;25/06/2025;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female;;;;;;;;;;
-DON250909;Bombus pascuorum;Trifolium pratense;2025;25/06/2025;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female;;;;;;;;;;
-DON250910;Bombus pascuorum;Trifolium pratense;2025;25/06/2025;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female;;;;;;;;;;
-ART251001;Bombus pascuorum;Trifolium repens;2025;19/06/2025;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female;;;;;;;;;;
-ART251002;Bombus pascuorum;Rubus sp.;2025;19/06/2025;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female;;;;;;;;;;
-ART251003;Bombus pascuorum;Rubus sp.;2025;19/06/2025;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female;;;;;;;;;;
-ART251004;Bombus pascuorum;Digitalis purpurea;2025;19/06/2025;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female;;;;;;;;;;
-ART251005;Bombus pascuorum;Cirsium palustre;2025;19/06/2025;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female;;;;;;;;;;
-ART251006;Bombus pascuorum;Cirsium palustre;2025;19/06/2025;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female;;;;;;;;;;
-ART251007;Bombus pascuorum;Cirsium palustre;2025;19/06/2025;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female;;;;;;;;;;
-ART251008;Bombus pascuorum;Cirsium palustre;2025;19/06/2025;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female;;;;;;;;;;
-ART251009;Bombus pascuorum;Cirsium palustre;2025;19/06/2025;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female;;;;;;;;;;
-ART251010;Bombus pascuorum;Cirsium palustre;2025;19/06/2025;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Male;;;;;;;;;;
-ATZ251101;Bombus pascuorum;Origanum vulgare;2025;17/07/2025;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female;;;;;;;;;;
-ATZ251102;Bombus pascuorum;Trifolium pratense;2025;17/07/2025;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female;;;;;;;;;;
-ATZ251103;Bombus pascuorum;Trifolium pratense;2025;17/07/2025;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female;;;;;;;;;;
-ATZ251104;Bombus pascuorum;Trifolium pratense;2025;17/07/2025;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female;;;;;;;;;;
-ATZ251105;Bombus pascuorum;Trifolium pratense;2025;17/07/2025;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female;;;;;;;;;;
-ATZ251106;Bombus pascuorum;Trifolium pratense;2025;17/07/2025;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female;;;;;;;;;;
-ATZ251107;Bombus pascuorum;Trifolium pratense;2025;17/07/2025;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female;;;;;;;;;;
-ATZ251108;Bombus pascuorum;Trifolium pratense;2025;17/07/2025;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female;;;;;;;;;;
-ATZ251109;Bombus pascuorum;Trifolium pratense;2025;17/07/2025;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female;;;;;;;;;;
-ATZ251110;Bombus pascuorum;Origanum vulgare;2025;17/07/2025;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female;;;;;;;;;;
-ATZ251111;Bombus pascuorum;Origanum vulgare;2025;17/07/2025;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female;;;;;;;;;;
-ATZ251112;Bombus pascuorum;Lotus corniculatus;2025;17/07/2025;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female;;;;;;;;;;
-GOR251401;Bombus pascuorum;Prunella vulgaris;2025;04/07/2025;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female;;;;;;;;;;
-GOR251402;Bombus pascuorum;Prunella vulgaris;2025;04/07/2025;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female;;;;;;;;;;
-GOR251403;Bombus pascuorum;Trifolium repens;2025;04/07/2025;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female;;;;;;;;;;
-GOR251404;Bombus pascuorum;Trifolium repens;2025;04/07/2025;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female;;;;;;;;;;
-GOR251405;Bombus pascuorum;Trifolium repens;2025;04/07/2025;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female;;;;;;;;;;
-GOR251406;Bombus pascuorum;Cirsium sp.;2025;04/07/2025;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female;;;;;;;;;;
-GOR251407;Bombus pascuorum;Cirsium sp.;2025;04/07/2025;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female;;;;;;;;;;
-GOR251408;Bombus pascuorum;Cirsium sp.;2025;04/07/2025;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female;;;;;;;;;;
-GOR251409;Bombus pascuorum;Lotus corniculatus;2025;04/07/2025;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female;;;;;;;;;;
-GOR251410;Bombus pascuorum;Digitalis purpurea;2025;04/07/2025;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;
+﻿Code;Species;Interaction;Year;Date;Locality;Habitat;Provincias;Latitude;Longitud;Altitude (m);Collectors (leg.);sex;Intertegular_distance (mm)
+BPVAL240221;Bombus pascuorum;Anthyllis vulneraria;2024;23/5/24;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8901508;-3,2464186;996,875;"AM; LC; ET";Female;5.2
+BPVAL240222;Bombus pascuorum;Acinus alpinus;2024;23/5/24;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8901508;-3,2464186;996,875;"AM; LC; ET";Female;4.11
+BPVAL240223;Bombus pascuorum;Acinus alpinus;2024;23/5/24;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8901508;-3,2464186;996,875;"AM; LC; ET";Female;4.92
+BPVAL240224;Bombus pascuorum;Acinus alpinus;2024;23/5/24;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8901508;-3,2464186;996,875;"AM; LC; ET";Female;5.1
+BPVAL240225;Bombus pascuorum;Acinus alpinus;2024;23/5/24;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8901508;-3,2464186;996,875;"AM; LC; ET";Female;3.58
+BPVAL240226;Bombus pascuorum;Acinus alpinus;2024;23/5/24;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8901508;-3,2464186;996,875;"AM; LC; ET";Female;4.87
+BPVAL240227;Bombus pascuorum;Acinus alpinus;2024;23/5/24;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8901508;-3,2464186;996,875;"AM; LC; ET";Female;3.33
+BPKAR240401;Bombus pascuorum;Genista hispanica;2024;28/5/24;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;3.83
+BPKAR240404;Bombus pascuorum;Genista hispanica;2024;28/5/24;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;3.42
+BPKAR240405;Bombus pascuorum;Echium vulgare;2024;28/5/24;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;3.3
+BPKAR240406;Bombus pascuorum;Echium vulgare;2024;28/5/24;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;3.47
+BPKAR240407;Bombus pascuorum;Echium vulgare;2024;28/5/24;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;3.44
+BPKAR240408;Bombus pascuorum;Genista hispanica;2024;28/5/24;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;3.42
+BPKAR240409;Bombus pascuorum;Coronilla minima;2024;28/5/24;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;4.56
+BPKAR240410;Bombus pascuorum;Genista hispanica;2024;28/5/24;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;4.57
+BPKAR240411;Bombus pascuorum;Echium vulgare;2024;28/5/24;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"AM; LC; ET";Female;3.9
+BPKAR240512;Bombus pascuorum;Echium vulgare;2024;28/5/24;Barrón, Ribera-Alta;Agrícola;Araba;42,8403908;-2,9832317;714,027;"LC; ET";Female;3.38
+BPGAS240901;Bombus pascuorum;Salvia officinalis;2024;28/5/24;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.96
+BPGAS240902;Bombus pascuorum;Salvia officinalis;2024;28/5/24;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;4.09
+BPGAS240903;Bombus pascuorum;Salvia officinalis;2024;28/5/24;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.93
+BPGAS240904;Bombus pascuorum;Salvia officinalis;2024;28/5/24;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.48
+BPGAS240905;Bombus pascuorum;Salvia officinalis;2024;28/5/24;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;4.06
+BPGAS240906;Bombus pascuorum;Salvia officinalis;2024;28/5/24;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.88
+BPGAS240907;Bombus pascuorum;Salvia officinalis;2024;28/5/24;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.64
+BPGAS240908;Bombus pascuorum;Salvia officinalis;2024;28/5/24;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.62
+BPGAS240909;Bombus pascuorum;Salvia officinalis;2024;28/5/24;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.73
+BPGAS240910;Bombus pascuorum;Salvia officinalis;2024;28/5/24;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.61
+BPGAS240911;Bombus pascuorum;Salvia officinalis;2024;28/5/24;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.76
+BPGAS240912;Bombus pascuorum;Salvia officinalis;2024;28/5/24;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.51
+BPGAS240913;Bombus pascuorum;Salvia officinalis;2024;28/5/24;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"LC; ET";Female;3.65
+BPZEB240707M;Bombus pascuorum;Rubus sp.;2024;29/5/24;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;5.55
+BPZEB240708;Bombus pascuorum;Rubus sp.;2024;29/5/24;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;4.11
+BPZEB240709M;Bombus pascuorum;Rubus sp.;2024;29/5/24;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;2.9
+BPZEB240710;Bombus pascuorum;Scrophularia auriculata;2024;29/5/24;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;3.93
+BPZEB240711M;Bombus pascuorum;Geranium sp.;2024;29/5/24;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;3.51
+BPZEB240712M;Bombus pascuorum;Geranium sp.;2024;29/5/24;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;3.58
+BPZEB240713;Bombus pascuorum;Scrophularia auriculata;2024;29/5/24;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;4.06
+BPZEB240716;Bombus pascuorum;Scrophularia auriculata;2024;29/5/24;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;3.41
+BPZEB240717M;Bombus pascuorum;Rubus sp.;2024;29/5/24;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;3.92
+BPZEB240720;Bombus pascuorum;Rubus sp.;2024;29/5/24;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;2.8
+BPZEB240723;Bombus pascuorum;Scrophularia auriculata;2024;29/5/24;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"AM; LC; ET";Female;3.03
+BPBIL240801;Bombus pascuorum;Stachys sylvatica;2024;29/5/24;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";Female;3.85
+BPBIL240804;Bombus pascuorum;Stachys sylvatica;2024;29/5/24;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";Female;3.13
+BPBIL240811M;Bombus pascuorum;Stachys sylvatica;2024;29/5/24;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";Female;4.1
+BPBIL240815;Bombus pascuorum;Stachys sylvatica;2024;29/5/24;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";Female;3.89
+BPBIL240816M;Bombus pascuorum;Stachys sylvatica;2024;29/5/24;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";Female;4.17
+BPBIL240817M;Bombus pascuorum;Stachys sylvatica;2024;29/5/24;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";Female;3.36
+BPBIL240818M;Bombus pascuorum;Stachys sylvatica;2024;29/5/24;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";Male;4.67
+BPBIL240819;Bombus pascuorum;Stachys sylvatica;2024;6/6/24;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;LC;Female;2.51
+BPBIL240820M;Bombus pascuorum;Stachys sylvatica;2024;6/6/24;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;LC;Female;4.56
+BPBIL240821M;Bombus pascuorum;Stachys sylvatica;2024;6/6/24;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;LC;Female;3.58
+BPDON240901;Bombus pascuorum;Trifolium pratense;2024;31/5/24;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;3.52
+BPDON240902;Bombus pascuorum;Trifolium pratense;2024;31/5/24;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;3.98
+BPDON240903;Bombus pascuorum;Trifolium pratense;2024;31/5/24;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;3.73
+BPDON240904;Bombus pascuorum;Trifolium pratense;2024;31/5/24;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;4.03
+BPDON240905;Bombus pascuorum;Trifolium pratense;2024;31/5/24;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;3.83
+BPDON240906;Bombus pascuorum;Trifolium pratense;2024;31/5/24;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;3.75
+BPDON240907;Bombus pascuorum;Trifolium repens;2024;31/5/24;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;3.5
+BPDON240908;Bombus pascuorum;Trifolium repens;2024;31/5/24;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;3.33
+BPDON240909;Bombus pascuorum;Trifolium repens;2024;31/5/24;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;2.9
+BPDON240910;Bombus pascuorum;Ligustrum sp. ;2024;31/5/24;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,305699;-1,948854;59,33;JR;Female;3.6
+BPART241001;Bombus pascuorum;Trifolium repens;2024;5/6/24;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.12
+BPART241002;Bombus pascuorum;Trifolium repens;2024;5/6/24;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.78
+BPART241003;Bombus pascuorum;Trifolium repens;2024;5/6/24;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.4
+BPART241004;Bombus pascuorum;Trifolium repens;2024;5/6/24;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.38
+BPART241006;Bombus pascuorum;Pilosella sp.;2024;5/6/24;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;5.64
+BPART241007;Bombus pascuorum;Trifolium repens;2024;5/6/24;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.35
+BPART241010;Bombus pascuorum;Trifolium repens;2024;5/6/24;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.85
+BPART241013;Bombus pascuorum;Ajuga reptans;2024;5/6/24;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.74
+BPART241014;Bombus pascuorum;Ajuga reptans;2024;5/6/24;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.95
+BPART241016;Bombus pascuorum;Trifolium repens;2024;5/6/24;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.84
+BPART241017M;Bombus pascuorum;Trifolium repens;2024;5/6/24;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.8
+BPART241018;Bombus pascuorum;;2024;6/6/24;Artikutza;Natural;Navarra;43,2380388;-1,8036209;640,5127266;"JP;LC";Female;3.91
+BPATZ241101;Bombus pascuorum;Lamium galeobdolon;2024;5/6/24;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;3.59
+BPATZ241114;Bombus pascuorum;Anthyllis vulneraria;2024;5/6/24;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;3.63
+BPATZ241115;Bombus pascuorum;Lotus corniculatus;2024;5/6/24;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;3.62
+BPATZ241116;Bombus pascuorum;Trifolium pratense;2024;5/6/24;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;2.8
+BPATZ241117;Bombus pascuorum;Lotus corniculatus;2024;5/6/24;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;4.15
+BPATZ241118;Bombus pascuorum;Trifolium pratense;2024;5/6/24;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;3.6
+BPATZ241119;Bombus pascuorum;Trifolium pratense;2024;5/6/24;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;3.09
+BPATZ241120;Bombus pascuorum;Trifolium pratense;2024;5/6/24;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;4.22
+BPATZ241121;Bombus pascuorum;Lotus corniculatus;2024;5/6/24;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;3.96
+BPATZ241122;Bombus pascuorum;Lotus corniculatus;2024;5/6/24;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"JP;LC";Female;3.64
+BPGOR241401M;Bombus pascuorum;Lamium purpureum;2024;13/6/24;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"JP;LC";Female;5.88
+BPGOR241402;Bombus pascuorum;Flying;2024;13/6/24;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"JP;LC";Female;5.53
+BPGOR241403;Bombus pascuorum;Vicia pyrenaica;2024;13/6/24;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"JP;LC";Female;5.28
+BPGOR241404;Bombus pascuorum;Lamium purpureum;2024;14/6/24;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;JP;Female;5.02
+BPGOR241405;Bombus pascuorum;Lamium purpureum;2024;14/6/24;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;JP;Female;5.88
+BPGOR241406M;Bombus pascuorum;Lamium galeobdolon;2024;16/6/24;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;LC;Female;5.53
+BPGOR241407M;Bombus pascuorum;Lamium purpureum;2024;16/6/24;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;LC;Female;5.87
+BPGOR241408M;Bombus pascuorum;Lamium purpureum;2024;16/6/24;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;LC;Female;5.79
+BPGOR241409M;Bombus pascuorum;Scrophularia alpestris;2024;16/6/24;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;LC;Female;5.57
+BPGOR241410M;Bombus pascuorum;Scrophularia alpestris;2024;16/6/24;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;LC;Female;5.34
+BPGOR241411;Bombus pascuorum;Scrophularia alpestris;2024;16/6/24;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;LC;Female;6.17
+BPVAL250101;Bombus pascuorum;Prunella laciniata;2025;26/6/25;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female
+BPVAL250102;Bombus pascuorum;Thymus sp.;2025;26/6/25;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female
+BPVAL250103;Bombus pascuorum;Centaurium littorale;2025;26/6/25;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female
+BPVAL250104;Bombus pascuorum;Centaurium littorale;2025;26/6/25;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female
+BPVAL250105;Bombus pascuorum;Centaurium littorale;2025;26/6/25;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female
+BPVAL250106;Bombus pascuorum;Centaurium littorale;2025;26/6/25;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female
+BPVAL250107;Bombus pascuorum;Centaurium littorale;2025;26/6/25;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female
+BPVAL250108;Bombus pascuorum;Trifolium pratense;2025;26/6/25;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female
+BPVAL250109;Bombus pascuorum;Centaurium littorale;2025;26/6/25;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female
+BPVAL250110;Bombus pascuorum;Centaurium littorale;2025;26/6/25;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female
+BPVAL250111;Bombus pascuorum;Centaurium littorale;2025;26/6/25;Lahoz, Valderejo, Valdegovía;Natural;Araba;42,8877239;-3,2404513;979,4815265;"AM; LC; ET";;Female
+BPKAR250401;Bombus pascuorum;Trifolium pratense;2025;17/6/25;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female
+BPKAR250402;Bombus pascuorum;Prunella vulgaris;2025;17/6/25;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female
+BPKAR250403;Bombus pascuorum;Echium vulgare;2025;17/6/25;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female
+BPKAR250404;Bombus pascuorum;Echium vulgare;2025;17/6/25;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;
+BPKAR250405;Bombus pascuorum;na;2025;17/6/25;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female
+BPKAR250406;Bombus pascuorum;Prunella vulgaris;2025;17/6/25;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female
+BPKAR250407;Bombus pascuorum;Lotus sp.;2025;17/6/25;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female
+BPKAR250408;Bombus pascuorum;Prunella vulgaris;2025;17/6/25;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female
+BPKAR250409;Bombus pascuorum;Echium vulgare;2025;17/6/25;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female
+BPKAR250410;Bombus pascuorum;Lathyrus latifolius;2025;17/6/25;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female
+BPKAR250411;Bombus pascuorum;Lotus sp.;2025;17/6/25;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female
+BPKAR250412;Bombus pascuorum;Trifolium pratense;2025;17/6/25;Escota, Ribera-Alta;Agrícola;Araba;42,836072;-2,9558087;760,392;"LC; ET";;Female
+BPGAS250901;Bombus pascuorum;Salvia officinalis;2025;26/6/25;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female
+BPGAS250902;Bombus pascuorum;Salvia officinalis;2025;26/6/25;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Male
+BPGAS250903;Bombus pascuorum;Salvia officinalis;2025;26/6/25;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female
+BPGAS250904;Bombus pascuorum;Salvia officinalis;2025;26/6/25;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female
+BPGAS250905;Bombus pascuorum;Salvia officinalis;2025;26/6/25;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female
+BPGAS250906;Bombus pascuorum;Salvia officinalis;2025;26/6/25;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female
+BPGAS250907;Bombus pascuorum;Salvia officinalis;2025;26/6/25;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female
+BPGAS250908;Bombus pascuorum;Salvia officinalis;2025;26/6/25;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female
+BPGAS250909;Bombus pascuorum;Salvia officinalis;2025;26/6/25;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female
+BPGAS250910;Bombus pascuorum;Salvia officinalis;2025;26/6/25;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female
+BPGAS250911;Bombus pascuorum;Salvia officinalis;2025;26/6/25;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female
+BPGAS250912;Bombus pascuorum;Salvia officinalis;2025;26/6/25;Abetxuko, Vitoria-Gasteiz;Urbano;Araba;42,874684;-2,6845993;506,392;"AM; LC; ET";;Female
+BPZEB250701;Bombus pascuorum;Lotus corniculatus;2025;11/7/25;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female
+BPZEB250702;Bombus pascuorum;na;2025;11/7/25;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female
+BPZEB250703;Bombus pascuorum;Oenothera cf. glazioviana;2025;11/7/25;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female
+BPZEB250704;Bombus pascuorum;Dipsacus fullonum;2025;11/7/25;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female
+BPZEB250705;Bombus pascuorum;Dipsacus fullonum;2025;11/7/25;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female
+BPZEB250706;Bombus pascuorum;Dipsacus fullonum;2025;11/7/25;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female
+BPZEB250707;Bombus pascuorum;Rubus sp.;2025;11/7/25;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female
+BPZEB250708;Bombus pascuorum;Meliotus albus;2025;11/7/25;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Male
+BPZEB250709;Bombus pascuorum;Lotus corniculatus;2025;11/7/25;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female
+BPZEB250710;Bombus pascuorum;Dipsacus fullonum;2025;11/7/25;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female
+BPZEB250711;Bombus pascuorum;Mentha sp.;2025;11/7/25;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female
+BPZEB250712;Bombus pascuorum;Oenothera cf. glazioviana;2025;11/7/25;Isasi Auzoa, Zeberio;Agrícola;Bizkaia;43,1445058;-2,823972;188,333;"LC; ET";;Female
+BPBIL250801;Bombus pascuorum;Buddleja davidii;2025;11/7/25;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female
+BPBIL250802;Bombus pascuorum;Origanum vulgare;2025;11/7/25;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female
+BPBIL250803;Bombus pascuorum;Rubus sp.;2025;11/7/25;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female
+BPBIL250804;Bombus pascuorum;Rubus sp.;2025;11/7/25;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female
+BPBIL250805;Bombus pascuorum;Dipsacus fullonum;2025;11/7/25;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Male
+BPBIL250806;Bombus pascuorum;Dipsacus fullonum;2025;11/7/25;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female
+BPBIL250807;Bombus pascuorum;Trifolium repens;2025;11/7/25;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female
+BPBIL250808;Bombus pascuorum;Trifolium repens;2025;11/7/25;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female
+BPBIL250809;Bombus pascuorum;Trifolium repens;2025;11/7/25;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female
+BPBIL250810;Bombus pascuorum;Trifolium repens;2025;11/7/25;Vía Vieja de Lezama, Bilbao;Urbano;Bizkaia;43,2697136;-2,9168994;117,245;"LC; ET";;Female
+BPDON250901;Bombus pascuorum;Lotus corniculatus;2025;25/6/25;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female
+BPDON250902;Bombus pascuorum;Lotus corniculatus;2025;25/6/25;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female
+BPDON250903;Bombus pascuorum;Trifolium repens;2025;25/6/25;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female
+BPDON250904;Bombus pascuorum;Trifolium repens;2025;25/6/25;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female
+BPDON250905;Bombus pascuorum;Trifolium repens;2025;25/6/25;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female
+BPDON250906;Bombus pascuorum;Prunella vulgaris;2025;25/6/25;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female
+BPDON250907;Bombus pascuorum;Prunella vulgaris;2025;25/6/25;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female
+BPDON250908;Bombus pascuorum;Trifolium pratense;2025;25/6/25;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female
+BPDON250909;Bombus pascuorum;Trifolium pratense;2025;25/6/25;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female
+BPDON250910;Bombus pascuorum;Trifolium pratense;2025;25/6/25;Ametzagaina parkea, Donostia;Urbano;Gipuzkoa;43,310315;-1,95077;55;JR;JR;Female
+BPART251001;Bombus pascuorum;Trifolium repens;2025;19/6/25;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female
+BPART251002;Bombus pascuorum;Rubus sp.;2025;19/6/25;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female
+BPART251003;Bombus pascuorum;Rubus sp.;2025;19/6/25;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female
+BPART251004;Bombus pascuorum;Digitalis purpurea;2025;19/6/25;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female
+BPART251005;Bombus pascuorum;Cirsium palustre;2025;19/6/25;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female
+BPART251006;Bombus pascuorum;Cirsium palustre;2025;19/6/25;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female
+BPART251007;Bombus pascuorum;Cirsium palustre;2025;19/6/25;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female
+BPART251008;Bombus pascuorum;Cirsium palustre;2025;19/6/25;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female
+BPART251009;Bombus pascuorum;Cirsium palustre;2025;19/6/25;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Female
+BPART251010;Bombus pascuorum;Cirsium palustre;2025;19/6/25;Artikutza;Natural;Navarra;43,234936;-1,805432;622;JR;JR;Male
+BPATZ251101;Bombus pascuorum;Origanum vulgare;2025;17/7/25;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female
+BPATZ251102;Bombus pascuorum;Trifolium pratense;2025;17/7/25;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female
+BPATZ251103;Bombus pascuorum;Trifolium pratense;2025;17/7/25;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female
+BPATZ251104;Bombus pascuorum;Trifolium pratense;2025;17/7/25;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female
+BPATZ251105;Bombus pascuorum;Trifolium pratense;2025;17/7/25;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female
+BPATZ251106;Bombus pascuorum;Trifolium pratense;2025;17/7/25;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female
+BPATZ251107;Bombus pascuorum;Trifolium pratense;2025;17/7/25;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female
+BPATZ251108;Bombus pascuorum;Trifolium pratense;2025;17/7/25;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female
+BPATZ251109;Bombus pascuorum;Trifolium pratense;2025;17/7/25;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female
+BPATZ251110;Bombus pascuorum;Origanum vulgare;2025;17/7/25;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female
+BPATZ251111;Bombus pascuorum;Origanum vulgare;2025;17/7/25;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female
+BPATZ251112;Bombus pascuorum;Lotus corniculatus;2025;17/7/25;Asteazu;Agrícola;Gipuzkoa;43,2001451;-2,0989976;176,1103727;"LC; ET";;Female
+BPGOR251401;Bombus pascuorum;Prunella vulgaris;2025;4/7/25;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female
+BPGOR251402;Bombus pascuorum;Prunella vulgaris;2025;4/7/25;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female
+BPGOR251403;Bombus pascuorum;Trifolium repens;2025;4/7/25;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female
+BPGOR251404;Bombus pascuorum;Trifolium repens;2025;4/7/25;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female
+BPGOR251405;Bombus pascuorum;Trifolium repens;2025;4/7/25;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female
+BPGOR251406;Bombus pascuorum;Cirsium sp.;2025;4/7/25;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female
+BPGOR251407;Bombus pascuorum;Cirsium sp.;2025;4/7/25;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female
+BPGOR251408;Bombus pascuorum;Cirsium sp.;2025;4/7/25;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female
+BPGOR251409;Bombus pascuorum;Lotus corniculatus;2025;4/7/25;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female
+BPGOR251410;Bombus pascuorum;Digitalis purpurea;2025;4/7/25;Gorbea, Peña Urratxa;Natural;Bizkaia;43,0473871;-2,7966166;1.032,36;"LC; ET";;Female
