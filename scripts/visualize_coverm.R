@@ -162,33 +162,54 @@ ggplot(nmds_scores, aes(x = NMDS1, y = NMDS2, label = Sample)) +
     labs(title = sprintf("NMDS of MAG community (stress = %.3f)", nmds$stress)) +
     theme_minimal()
 
-## ---- 5) Metadata integration (TEMPLATE) ----------------------------------
+## ---- 5) Metadata integration ----------------------------------------------
 #
-# TODO once the metadata file is available:
-#   - Expected: one row per sample, with a column that matches the
-#     "Sample" values used above (e.g. "BPART241001").
-#   - Expected columns: locality, habitat_type, collection_year, host_size
-#     (adjust names below to match the real file).
-#
-# metadata <- read_csv("metadata.csv", show_col_types = FALSE)
-#
-# diversity_meta <- diversity_df |>
-#     left_join(metadata, by = "Sample")
-#
-# ggplot(diversity_meta, aes(x = habitat_type, y = Shannon, fill = habitat_type)) +
-#     geom_boxplot() +
-#     labs(title = "MAG Shannon diversity by habitat type") +
-#     theme_minimal()
-#
-# nmds_meta <- nmds_scores |>
-#     left_join(metadata, by = "Sample")
-#
-# ggplot(nmds_meta, aes(x = NMDS1, y = NMDS2, color = habitat_type, shape = as.factor(collection_year))) +
-#     geom_point(size = 3) +
-#     labs(title = "NMDS of MAG community, coloured by habitat, shaped by year") +
-#     theme_minimal()
-#
-# PERMANOVA: does community composition differ by habitat/locality/year?
-# adonis2(sample_matrix ~ habitat_type + locality + collection_year,
-#         data = metadata[match(rownames(sample_matrix), metadata$Sample), ],
-#         method = "bray")
+# Metadata file is ";"-delimited with "," as the decimal mark (typical
+# Spanish-locale CSV export) - read_csv2() handles both automatically,
+# and also strips the UTF-8 BOM at the start of the header row.
+# "Code" is the column that matches the "Sample" values used above.
+
+metadata <- read_csv2("visualize/B.pascuorum_samples_metadata.csv", show_col_types = FALSE) |>
+    rename(Sample = Code)
+
+nmds_meta <- nmds_scores |>
+    left_join(metadata, by = "Sample")
+
+habitat_colors <- c("Natural" = "#1b9e77", "Agrícola" = "#d95f02", "Urbano" = "#7570b3")
+
+# 5a. NMDS colored by habitat, WITH sample labels
+ggplot(nmds_meta, aes(x = NMDS1, y = NMDS2, color = Habitat, label = Sample)) +
+    geom_point(size = 2.5) +
+    ggrepel::geom_text_repel(size = 2, max.overlaps = 15, show.legend = FALSE) +
+    scale_color_manual(values = habitat_colors) +
+    labs(
+        title = sprintf("NMDS of MAG community by habitat (stress = %.3f)", nmds$stress),
+        color = "Habitat"
+    ) +
+    theme_minimal()
+
+# 5b. Same NMDS colored by habitat, WITHOUT sample labels
+ggplot(nmds_meta, aes(x = NMDS1, y = NMDS2, color = Habitat)) +
+    geom_point(size = 2.5) +
+    scale_color_manual(values = habitat_colors) +
+    labs(
+        title = sprintf("NMDS of MAG community by habitat (stress = %.3f)", nmds$stress),
+        color = "Habitat"
+    ) +
+    theme_minimal()
+
+# Diversity by habitat
+diversity_meta <- diversity_df |> left_join(metadata, by = "Sample")
+
+ggplot(diversity_meta, aes(x = Habitat, y = Shannon, fill = Habitat)) +
+    geom_boxplot() +
+    scale_fill_manual(values = habitat_colors) +
+    labs(title = "MAG Shannon diversity by habitat") +
+    theme_minimal()
+
+# PERMANOVA: does community composition differ by habitat?
+# (uses ordination_matrix, i.e. the same samples actually used for NMDS -
+# the 2 all-zero samples dropped in section 4 have no metadata row match issue,
+# they're just absent from ordination_matrix already)
+permanova_metadata <- metadata[match(rownames(ordination_matrix), metadata$Sample), ]
+adonis2(ordination_matrix ~ Habitat, data = permanova_metadata, method = "bray")
