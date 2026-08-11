@@ -23,7 +23,7 @@ if (length(missing_packages) > 0) install.packages(missing_packages)
 library(tidyverse)
 
 # Adjust to your local path
-gtdbtk_file <- "gtdbtk.bac120.summary.tsv"
+gtdbtk_file <- "visualize/gtdbtk.bac120.summary.tsv"
 
 # If you also have an archaeal run (gtdbtk.ar53.summary.tsv), read and
 # bind_rows() it with the bacterial table below - same column layout.
