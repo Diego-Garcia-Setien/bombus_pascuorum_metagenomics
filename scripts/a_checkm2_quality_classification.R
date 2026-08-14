@@ -51,6 +51,7 @@ library(dplyr)
 library(readr)
 library(stringr)
 library(ggplot2)
+library(tidyr)
 
 # 2. Leer el archivo TSV -----------------------------------------------------
 checkm2 <- read_tsv("visualize/checkm2_quality_report.tsv")
@@ -151,20 +152,17 @@ resumen_habitat <- checkm2_metadatos %>%
 
 resumen_habitat
 
-# 13. Exportar todo a un excel y csv ------------------------------------
-# El archivo va a tener:
-#   - "Todos_metadatos"  -> tabla completa con metadatos + hábitat
-#   - "Resumen_Habitat"  -> conteo de MAGs por categoría x hábitat
+# 13. Exportar todo a un excel y tsv ------------------------------------
 
-#wb <- createWorkbook()
+wb <- createWorkbook()
 
-#addWorksheet(wb, "Todos_metadatos")
-#writeData(wb, "Todos_metadatos", checkm2_metadatos)
+addWorksheet(wb, "Todos_metadatos")
+writeData(wb, "Todos_metadatos", checkm2_metadatos)
 
-#addWorksheet(wb, "Resumen_Habitat")
-#writeData(wb, "Resumen_Habitat", resumen_habitat)
+addWorksheet(wb, "Resumen_Habitat")
+writeData(wb, "Resumen_Habitat", resumen_habitat)
 
-#saveWorkbook(wb, "excels/MAGs_metadatos_habitat.xlsx", overwrite = TRUE)
+saveWorkbook(wb, "excels/MAGs_metadatos_habitat.xlsx", overwrite = TRUE)
 
 # TSV de cada tabla por separado
 write_tsv(checkm2_metadatos, "visualize/MAGs_metadatos_habitat.tsv")
@@ -202,10 +200,10 @@ for (h in habitats) {
   
   print(p)
   
-#  ggsave(filename = paste0("plots/pie_calidad_", h, ".png"), plot = p, width = 6, height = 6, dpi = 300)
-#  ggsave(filename = paste0("plots/pie_calidad_", h, ".pdf"), plot = p, width = 6, height = 6)
-#  ggsave(filename = paste0("plots/pie_calidad_", h, ".svg"), plot = p, width = 6, height = 6)
-#  ggsave(filename = paste0("plots/pie_calidad_", h, ".eps"), plot = p, width = 6, height = 6, device = cairo_ps)
+  ggsave(filename = paste0("plots/pie_calidad_", h, ".png"), plot = p, width = 6, height = 6, dpi = 300)
+  ggsave(filename = paste0("plots/pie_calidad_", h, ".pdf"), plot = p, width = 6, height = 6)
+  ggsave(filename = paste0("plots/pie_calidad_", h, ".svg"), plot = p, width = 6, height = 6)
+  ggsave(filename = paste0("plots/pie_calidad_", h, ".eps"), plot = p, width = 6, height = 6, device = cairo_ps)
 }
 
 # 14b. Un único gráfico con los tres quesitos juntos  --------------
@@ -225,10 +223,10 @@ p_conjunto <- ggplot(datos_pie, aes(x = "", y = n, fill = Categoria)) +
 
 print(p_conjunto)
 
-#  ggsave(filename = "plots/pie_calidad_por_habitat.png", plot = p_conjunto, width = 12, height = 5, dpi = 300)
-#  ggsave(filename = "plots/pie_calidad_por_habitat.pdf", plot = p_conjunto, width = 12, height = 5)
-#  ggsave(filename = "plots/pie_calidad_por_habitat.svg", plot = p_conjunto, width = 12, height = 5)
-#  ggsave(filename = "plots/pie_calidad_por_habitat.eps", plot = p_conjunto, width = 12, height = 5, device = cairo_ps)
+  ggsave(filename = "plots/pie_calidad_por_habitat.png", plot = p_conjunto, width = 12, height = 5, dpi = 300)
+  ggsave(filename = "plots/pie_calidad_por_habitat.pdf", plot = p_conjunto, width = 12, height = 5)
+  ggsave(filename = "plots/pie_calidad_por_habitat.svg", plot = p_conjunto, width = 12, height = 5)
+  ggsave(filename = "plots/pie_calidad_por_habitat.eps", plot = p_conjunto, width = 12, height = 5, device = cairo_ps)
 
 
-save.image("visualize/checkm2_classification.RData")
+save.image("visualize/a_checkm2_classification.RData")
