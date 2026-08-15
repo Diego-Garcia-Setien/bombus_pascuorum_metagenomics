@@ -163,12 +163,8 @@ gtdbtk %>%
   filter(is.na(Especie)) %>%
   distinct(Genero, Especie_final)
 
-# 8. Guardar archivo intermedio (versión SIN cruce de hábitat todavía) ------
-saveRDS(gtdbtk, "visualize/gtdbtk_taxonomia.rds")
 
-# 9. Cruzar con la tabla de localización / provincia / hábitat --------------
-# (ÚNICO join en todo el script -- hacerlo dos veces duplica las columnas
-# Locality/Provincia/Habitat en .x/.y y rompe todo lo que sigue)
+# 8. Cruzar con la tabla de localización / provincia / hábitat --------------
 tabla_localizaciones <- tribble(
   ~Localizacion, ~Locality,          ~Provincia,   ~Habitat,
   "VAL",         "Valderejo",        "Araba",      "Natural",
@@ -188,7 +184,7 @@ gtdbtk <- gtdbtk %>%
 # Chequeo: localizaciones que no matchearon con la tabla de referencia (debería dar 0 filas)
 gtdbtk %>% filter(is.na(Habitat)) %>% distinct(Localizacion)
 
-# 10. Ranking de Género por Hábitat (cantidad y porcentaje) -------------------
+# 9. Ranking de Género por Hábitat (cantidad y porcentaje) -------------------
 ranking_genero_habitat <- gtdbtk %>%
   filter(!is.na(Habitat)) %>%
   mutate(Genero = if_else(is.na(Genero) | Genero == "", "Sin determinar", Genero)) %>%
@@ -200,7 +196,7 @@ ranking_genero_habitat <- gtdbtk %>%
 
 ranking_genero_habitat
 
-# 11. Ranking de Especie por Hábitat (cantidad y porcentaje) ------------------
+# 10. Ranking de Especie por Hábitat (cantidad y porcentaje) ------------------
 # Usa "Especie_final" (con las etiquetas "sp." / "indeterminado" ya aplicadas)
 ranking_especie_habitat <- gtdbtk %>%
   filter(!is.na(Habitat)) %>%
@@ -212,10 +208,10 @@ ranking_especie_habitat <- gtdbtk %>%
 
 ranking_especie_habitat
 
-# 12. Guardar archivo intermedio (para la 3ª parte: filtrado de Rejects) ----
+# 11. Guardar archivo intermedio (para la 3ª parte: filtrado de Rejects) ----
 saveRDS(gtdbtk, "visualize/gtdbtk_taxonomia.rds")
 
-# 13. Exportar a Excel ----------------------------------------------------------
+# 12. Exportar a Excel ----------------------------------------------------------
 wb <- createWorkbook()
 
 addWorksheet(wb, "Taxonomia_completa")
@@ -229,12 +225,12 @@ writeData(wb, "Ranking_Especie_Habitat", ranking_especie_habitat)
 
 #saveWorkbook(wb, "excels/taxonomia_MAGs_gtdbtk.xlsx", overwrite = TRUE)
 
-# 14. TSV de cada tabla por separado ------------------------------------------
+# 13. TSV de cada tabla por separado ------------------------------------------
 #write_tsv(gtdbtk, "visualize/taxonomy_all_species.tsv")
 #write_tsv(ranking_genero_habitat, "visualize/ranking_genus_habitat_all_species.tsv")
 #write_tsv(ranking_especie_habitat, "visualize/ranking_species_habitat_all_species.tsv")
 
-# 15. Gráficos de barras apiladas horizontales, por hábitat -------------------
+# 14. Gráficos de barras apiladas horizontales, por hábitat -------------------
 # Uno para Género y otro para Especie. Cada uno combina dos paneles:
 # cantidad absoluta (izquierda) y porcentaje (derecha). Se muestran TODOS
 # los taxones (sin agrupar en "Otros").
@@ -280,19 +276,19 @@ graficar_stack_habitat <- function(datos, titulo) {
 datos_stack_genero <- preparar_datos_stack(ranking_genero_habitat, "Genero")
 p_genero <- graficar_stack_habitat(datos_stack_genero, "Composición de Géneros por Hábitat")
 print(p_genero)
-ggsave(filename = "plots/barras_apiladas_genero_habitat.png", plot = p_genero, width = 12, height = 5, dpi = 300)
-ggsave(filename = "plots/barras_apiladas_genero_habitat.pdf", plot = p_genero, width = 12, height = 5)
-ggsave(filename = "plots/barras_apiladas_genero_habitat.svg", plot = p_genero, width = 12, height = 5)
-ggsave(filename = "plots/barras_apiladas_genero_habitat.eps", plot = p_genero, width = 12, height = 5, device = cairo_ps)
+#ggsave(filename = "plots/barras_apiladas_genero_habitat.png", plot = p_genero, width = 12, height = 5, dpi = 300)
+#ggsave(filename = "plots/barras_apiladas_genero_habitat.pdf", plot = p_genero, width = 12, height = 5)
+#ggsave(filename = "plots/barras_apiladas_genero_habitat.svg", plot = p_genero, width = 12, height = 5)
+#ggsave(filename = "plots/barras_apiladas_genero_habitat.eps", plot = p_genero, width = 12, height = 5, device = cairo_ps)
 
 # Especie ---------------------------------------------------------------------
 datos_stack_especie <- preparar_datos_stack(ranking_especie_habitat, "Especie_final")
 p_especie <- graficar_stack_habitat(datos_stack_especie, "Composición de Especies por Hábitat")
 print(p_especie)
-ggsave(filename = "plots/barras_apiladas_especie_habitat.png", plot = p_especie, width = 12, height = 5, dpi = 300)
-ggsave(filename = "plots/barras_apiladas_especie_habitat.pdf", plot = p_especie, width = 12, height = 5)
-ggsave(filename = "plots/barras_apiladas_especie_habitat.svg", plot = p_especie, width = 12, height = 5)
-ggsave(filename = "plots/barras_apiladas_especie_habitat.eps", plot = p_especie, width = 12, height = 5, device = cairo_ps)
+#ggsave(filename = "plots/barras_apiladas_especie_habitat.png", plot = p_especie, width = 12, height = 5, dpi = 300)
+#ggsave(filename = "plots/barras_apiladas_especie_habitat.pdf", plot = p_especie, width = 12, height = 5)
+#ggsave(filename = "plots/barras_apiladas_especie_habitat.svg", plot = p_especie, width = 12, height = 5)
+#ggsave(filename = "plots/barras_apiladas_especie_habitat.eps", plot = p_especie, width = 12, height = 5, device = cairo_ps)
 
 ##=======================================================
 #########################################################
@@ -306,11 +302,11 @@ ggsave(filename = "plots/barras_apiladas_especie_habitat.eps", plot = p_especie,
 #########################################################
 ##=======================================================
 
-# 16. Leer los archivos intermedios necesarios -------------------------------
+# 15. Leer los archivos intermedios necesarios -------------------------------
 checkm2_clasificado <- readRDS("visualize/checkm2_clasificado.rds")
 #gtdbtk              <- readRDS("visualize/gtdbtk_taxonomia.rds")
 
-# 17. Unir calidad + taxonomía por "Name", y descartar los Rejects -----------
+# 16. Unir calidad + taxonomía por "Name", y descartar los Rejects -----------
 gtdbtk_sin_rejects <- gtdbtk %>%
   left_join(checkm2_clasificado %>% select(Name, Categoria), by = "Name")
 
@@ -326,7 +322,7 @@ gtdbtk_sin_rejects <- gtdbtk_sin_rejects %>%
 
 nrow(gtdbtk_sin_rejects)                     # total tras descartar Rejects
 
-# 18. Ranking de Género por Hábitat, sin Rejects (cantidad y porcentaje) ----
+# 17. Ranking de Género por Hábitat, sin Rejects (cantidad y porcentaje) ----
 ranking_genero_habitat_without_rejects <- gtdbtk_sin_rejects %>%
   filter(!is.na(Habitat)) %>%
   count(Habitat, Genero, name = "Cantidad") %>%
@@ -337,7 +333,7 @@ ranking_genero_habitat_without_rejects <- gtdbtk_sin_rejects %>%
 
 ranking_genero_habitat_without_rejects
 
-# 19. Ranking de Especie por Hábitat, sin Rejects (cantidad y porcentaje) ---
+# 18. Ranking de Especie por Hábitat, sin Rejects (cantidad y porcentaje) ---
 ranking_especie_habitat_without_rejects <- gtdbtk_sin_rejects %>%
   filter(!is.na(Habitat)) %>%
   count(Habitat, Especie_final, name = "Cantidad") %>%
@@ -348,7 +344,7 @@ ranking_especie_habitat_without_rejects <- gtdbtk_sin_rejects %>%
 
 ranking_especie_habitat_without_rejects
 
-# 20. Exportar taxonomía filtrada + rankings a Excel --------------------------
+# 19. Exportar taxonomía filtrada + rankings a Excel --------------------------
 wb <- createWorkbook()
 
 addWorksheet(wb, "Taxonomy_without_rejects")
@@ -360,34 +356,34 @@ writeData(wb, "Ranking_Genus_Habitat", ranking_genero_habitat_without_rejects)
 addWorksheet(wb, "Ranking_Species_Habitat")
 writeData(wb, "Ranking_Species_Habitat", ranking_especie_habitat_without_rejects)
 
-saveWorkbook(wb, "excels/taxonomy_MAGs_gtdbtk_without_rejects.xlsx", overwrite = TRUE)
+#saveWorkbook(wb, "excels/taxonomy_MAGs_gtdbtk_without_rejects.xlsx", overwrite = TRUE)
 
 # TSV de cada tabla por separado
 write_tsv(gtdbtk_sin_rejects, "visualize/taxonomy_without_rejects.tsv")
 write_tsv(ranking_genero_habitat_without_rejects, "visualize/ranking_genus_habitat_without_rejects.tsv")
 write_tsv(ranking_especie_habitat_without_rejects, "visualize/ranking_species_habitat_without_rejects.tsv")
 
-# 21. Gráficos de barras apiladas horizontales, por hábitat, sin Rejects ----
+# 20. Gráficos de barras apiladas horizontales, por hábitat, sin Rejects ----
 # Reutiliza las mismas funciones preparar_datos_stack / graficar_stack_habitat
 # definidas en la 2ª parte -- no hace falta redefinirlas.
 
 datos_stack_genero_sr <- preparar_datos_stack(ranking_genero_habitat_without_rejects, "Genero")
 p_genero_sr <- graficar_stack_habitat(datos_stack_genero_sr, "Composición de Géneros por Hábitat (sin Rejects)")
 print(p_genero_sr)
-ggsave(filename = "plots/stacked_bars_genus_habitat_without_rejects.png", plot = p_genero_sr, width = 12, height = 5, dpi = 300)
-ggsave(filename = "plots/stacked_bars_genus_habitat_without_rejects.pdf", plot = p_genero_sr, width = 12, height = 5)
-ggsave(filename = "plots/stacked_bars_genus_habitat_without_rejects.svg", plot = p_genero_sr, width = 12, height = 5)
-ggsave(filename = "plots/stacked_bars_genus_habitat_without_rejects.eps", plot = p_genero_sr, width = 12, height = 5, device = cairo_ps)
+#ggsave(filename = "plots/stacked_bars_genus_habitat_without_rejects.png", plot = p_genero_sr, width = 12, height = 5, dpi = 300)
+#ggsave(filename = "plots/stacked_bars_genus_habitat_without_rejects.pdf", plot = p_genero_sr, width = 12, height = 5)
+#ggsave(filename = "plots/stacked_bars_genus_habitat_without_rejects.svg", plot = p_genero_sr, width = 12, height = 5)
+#ggsave(filename = "plots/stacked_bars_genus_habitat_without_rejects.eps", plot = p_genero_sr, width = 12, height = 5, device = cairo_ps)
 
 datos_stack_especie_sr <- preparar_datos_stack(ranking_especie_habitat_without_rejects, "Especie_final")
 p_especie_sr <- graficar_stack_habitat(datos_stack_especie_sr, "Composición de Especies por Hábitat (sin Rejects)")
 print(p_especie_sr)
-ggsave(filename = "plots/stacked_bars_species_habitat_without_rejects.png", plot = p_especie_sr, width = 12, height = 5, dpi = 300)
-ggsave(filename = "plots/stacked_bars_species_habitat_without_rejects.pdf", plot = p_especie_sr, width = 12, height = 5)
-ggsave(filename = "plots/stacked_bars_species_habitat_without_rejects.svg", plot = p_especie_sr, width = 12, height = 5)
-ggsave(filename = "plots/stacked_bars_species_habitat_without_rejects.eps", plot = p_especie_sr, width = 12, height = 5, device = cairo_ps)
+#ggsave(filename = "plots/stacked_bars_species_habitat_without_rejects.png", plot = p_especie_sr, width = 12, height = 5, dpi = 300)
+#ggsave(filename = "plots/stacked_bars_species_habitat_without_rejects.pdf", plot = p_especie_sr, width = 12, height = 5)
+#ggsave(filename = "plots/stacked_bars_species_habitat_without_rejects.svg", plot = p_especie_sr, width = 12, height = 5)
+#ggsave(filename = "plots/stacked_bars_species_habitat_without_rejects.eps", plot = p_especie_sr, width = 12, height = 5, device = cairo_ps)
 
-# 22. Excels con cantidad y porcentaje de Género/Especie por Hábitat, sin Rejects
+# 21. Excels con cantidad y porcentaje de Género/Especie por Hábitat, sin Rejects
 # --- Género -----------------------------------------------------------------
 cantidad_genero <- ranking_genero_habitat_without_rejects %>%
   select(Habitat, Genero, Cantidad) %>%
@@ -422,9 +418,9 @@ addWorksheet(wb_especie, "Cantidad")
 writeData(wb_especie, "Cantidad", cantidad_especie)
 addWorksheet(wb_especie, "Porcentaje")
 writeData(wb_especie, "Porcentaje", porcentaje_especie)
-saveWorkbook(wb_especie, "excels/resumen_especie_por_habitat_sin_rejects.xlsx", overwrite = TRUE)
+#saveWorkbook(wb_especie, "excels/resumen_especie_por_habitat_sin_rejects.xlsx", overwrite = TRUE)
 
-# 23. Guardar archivo intermedio (para usar en otros scripts, ej. Familia) --
+# 22. Guardar archivo intermedio (para usar en otros scripts, ej. Familia) --
 saveRDS(gtdbtk_sin_rejects, "visualize/gtdbtk_sin_rejects.rds")
 
 
@@ -440,7 +436,7 @@ saveRDS(gtdbtk_sin_rejects, "visualize/gtdbtk_sin_rejects.rds")
 #########################################################
 ##=======================================================
 
-# 24. Identificar las 5 especies más abundantes en total ---------------------
+# 23. Identificar las 5 especies más abundantes en total ---------------------
 top5_especies <- ranking_especie_habitat_without_rejects %>%
   group_by(Especie_final) %>%
   summarise(Total = sum(Cantidad), .groups = "drop") %>%
@@ -449,14 +445,14 @@ top5_especies <- ranking_especie_habitat_without_rejects %>%
 
 top5_especies  # revisar cuáles son antes de excluirlas
 
-# 25. Filtrar el dataset, sacando esas 5 especies -----------------------------
+# 24. Filtrar el dataset, sacando esas 5 especies -----------------------------
 gtdbtk_sin_top5 <- gtdbtk_sin_rejects %>%
   filter(!Especie_final %in% top5_especies)
 
 nrow(gtdbtk_sin_rejects)   # total antes de sacar las 5 especies
 nrow(gtdbtk_sin_top5)      # total después
 
-# 26. Ranking de Especie por Hábitat, sin Rejects y sin el top 5 ------------
+# 25. Ranking de Especie por Hábitat, sin Rejects y sin el top 5 ------------
 ranking_especie_habitat_sin_top5 <- gtdbtk_sin_top5 %>%
   filter(!is.na(Habitat)) %>%
   count(Habitat, Especie_final, name = "Cantidad") %>%
@@ -467,8 +463,7 @@ ranking_especie_habitat_sin_top5 <- gtdbtk_sin_top5 %>%
 
 ranking_especie_habitat_sin_top5
 
-# 27. Gráfico de barras apiladas horizontales, sin el top 5 ------------------
-# Reutiliza preparar_datos_stack() / graficar_stack_habitat(), ya definidas
+# 26. Gráfico de barras apiladas horizontales, sin el top 5 ------------------
 datos_stack_especie_sin_top5 <- preparar_datos_stack(ranking_especie_habitat_sin_top5, "Especie_final")
 p_especie_sin_top5 <- graficar_stack_habitat(
   datos_stack_especie_sin_top5,
@@ -476,12 +471,12 @@ p_especie_sin_top5 <- graficar_stack_habitat(
 )
 print(p_especie_sin_top5)
 
-ggsave(filename = "plots/stacked_bars_species_habitat_sin_top5.png", plot = p_especie_sin_top5, width = 12, height = 5, dpi = 300)
-ggsave(filename = "plots/stacked_bars_species_habitat_sin_top5.pdf", plot = p_especie_sin_top5, width = 12, height = 5)
-ggsave(filename = "plots/stacked_bars_species_habitat_sin_top5.svg", plot = p_especie_sin_top5, width = 12, height = 5)
-ggsave(filename = "plots/stacked_bars_species_habitat_sin_top5.eps", plot = p_especie_sin_top5, width = 12, height = 5, device = cairo_ps)
+#ggsave(filename = "plots/stacked_bars_species_habitat_sin_top5.png", plot = p_especie_sin_top5, width = 12, height = 5, dpi = 300)
+#ggsave(filename = "plots/stacked_bars_species_habitat_sin_top5.pdf", plot = p_especie_sin_top5, width = 12, height = 5)
+#ggsave(filename = "plots/stacked_bars_species_habitat_sin_top5.svg", plot = p_especie_sin_top5, width = 12, height = 5)
+#ggsave(filename = "plots/stacked_bars_species_habitat_sin_top5.eps", plot = p_especie_sin_top5, width = 12, height = 5, device = cairo_ps)
 
-# 28. Excel con cantidad y porcentaje de Especie por Hábitat, sin top 5 -----
+# 27. Excel con cantidad y porcentaje de Especie por Hábitat, sin top 5 -----
 cantidad_especie_sin_top5 <- ranking_especie_habitat_sin_top5 %>%
   select(Habitat, Especie_final, Cantidad) %>%
   pivot_wider(names_from = Habitat, values_from = Cantidad, values_fill = 0) %>%
@@ -497,12 +492,12 @@ addWorksheet(wb_especie_sin_top5, "Cantidad")
 writeData(wb_especie_sin_top5, "Cantidad", cantidad_especie_sin_top5)
 addWorksheet(wb_especie_sin_top5, "Porcentaje")
 writeData(wb_especie_sin_top5, "Porcentaje", porcentaje_especie_sin_top5)
-saveWorkbook(wb_especie_sin_top5, "excels/resumen_especie_por_habitat_sin_top5.xlsx", overwrite = TRUE)
+#saveWorkbook(wb_especie_sin_top5, "excels/resumen_especie_por_habitat_sin_top5.xlsx", overwrite = TRUE)
 
-# 29. TSV con el ranking completo, sin top 5 especies -------------------------
+# 28. TSV con el ranking completo, sin top 5 especies -------------------------
 write_tsv(ranking_especie_habitat_sin_top5, "visualize/ranking_species_habitat_sin_top5.tsv")
 
-# 30. Identificar los 5 géneros más abundantes en total -----------------------
+# 29. Identificar los 5 géneros más abundantes en total -----------------------
 top5_generos <- ranking_genero_habitat_without_rejects %>%
   group_by(Genero) %>%
   summarise(Total = sum(Cantidad), .groups = "drop") %>%
@@ -511,14 +506,14 @@ top5_generos <- ranking_genero_habitat_without_rejects %>%
 
 top5_generos  # revisar cuáles son antes de excluirlos
 
-# 31. Filtrar el dataset, sacando esos 5 géneros ------------------------------
+# 30. Filtrar el dataset, sacando esos 5 géneros ------------------------------
 gtdbtk_sin_top5_genero <- gtdbtk_sin_rejects %>%
   filter(!Genero %in% top5_generos)
 
 nrow(gtdbtk_sin_rejects)          # total antes de sacar los 5 géneros
 nrow(gtdbtk_sin_top5_genero)      # total después
 
-# 32. Ranking de Género por Hábitat, sin Rejects y sin el top 5 --------------
+# 31. Ranking de Género por Hábitat, sin Rejects y sin el top 5 --------------
 ranking_genero_habitat_sin_top5 <- gtdbtk_sin_top5_genero %>%
   filter(!is.na(Habitat)) %>%
   count(Habitat, Genero, name = "Cantidad") %>%
@@ -529,7 +524,7 @@ ranking_genero_habitat_sin_top5 <- gtdbtk_sin_top5_genero %>%
 
 ranking_genero_habitat_sin_top5
 
-# 33. Gráfico de barras apiladas horizontales, sin el top 5 de géneros ------
+# 32. Gráfico de barras apiladas horizontales, sin el top 5 de géneros ------
 datos_stack_genero_sin_top5 <- preparar_datos_stack(ranking_genero_habitat_sin_top5, "Genero")
 p_genero_sin_top5 <- graficar_stack_habitat(
   datos_stack_genero_sin_top5,
@@ -537,12 +532,12 @@ p_genero_sin_top5 <- graficar_stack_habitat(
 )
 print(p_genero_sin_top5)
 
-ggsave(filename = "plots/stacked_bars_genus_habitat_sin_top5.png", plot = p_genero_sin_top5, width = 12, height = 5, dpi = 300)
-ggsave(filename = "plots/stacked_bars_genus_habitat_sin_top5.pdf", plot = p_genero_sin_top5, width = 12, height = 5)
-ggsave(filename = "plots/stacked_bars_genus_habitat_sin_top5.svg", plot = p_genero_sin_top5, width = 12, height = 5)
-ggsave(filename = "plots/stacked_bars_genus_habitat_sin_top5.eps", plot = p_genero_sin_top5, width = 12, height = 5, device = cairo_ps)
+#ggsave(filename = "plots/stacked_bars_genus_habitat_sin_top5.png", plot = p_genero_sin_top5, width = 12, height = 5, dpi = 300)
+#ggsave(filename = "plots/stacked_bars_genus_habitat_sin_top5.pdf", plot = p_genero_sin_top5, width = 12, height = 5)
+#ggsave(filename = "plots/stacked_bars_genus_habitat_sin_top5.svg", plot = p_genero_sin_top5, width = 12, height = 5)
+#ggsave(filename = "plots/stacked_bars_genus_habitat_sin_top5.eps", plot = p_genero_sin_top5, width = 12, height = 5, device = cairo_ps)
 
-# 34. Excel con cantidad y porcentaje de Género por Hábitat, sin top 5 ------
+# 33. Excel con cantidad y porcentaje de Género por Hábitat, sin top 5 ------
 cantidad_genero_sin_top5 <- ranking_genero_habitat_sin_top5 %>%
   select(Habitat, Genero, Cantidad) %>%
   pivot_wider(names_from = Habitat, values_from = Cantidad, values_fill = 0) %>%
@@ -558,9 +553,9 @@ addWorksheet(wb_genero_sin_top5, "Cantidad")
 writeData(wb_genero_sin_top5, "Cantidad", cantidad_genero_sin_top5)
 addWorksheet(wb_genero_sin_top5, "Porcentaje")
 writeData(wb_genero_sin_top5, "Porcentaje", porcentaje_genero_sin_top5)
-saveWorkbook(wb_genero_sin_top5, "excels/resumen_genero_por_habitat_sin_top5.xlsx", overwrite = TRUE)
+#saveWorkbook(wb_genero_sin_top5, "excels/resumen_genero_por_habitat_sin_top5.xlsx", overwrite = TRUE)
 
-# 35. TSV con el ranking completo, sin top 5 géneros ---------------------------
+# 34. TSV con el ranking completo, sin top 5 géneros ---------------------------
 write_tsv(ranking_genero_habitat_sin_top5, "visualize/ranking_genus_habitat_sin_top5.tsv")
 
-save.image("visualize/b_gtfbtk_habitat.RData")
+#save.image("visualize/b_gtfbtk_habitat.RData")
