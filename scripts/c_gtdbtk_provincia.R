@@ -129,8 +129,8 @@ writeData(wb, "Ranking_Species_Provincia", ranking_especie_provincia_without_rej
 #saveWorkbook(wb, "excels/taxonomy_MAGs_gtdbtk_provincia_without_rejects.xlsx", overwrite = TRUE)
 
 #write_tsv(gtdbtk_sin_rejects, "visualize/taxonomy_without_rejects_provincia.tsv")
-#write_tsv(ranking_genero_provincia_without_rejects, "visualize/ranking_genus_provincia_without_rejects.tsv")
-#write_tsv(ranking_especie_provincia_without_rejects, "visualize/ranking_species_provincia_without_rejects.tsv")
+write_tsv(ranking_genero_provincia_without_rejects, "visualize/ranking_genus_provincia_without_rejects.tsv")
+write_tsv(ranking_especie_provincia_without_rejects, "visualize/ranking_species_provincia_without_rejects.tsv")
 
 # 7. Gráficos de barras apiladas horizontales, por provincia, sin Rejects --
 datos_stack_genero_sr <- preparar_datos_stack(ranking_genero_provincia_without_rejects, "Genero", "Provincia")

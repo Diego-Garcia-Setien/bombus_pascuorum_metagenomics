@@ -209,7 +209,7 @@ ranking_especie_habitat <- gtdbtk %>%
 ranking_especie_habitat
 
 # 11. Guardar archivo intermedio (para la 3ª parte: filtrado de Rejects) ----
-saveRDS(gtdbtk, "visualize/gtdbtk_taxonomia.rds")
+#saveRDS(gtdbtk, "visualize/gtdbtk_taxonomia.rds")
 
 # 12. Exportar a Excel ----------------------------------------------------------
 wb <- createWorkbook()
@@ -359,7 +359,7 @@ writeData(wb, "Ranking_Species_Habitat", ranking_especie_habitat_without_rejects
 #saveWorkbook(wb, "excels/taxonomy_MAGs_gtdbtk_without_rejects.xlsx", overwrite = TRUE)
 
 # TSV de cada tabla por separado
-write_tsv(gtdbtk_sin_rejects, "visualize/taxonomy_without_rejects.tsv")
+#write_tsv(gtdbtk_sin_rejects, "visualize/taxonomy_without_rejects.tsv")
 write_tsv(ranking_genero_habitat_without_rejects, "visualize/ranking_genus_habitat_without_rejects.tsv")
 write_tsv(ranking_especie_habitat_without_rejects, "visualize/ranking_species_habitat_without_rejects.tsv")
 
@@ -421,7 +421,7 @@ writeData(wb_especie, "Porcentaje", porcentaje_especie)
 #saveWorkbook(wb_especie, "excels/resumen_especie_por_habitat_sin_rejects.xlsx", overwrite = TRUE)
 
 # 22. Guardar archivo intermedio (para usar en otros scripts, ej. Familia) --
-saveRDS(gtdbtk_sin_rejects, "visualize/gtdbtk_sin_rejects.rds")
+#saveRDS(gtdbtk_sin_rejects, "visualize/gtdbtk_sin_rejects.rds")
 
 
 ##=======================================================
@@ -495,7 +495,7 @@ writeData(wb_especie_sin_top5, "Porcentaje", porcentaje_especie_sin_top5)
 #saveWorkbook(wb_especie_sin_top5, "excels/resumen_especie_por_habitat_sin_top5.xlsx", overwrite = TRUE)
 
 # 28. TSV con el ranking completo, sin top 5 especies -------------------------
-write_tsv(ranking_especie_habitat_sin_top5, "visualize/ranking_species_habitat_sin_top5.tsv")
+#write_tsv(ranking_especie_habitat_sin_top5, "visualize/ranking_species_habitat_sin_top5.tsv")
 
 # 29. Identificar los 5 géneros más abundantes en total -----------------------
 top5_generos <- ranking_genero_habitat_without_rejects %>%
@@ -559,3 +559,4 @@ writeData(wb_genero_sin_top5, "Porcentaje", porcentaje_genero_sin_top5)
 write_tsv(ranking_genero_habitat_sin_top5, "visualize/ranking_genus_habitat_sin_top5.tsv")
 
 #save.image("visualize/b_gtfbtk_habitat.RData")
+
