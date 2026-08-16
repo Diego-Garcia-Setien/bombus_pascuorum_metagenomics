@@ -1,0 +1,142 @@
+Grupo	Funcion	Nivel_ponderado_pct
+Agricola	Methanogenesis and methanotrophy: Key functional gene	0
+Agricola	Methanogenesis and methanotrophy: acetate => methane, pt 1	3.5
+Agricola	Methanogenesis and methanotrophy: acetate => methane, pt 2	100
+Agricola	Methanogenesis and methanotrophy: acetate => methane, pt 3	11.8
+Agricola	Methanogenesis and methanotrophy: dimethylamine => monomethylamine	0
+Agricola	Methanogenesis and methanotrophy: methane => methanol, with oxygen (mmo)	0
+Agricola	Methanogenesis and methanotrophy: methane => methanol, with oxygen (pmo)	0
+Agricola	Methanogenesis and methanotrophy: methanol => methane	0
+Agricola	Methanogenesis and methanotrophy: monomethylamine => ammonia	0
+Agricola	Methanogenesis and methanotrophy: putative but not defining CO2 => methane	0
+Agricola	Methanogenesis and methanotrophy: trimethylamine => dimethylamine	0
+Agricola	Nitrogen metabolism: Bacterial (aerobic-specific) ammonia oxidation	0
+Agricola	Nitrogen metabolism: Bacterial (anaerobic-specific) ammonia oxidation	0
+Agricola	Nitrogen metabolism: Bacterial/Archaeal ammonia oxidation	0
+Agricola	Nitrogen metabolism: Dissimilatory nitrite reduction to ammonia (DNRA)	0
+Agricola	Nitrogen metabolism: Nitrogen fixation altennative	0
+Agricola	Nitrogen metabolism: ammonia => nitrite	0
+Agricola	Nitrogen metabolism: nitrate => nitrite	34.1
+Agricola	Nitrogen metabolism: nitric oxide => nitrous oxide	0
+Agricola	Nitrogen metabolism: nitrite => nitric oxide	29.4
+Agricola	Nitrogen metabolism: nitrite=> nitrate	34.1
+Agricola	Nitrogen metabolism: nitrogen => ammonia	0
+Agricola	Nitrogen metabolism: nitrous oxide => nitrogen	0
+Agricola	Other Reductases: TMAO reductase	0
+Agricola	Other Reductases: arsenate reduction, pt 1	34.1
+Agricola	Other Reductases: arsenate reduction, pt 2	0
+Agricola	Other Reductases: mercury reduction	0
+Agricola	Other Reductases: selenate/Chlorate reduction	0
+Agricola	Photosynthesis: Photosystem I	0
+Agricola	Photosynthesis: Photosystem II	0
+Agricola	SCFA and alcohol conversions: Alcohol production	81.2
+Agricola	SCFA and alcohol conversions: Butyrate, pt 1	0
+Agricola	SCFA and alcohol conversions: Butyrate, pt 2	0
+Agricola	SCFA and alcohol conversions: Propionate, pt 1	0
+Agricola	SCFA and alcohol conversions: Propionate, pt 2	0
+Agricola	SCFA and alcohol conversions: acetate, pt 1	100
+Agricola	SCFA and alcohol conversions: acetate, pt 2	0
+Agricola	SCFA and alcohol conversions: acetate, pt 3	0
+Agricola	SCFA and alcohol conversions: lactate D	78.8
+Agricola	SCFA and alcohol conversions: lactate L	67.1
+Agricola	SCFA and alcohol conversions: pyruvate => acetyl CoA v1	67.1
+Agricola	SCFA and alcohol conversions: pyruvate => acetyl CoA v2	0
+Agricola	SCFA and alcohol conversions: pyruvate => acetylCoA f+ formate v3	43.5
+Agricola	Sulfur metabolism: Thiosulfate oxidation by SOX complex, thiosulfate => sulfate	0
+Agricola	Sulfur metabolism: dissimilatory sulfate reduction (and oxidation) sulfate => sulfide	0
+Agricola	Sulfur metabolism: tetrathionate => thiosulfate	0
+Agricola	Sulfur metabolism: thiosulfate => sulfite	0
+Natural	Methanogenesis and methanotrophy: Key functional gene	0
+Natural	Methanogenesis and methanotrophy: acetate => methane, pt 1	4.7
+Natural	Methanogenesis and methanotrophy: acetate => methane, pt 2	97.7
+Natural	Methanogenesis and methanotrophy: acetate => methane, pt 3	9.3
+Natural	Methanogenesis and methanotrophy: dimethylamine => monomethylamine	0
+Natural	Methanogenesis and methanotrophy: methane => methanol, with oxygen (mmo)	0
+Natural	Methanogenesis and methanotrophy: methane => methanol, with oxygen (pmo)	0
+Natural	Methanogenesis and methanotrophy: methanol => methane	0
+Natural	Methanogenesis and methanotrophy: monomethylamine => ammonia	0
+Natural	Methanogenesis and methanotrophy: putative but not defining CO2 => methane	0
+Natural	Methanogenesis and methanotrophy: trimethylamine => dimethylamine	0
+Natural	Nitrogen metabolism: Bacterial (aerobic-specific) ammonia oxidation	0
+Natural	Nitrogen metabolism: Bacterial (anaerobic-specific) ammonia oxidation	0
+Natural	Nitrogen metabolism: Bacterial/Archaeal ammonia oxidation	0
+Natural	Nitrogen metabolism: Dissimilatory nitrite reduction to ammonia (DNRA)	0
+Natural	Nitrogen metabolism: Nitrogen fixation altennative	0
+Natural	Nitrogen metabolism: ammonia => nitrite	0
+Natural	Nitrogen metabolism: nitrate => nitrite	30.2
+Natural	Nitrogen metabolism: nitric oxide => nitrous oxide	0
+Natural	Nitrogen metabolism: nitrite => nitric oxide	30.2
+Natural	Nitrogen metabolism: nitrite=> nitrate	30.2
+Natural	Nitrogen metabolism: nitrogen => ammonia	0
+Natural	Nitrogen metabolism: nitrous oxide => nitrogen	0
+Natural	Other Reductases: TMAO reductase	0
+Natural	Other Reductases: arsenate reduction, pt 1	30.2
+Natural	Other Reductases: arsenate reduction, pt 2	0
+Natural	Other Reductases: mercury reduction	0
+Natural	Other Reductases: selenate/Chlorate reduction	0
+Natural	Photosynthesis: Photosystem I	0
+Natural	Photosynthesis: Photosystem II	0
+Natural	SCFA and alcohol conversions: Alcohol production	80.2
+Natural	SCFA and alcohol conversions: Butyrate, pt 1	0
+Natural	SCFA and alcohol conversions: Butyrate, pt 2	0
+Natural	SCFA and alcohol conversions: Propionate, pt 1	0
+Natural	SCFA and alcohol conversions: Propionate, pt 2	0
+Natural	SCFA and alcohol conversions: acetate, pt 1	97.7
+Natural	SCFA and alcohol conversions: acetate, pt 2	0
+Natural	SCFA and alcohol conversions: acetate, pt 3	0
+Natural	SCFA and alcohol conversions: lactate D	76.7
+Natural	SCFA and alcohol conversions: lactate L	61.6
+Natural	SCFA and alcohol conversions: pyruvate => acetyl CoA v1	64
+Natural	SCFA and alcohol conversions: pyruvate => acetyl CoA v2	1.2
+Natural	SCFA and alcohol conversions: pyruvate => acetylCoA f+ formate v3	45.3
+Natural	Sulfur metabolism: Thiosulfate oxidation by SOX complex, thiosulfate => sulfate	0
+Natural	Sulfur metabolism: dissimilatory sulfate reduction (and oxidation) sulfate => sulfide	0
+Natural	Sulfur metabolism: tetrathionate => thiosulfate	0
+Natural	Sulfur metabolism: thiosulfate => sulfite	0
+Urbano	Methanogenesis and methanotrophy: Key functional gene	0
+Urbano	Methanogenesis and methanotrophy: acetate => methane, pt 1	4.7
+Urbano	Methanogenesis and methanotrophy: acetate => methane, pt 2	100
+Urbano	Methanogenesis and methanotrophy: acetate => methane, pt 3	6.2
+Urbano	Methanogenesis and methanotrophy: dimethylamine => monomethylamine	0
+Urbano	Methanogenesis and methanotrophy: methane => methanol, with oxygen (mmo)	0
+Urbano	Methanogenesis and methanotrophy: methane => methanol, with oxygen (pmo)	0
+Urbano	Methanogenesis and methanotrophy: methanol => methane	0
+Urbano	Methanogenesis and methanotrophy: monomethylamine => ammonia	0
+Urbano	Methanogenesis and methanotrophy: putative but not defining CO2 => methane	0
+Urbano	Methanogenesis and methanotrophy: trimethylamine => dimethylamine	0
+Urbano	Nitrogen metabolism: Bacterial (aerobic-specific) ammonia oxidation	0
+Urbano	Nitrogen metabolism: Bacterial (anaerobic-specific) ammonia oxidation	0
+Urbano	Nitrogen metabolism: Bacterial/Archaeal ammonia oxidation	0
+Urbano	Nitrogen metabolism: Dissimilatory nitrite reduction to ammonia (DNRA)	0
+Urbano	Nitrogen metabolism: Nitrogen fixation altennative	0
+Urbano	Nitrogen metabolism: ammonia => nitrite	0
+Urbano	Nitrogen metabolism: nitrate => nitrite	39.1
+Urbano	Nitrogen metabolism: nitric oxide => nitrous oxide	0
+Urbano	Nitrogen metabolism: nitrite => nitric oxide	34.4
+Urbano	Nitrogen metabolism: nitrite=> nitrate	37.5
+Urbano	Nitrogen metabolism: nitrogen => ammonia	0
+Urbano	Nitrogen metabolism: nitrous oxide => nitrogen	0
+Urbano	Other Reductases: TMAO reductase	0
+Urbano	Other Reductases: arsenate reduction, pt 1	37.5
+Urbano	Other Reductases: arsenate reduction, pt 2	0
+Urbano	Other Reductases: mercury reduction	0
+Urbano	Other Reductases: selenate/Chlorate reduction	0
+Urbano	Photosynthesis: Photosystem I	0
+Urbano	Photosynthesis: Photosystem II	0
+Urbano	SCFA and alcohol conversions: Alcohol production	79.7
+Urbano	SCFA and alcohol conversions: Butyrate, pt 1	0
+Urbano	SCFA and alcohol conversions: Butyrate, pt 2	0
+Urbano	SCFA and alcohol conversions: Propionate, pt 1	0
+Urbano	SCFA and alcohol conversions: Propionate, pt 2	0
+Urbano	SCFA and alcohol conversions: acetate, pt 1	100
+Urbano	SCFA and alcohol conversions: acetate, pt 2	0
+Urbano	SCFA and alcohol conversions: acetate, pt 3	0
+Urbano	SCFA and alcohol conversions: lactate D	78.1
+Urbano	SCFA and alcohol conversions: lactate L	56.2
+Urbano	SCFA and alcohol conversions: pyruvate => acetyl CoA v1	68.8
+Urbano	SCFA and alcohol conversions: pyruvate => acetyl CoA v2	0
+Urbano	SCFA and alcohol conversions: pyruvate => acetylCoA f+ formate v3	48.4
+Urbano	Sulfur metabolism: Thiosulfate oxidation by SOX complex, thiosulfate => sulfate	0
+Urbano	Sulfur metabolism: dissimilatory sulfate reduction (and oxidation) sulfate => sulfide	0
+Urbano	Sulfur metabolism: tetrathionate => thiosulfate	0
+Urbano	Sulfur metabolism: thiosulfate => sulfite	0

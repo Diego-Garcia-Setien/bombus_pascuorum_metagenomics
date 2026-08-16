@@ -1,0 +1,97 @@
+Grupo	Funcion	Nivel_ponderado_pct
+Agricola	3-Hydroxypropionate bi-cycle	0
+Agricola	Acetyl-CoA pathway, CO2 => acetyl-CoA	0
+Agricola	Citrate cycle (TCA cycle, Krebs cycle)	53.7
+Agricola	Complex I: NAD(P)H:quinone oxidoreductase, chloroplasts and cyanobacteria	0
+Agricola	Complex I: NADH dehydrogenase (ubiquinone) 1 alpha subcomplex	0
+Agricola	Complex I: NADH:quinone oxidoreductase, prokaryotes	35.9
+Agricola	Complex II: Fumarate reductase, prokaryotes	14.7
+Agricola	Complex II: Succinate dehydrogenase (ubiquinone)	0
+Agricola	Complex II: Succinate dehydrogenase, prokaryotes	37.6
+Agricola	Complex III: Cytochrome bc1 complex	0
+Agricola	Complex III: Cytochrome bc1 complex respiratory unit	3.5
+Agricola	Complex III: Cytochrome bd ubiquinol oxidase	65.5
+Agricola	Complex IV High affinity: Cytochrome bd ubiquinol oxidase	65.5
+Agricola	Complex IV High affinity: Cytochrome c oxidase, cbb3-type	0
+Agricola	Complex IV Low affinity: Cytochrome aa3-600 menaquinol oxidase	0
+Agricola	Complex IV Low affinity: Cytochrome c oxidase	2.7
+Agricola	Complex IV Low affinity: Cytochrome c oxidase, prokaryotes	3.5
+Agricola	Complex IV Low affinity: Cytochrome o ubiquinol oxidase	34.1
+Agricola	Complex V: F-type ATPase, eukaryotes	0
+Agricola	Complex V: F-type ATPase, prokaryotes and chloroplasts	89.9
+Agricola	Complex V: V-type ATPase, eukaryotes	0
+Agricola	Complex V: V/A-type ATPase, prokaryotes	0
+Agricola	Dicarboxylate-hydroxybutyrate cycle	20.1
+Agricola	Entner-Doudoroff pathway, glucose-6P => glyceraldehyde-3P + pyruvate	56.2
+Agricola	Glycolysis (Embden-Meyerhof pathway), glucose => pyruvate	81.3
+Agricola	Glyoxylate cycle	22.6
+Agricola	Hydroxypropionate-hydroxybutylate cycle	3.7
+Agricola	Methanogenesis, CO2 => methane	0.4
+Agricola	Pentose phosphate pathway (Pentose phosphate cycle)	89.2
+Agricola	Reductive acetyl-CoA pathway (Wood-Ljungdahl pathway)	20.2
+Agricola	Reductive citrate cycle (Arnon-Buchanan cycle)	36.9
+Agricola	Reductive pentose phosphate cycle (Calvin cycle)	60.5
+Natural	3-Hydroxypropionate bi-cycle	0
+Natural	Acetyl-CoA pathway, CO2 => acetyl-CoA	0
+Natural	Citrate cycle (TCA cycle, Krebs cycle)	51.3
+Natural	Complex I: NAD(P)H:quinone oxidoreductase, chloroplasts and cyanobacteria	0
+Natural	Complex I: NADH dehydrogenase (ubiquinone) 1 alpha subcomplex	0
+Natural	Complex I: NADH:quinone oxidoreductase, prokaryotes	33.9
+Natural	Complex II: Fumarate reductase, prokaryotes	15.1
+Natural	Complex II: Succinate dehydrogenase (ubiquinone)	0
+Natural	Complex II: Succinate dehydrogenase, prokaryotes	34.6
+Natural	Complex III: Cytochrome bc1 complex	0.3
+Natural	Complex III: Cytochrome bc1 complex respiratory unit	4.7
+Natural	Complex III: Cytochrome bd ubiquinol oxidase	63.6
+Natural	Complex IV High affinity: Cytochrome bd ubiquinol oxidase	63.6
+Natural	Complex IV High affinity: Cytochrome c oxidase, cbb3-type	1.2
+Natural	Complex IV Low affinity: Cytochrome aa3-600 menaquinol oxidase	0
+Natural	Complex IV Low affinity: Cytochrome c oxidase	2.6
+Natural	Complex IV Low affinity: Cytochrome c oxidase, prokaryotes	4.3
+Natural	Complex IV Low affinity: Cytochrome o ubiquinol oxidase	30.8
+Natural	Complex V: F-type ATPase, eukaryotes	0
+Natural	Complex V: F-type ATPase, prokaryotes and chloroplasts	88.8
+Natural	Complex V: V-type ATPase, eukaryotes	0
+Natural	Complex V: V/A-type ATPase, prokaryotes	0
+Natural	Dicarboxylate-hydroxybutyrate cycle	19.5
+Natural	Entner-Doudoroff pathway, glucose-6P => glyceraldehyde-3P + pyruvate	56.7
+Natural	Glycolysis (Embden-Meyerhof pathway), glucose => pyruvate	81.5
+Natural	Glyoxylate cycle	20.7
+Natural	Hydroxypropionate-hydroxybutylate cycle	3.9
+Natural	Methanogenesis, CO2 => methane	0.6
+Natural	Pentose phosphate pathway (Pentose phosphate cycle)	89.2
+Natural	Reductive acetyl-CoA pathway (Wood-Ljungdahl pathway)	20.1
+Natural	Reductive citrate cycle (Arnon-Buchanan cycle)	35.8
+Natural	Reductive pentose phosphate cycle (Calvin cycle)	60.5
+Urbano	3-Hydroxypropionate bi-cycle	0
+Urbano	Acetyl-CoA pathway, CO2 => acetyl-CoA	0
+Urbano	Citrate cycle (TCA cycle, Krebs cycle)	55.1
+Urbano	Complex I: NAD(P)H:quinone oxidoreductase, chloroplasts and cyanobacteria	0.1
+Urbano	Complex I: NADH dehydrogenase (ubiquinone) 1 alpha subcomplex	0
+Urbano	Complex I: NADH:quinone oxidoreductase, prokaryotes	39.6
+Urbano	Complex II: Fumarate reductase, prokaryotes	16.4
+Urbano	Complex II: Succinate dehydrogenase (ubiquinone)	0
+Urbano	Complex II: Succinate dehydrogenase, prokaryotes	37.1
+Urbano	Complex III: Cytochrome bc1 complex	0
+Urbano	Complex III: Cytochrome bc1 complex respiratory unit	0
+Urbano	Complex III: Cytochrome bd ubiquinol oxidase	66.1
+Urbano	Complex IV High affinity: Cytochrome bd ubiquinol oxidase	66.1
+Urbano	Complex IV High affinity: Cytochrome c oxidase, cbb3-type	0
+Urbano	Complex IV Low affinity: Cytochrome aa3-600 menaquinol oxidase	0
+Urbano	Complex IV Low affinity: Cytochrome c oxidase	2.4
+Urbano	Complex IV Low affinity: Cytochrome c oxidase, prokaryotes	0
+Urbano	Complex IV Low affinity: Cytochrome o ubiquinol oxidase	36.3
+Urbano	Complex V: F-type ATPase, eukaryotes	0
+Urbano	Complex V: F-type ATPase, prokaryotes and chloroplasts	87.5
+Urbano	Complex V: V-type ATPase, eukaryotes	0
+Urbano	Complex V: V/A-type ATPase, prokaryotes	0
+Urbano	Dicarboxylate-hydroxybutyrate cycle	20.1
+Urbano	Entner-Doudoroff pathway, glucose-6P => glyceraldehyde-3P + pyruvate	54.7
+Urbano	Glycolysis (Embden-Meyerhof pathway), glucose => pyruvate	80.7
+Urbano	Glyoxylate cycle	23.1
+Urbano	Hydroxypropionate-hydroxybutylate cycle	3.1
+Urbano	Methanogenesis, CO2 => methane	0
+Urbano	Pentose phosphate pathway (Pentose phosphate cycle)	88.4
+Urbano	Reductive acetyl-CoA pathway (Wood-Ljungdahl pathway)	21.4
+Urbano	Reductive citrate cycle (Arnon-Buchanan cycle)	38.8
+Urbano	Reductive pentose phosphate cycle (Calvin cycle)	60.7

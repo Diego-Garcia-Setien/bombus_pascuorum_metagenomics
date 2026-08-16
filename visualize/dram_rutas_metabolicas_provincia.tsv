@@ -1,0 +1,97 @@
+Grupo	Funcion	Nivel_ponderado_pct
+Araba	3-Hydroxypropionate bi-cycle	0
+Araba	Acetyl-CoA pathway, CO2 => acetyl-CoA	0
+Araba	Citrate cycle (TCA cycle, Krebs cycle)	53.7
+Araba	Complex I: NAD(P)H:quinone oxidoreductase, chloroplasts and cyanobacteria	0
+Araba	Complex I: NADH dehydrogenase (ubiquinone) 1 alpha subcomplex	0
+Araba	Complex I: NADH:quinone oxidoreductase, prokaryotes	34.2
+Araba	Complex II: Fumarate reductase, prokaryotes	18.2
+Araba	Complex II: Succinate dehydrogenase (ubiquinone)	0
+Araba	Complex II: Succinate dehydrogenase, prokaryotes	34.1
+Araba	Complex III: Cytochrome bc1 complex	0
+Araba	Complex III: Cytochrome bc1 complex respiratory unit	2.4
+Araba	Complex III: Cytochrome bd ubiquinol oxidase	67.1
+Araba	Complex IV High affinity: Cytochrome bd ubiquinol oxidase	67.1
+Araba	Complex IV High affinity: Cytochrome c oxidase, cbb3-type	0
+Araba	Complex IV Low affinity: Cytochrome aa3-600 menaquinol oxidase	0
+Araba	Complex IV Low affinity: Cytochrome c oxidase	2.4
+Araba	Complex IV Low affinity: Cytochrome c oxidase, prokaryotes	2.4
+Araba	Complex IV Low affinity: Cytochrome o ubiquinol oxidase	31.8
+Araba	Complex V: F-type ATPase, eukaryotes	0
+Araba	Complex V: F-type ATPase, prokaryotes and chloroplasts	90.3
+Araba	Complex V: V-type ATPase, eukaryotes	0
+Araba	Complex V: V/A-type ATPase, prokaryotes	0
+Araba	Dicarboxylate-hydroxybutyrate cycle	19.9
+Araba	Entner-Doudoroff pathway, glucose-6P => glyceraldehyde-3P + pyruvate	58.8
+Araba	Glycolysis (Embden-Meyerhof pathway), glucose => pyruvate	83
+Araba	Glyoxylate cycle	20.5
+Araba	Hydroxypropionate-hydroxybutylate cycle	3.5
+Araba	Methanogenesis, CO2 => methane	0.3
+Araba	Pentose phosphate pathway (Pentose phosphate cycle)	90.3
+Araba	Reductive acetyl-CoA pathway (Wood-Ljungdahl pathway)	21.5
+Araba	Reductive citrate cycle (Arnon-Buchanan cycle)	38.4
+Araba	Reductive pentose phosphate cycle (Calvin cycle)	61.5
+Guipuzcoa	3-Hydroxypropionate bi-cycle	0
+Guipuzcoa	Acetyl-CoA pathway, CO2 => acetyl-CoA	0
+Guipuzcoa	Citrate cycle (TCA cycle, Krebs cycle)	50.5
+Guipuzcoa	Complex I: NAD(P)H:quinone oxidoreductase, chloroplasts and cyanobacteria	0
+Guipuzcoa	Complex I: NADH dehydrogenase (ubiquinone) 1 alpha subcomplex	0
+Guipuzcoa	Complex I: NADH:quinone oxidoreductase, prokaryotes	34.4
+Guipuzcoa	Complex II: Fumarate reductase, prokaryotes	11
+Guipuzcoa	Complex II: Succinate dehydrogenase (ubiquinone)	0
+Guipuzcoa	Complex II: Succinate dehydrogenase, prokaryotes	36.8
+Guipuzcoa	Complex III: Cytochrome bc1 complex	0.3
+Guipuzcoa	Complex III: Cytochrome bc1 complex respiratory unit	5.5
+Guipuzcoa	Complex III: Cytochrome bd ubiquinol oxidase	61.5
+Guipuzcoa	Complex IV High affinity: Cytochrome bd ubiquinol oxidase	61.5
+Guipuzcoa	Complex IV High affinity: Cytochrome c oxidase, cbb3-type	1.1
+Guipuzcoa	Complex IV Low affinity: Cytochrome aa3-600 menaquinol oxidase	0
+Guipuzcoa	Complex IV Low affinity: Cytochrome c oxidase	2.9
+Guipuzcoa	Complex IV Low affinity: Cytochrome c oxidase, prokaryotes	5.1
+Guipuzcoa	Complex IV Low affinity: Cytochrome o ubiquinol oxidase	32.4
+Guipuzcoa	Complex V: F-type ATPase, eukaryotes	0
+Guipuzcoa	Complex V: F-type ATPase, prokaryotes and chloroplasts	87.2
+Guipuzcoa	Complex V: V-type ATPase, eukaryotes	0
+Guipuzcoa	Complex V: V/A-type ATPase, prokaryotes	0
+Guipuzcoa	Dicarboxylate-hydroxybutyrate cycle	19
+Guipuzcoa	Entner-Doudoroff pathway, glucose-6P => glyceraldehyde-3P + pyruvate	52.7
+Guipuzcoa	Glycolysis (Embden-Meyerhof pathway), glucose => pyruvate	79.6
+Guipuzcoa	Glyoxylate cycle	22.4
+Guipuzcoa	Hydroxypropionate-hydroxybutylate cycle	3.6
+Guipuzcoa	Methanogenesis, CO2 => methane	0.7
+Guipuzcoa	Pentose phosphate pathway (Pentose phosphate cycle)	87.9
+Guipuzcoa	Reductive acetyl-CoA pathway (Wood-Ljungdahl pathway)	18.7
+Guipuzcoa	Reductive citrate cycle (Arnon-Buchanan cycle)	33.8
+Guipuzcoa	Reductive pentose phosphate cycle (Calvin cycle)	59.5
+Vizcaya	3-Hydroxypropionate bi-cycle	0
+Vizcaya	Acetyl-CoA pathway, CO2 => acetyl-CoA	0
+Vizcaya	Citrate cycle (TCA cycle, Krebs cycle)	56.6
+Vizcaya	Complex I: NAD(P)H:quinone oxidoreductase, chloroplasts and cyanobacteria	0.2
+Vizcaya	Complex I: NADH dehydrogenase (ubiquinone) 1 alpha subcomplex	0
+Vizcaya	Complex I: NADH:quinone oxidoreductase, prokaryotes	41.8
+Vizcaya	Complex II: Fumarate reductase, prokaryotes	17.8
+Vizcaya	Complex II: Succinate dehydrogenase (ubiquinone)	0
+Vizcaya	Complex II: Succinate dehydrogenase, prokaryotes	39
+Vizcaya	Complex III: Cytochrome bc1 complex	0
+Vizcaya	Complex III: Cytochrome bc1 complex respiratory unit	0
+Vizcaya	Complex III: Cytochrome bd ubiquinol oxidase	67.2
+Vizcaya	Complex IV High affinity: Cytochrome bd ubiquinol oxidase	67.2
+Vizcaya	Complex IV High affinity: Cytochrome c oxidase, cbb3-type	0
+Vizcaya	Complex IV Low affinity: Cytochrome aa3-600 menaquinol oxidase	0
+Vizcaya	Complex IV Low affinity: Cytochrome c oxidase	2.5
+Vizcaya	Complex IV Low affinity: Cytochrome c oxidase, prokaryotes	0
+Vizcaya	Complex IV Low affinity: Cytochrome o ubiquinol oxidase	37.7
+Vizcaya	Complex V: F-type ATPase, eukaryotes	0
+Vizcaya	Complex V: F-type ATPase, prokaryotes and chloroplasts	89.2
+Vizcaya	Complex V: V-type ATPase, eukaryotes	0
+Vizcaya	Complex V: V/A-type ATPase, prokaryotes	0
+Vizcaya	Dicarboxylate-hydroxybutyrate cycle	21.1
+Vizcaya	Entner-Doudoroff pathway, glucose-6P => glyceraldehyde-3P + pyruvate	56.8
+Vizcaya	Glycolysis (Embden-Meyerhof pathway), glucose => pyruvate	81.2
+Vizcaya	Glyoxylate cycle	23.7
+Vizcaya	Hydroxypropionate-hydroxybutylate cycle	3.8
+Vizcaya	Methanogenesis, CO2 => methane	0
+Vizcaya	Pentose phosphate pathway (Pentose phosphate cycle)	88.9
+Vizcaya	Reductive acetyl-CoA pathway (Wood-Ljungdahl pathway)	21.8
+Vizcaya	Reductive citrate cycle (Arnon-Buchanan cycle)	40
+Vizcaya	Reductive pentose phosphate cycle (Calvin cycle)	60.7

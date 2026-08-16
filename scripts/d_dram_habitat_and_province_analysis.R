@@ -14,8 +14,6 @@
 ##
 ## Para cada tipo, se hace el análisis por HÁBITAT y por PROVINCIA.
 ##
-##
-##
 ## ============================================================
 
 # 1. Cargar librerías -------------------------------------------------------
@@ -66,6 +64,11 @@ dram_especie <- dram %>%
 # Chequeo: MAGs de DRAM sin especie asignada (no deberían aparecer)
 dram_especie %>% filter(is.na(Especie_final)) %>% pull(genome)
 
+##=======================================================
+######################################################||#
+## Funciones reutilizables                            ||#
+######################################################||#
+##=======================================================
 
 # Pasa un subconjunto de columnas funcionales a formato largo
 pasar_a_largo <- function(dram_especie, columnas) {
@@ -164,19 +167,20 @@ analizar_y_exportar <- function(gtdbtk_sin_rejects, dram_especie, columnas, colu
   
   prefijo <- paste0(tolower(gsub(" ", "_", etiqueta_tipo)), "_", tolower(columna_grupo))
   
-  ggsave(paste0("plots/heatmap_", prefijo, ".png"), p_heatmap, width = 8, height = max(6, length(columnas) * 0.35), dpi = 300)
-  ggsave(paste0("plots/heatmap_", prefijo, ".pdf"), p_heatmap, width = 8, height = max(6, length(columnas) * 0.35))
-  ggsave(paste0("plots/barras_top_", prefijo, ".png"), p_barras, width = 9, height = 7, dpi = 300)
-  ggsave(paste0("plots/barras_top_", prefijo, ".pdf"), p_barras, width = 9, height = 7)
+ #ggsave(paste0("plots/heatmap_", prefijo, ".png"), p_heatmap, width = 8, height = max(6, length(columnas) * 0.35), dpi = 300)
+ #ggsave(paste0("plots/heatmap_", prefijo, ".pdf"), p_heatmap, width = 8, height = max(6, length(columnas) * 0.35))
+ #ggsave(paste0("plots/barras_top_", prefijo, ".png"), p_barras, width = 9, height = 7, dpi = 300)
+ #ggsave(paste0("plots/barras_top_", prefijo, ".pdf"), p_barras, width = 9, height = 7)
   
   wb <- createWorkbook()
   addWorksheet(wb, "Nivel_ponderado")
   writeData(wb, "Nivel_ponderado", resumen %>% pivot_wider(names_from = Grupo, values_from = Nivel_ponderado_pct))
   addWorksheet(wb, "Cobertura_DRAM")
   writeData(wb, "Cobertura_DRAM", resultado$cobertura)
-  saveWorkbook(wb, paste0("excels/dram_", prefijo, ".xlsx"), overwrite = TRUE)
+  #saveWorkbook(wb, paste0("visualize/dram_", prefijo, ".xlsx"), overwrite = TRUE)
   
   write_tsv(resumen, paste0("visualize/dram_", prefijo, ".tsv"))
+  write_tsv(resultado$cobertura, paste0("visualize/dram_cobertura_", prefijo, ".tsv"))
   
   resumen
 }
@@ -216,4 +220,3 @@ resumen_booleanas_provincia <- analizar_y_exportar(
   gtdbtk_sin_rejects, dram_especie, columnas_booleanas, "Provincia",
   etiqueta_tipo = "CAZy y genes", top_n = 20
 )
-

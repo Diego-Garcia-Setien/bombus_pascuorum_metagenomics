@@ -1,0 +1,142 @@
+Grupo	Funcion	Nivel_ponderado_pct
+Araba	Methanogenesis and methanotrophy: Key functional gene	0
+Araba	Methanogenesis and methanotrophy: acetate => methane, pt 1	2.4
+Araba	Methanogenesis and methanotrophy: acetate => methane, pt 2	100
+Araba	Methanogenesis and methanotrophy: acetate => methane, pt 3	8.2
+Araba	Methanogenesis and methanotrophy: dimethylamine => monomethylamine	0
+Araba	Methanogenesis and methanotrophy: methane => methanol, with oxygen (mmo)	0
+Araba	Methanogenesis and methanotrophy: methane => methanol, with oxygen (pmo)	0
+Araba	Methanogenesis and methanotrophy: methanol => methane	0
+Araba	Methanogenesis and methanotrophy: monomethylamine => ammonia	0
+Araba	Methanogenesis and methanotrophy: putative but not defining CO2 => methane	0
+Araba	Methanogenesis and methanotrophy: trimethylamine => dimethylamine	0
+Araba	Nitrogen metabolism: Bacterial (aerobic-specific) ammonia oxidation	0
+Araba	Nitrogen metabolism: Bacterial (anaerobic-specific) ammonia oxidation	0
+Araba	Nitrogen metabolism: Bacterial/Archaeal ammonia oxidation	0
+Araba	Nitrogen metabolism: Dissimilatory nitrite reduction to ammonia (DNRA)	0
+Araba	Nitrogen metabolism: Nitrogen fixation altennative	0
+Araba	Nitrogen metabolism: ammonia => nitrite	0
+Araba	Nitrogen metabolism: nitrate => nitrite	31.8
+Araba	Nitrogen metabolism: nitric oxide => nitrous oxide	0
+Araba	Nitrogen metabolism: nitrite => nitric oxide	36.5
+Araba	Nitrogen metabolism: nitrite=> nitrate	31.8
+Araba	Nitrogen metabolism: nitrogen => ammonia	0
+Araba	Nitrogen metabolism: nitrous oxide => nitrogen	0
+Araba	Other Reductases: TMAO reductase	0
+Araba	Other Reductases: arsenate reduction, pt 1	31.8
+Araba	Other Reductases: arsenate reduction, pt 2	0
+Araba	Other Reductases: mercury reduction	0
+Araba	Other Reductases: selenate/Chlorate reduction	0
+Araba	Photosynthesis: Photosystem I	0
+Araba	Photosynthesis: Photosystem II	0
+Araba	SCFA and alcohol conversions: Alcohol production	84.7
+Araba	SCFA and alcohol conversions: Butyrate, pt 1	0
+Araba	SCFA and alcohol conversions: Butyrate, pt 2	0
+Araba	SCFA and alcohol conversions: Propionate, pt 1	0
+Araba	SCFA and alcohol conversions: Propionate, pt 2	0
+Araba	SCFA and alcohol conversions: acetate, pt 1	100
+Araba	SCFA and alcohol conversions: acetate, pt 2	0
+Araba	SCFA and alcohol conversions: acetate, pt 3	0
+Araba	SCFA and alcohol conversions: lactate D	80
+Araba	SCFA and alcohol conversions: lactate L	60
+Araba	SCFA and alcohol conversions: pyruvate => acetyl CoA v1	70.6
+Araba	SCFA and alcohol conversions: pyruvate => acetyl CoA v2	0
+Araba	SCFA and alcohol conversions: pyruvate => acetylCoA f+ formate v3	50.6
+Araba	Sulfur metabolism: Thiosulfate oxidation by SOX complex, thiosulfate => sulfate	0
+Araba	Sulfur metabolism: dissimilatory sulfate reduction (and oxidation) sulfate => sulfide	0
+Araba	Sulfur metabolism: tetrathionate => thiosulfate	0
+Araba	Sulfur metabolism: thiosulfate => sulfite	0
+Guipuzcoa	Methanogenesis and methanotrophy: Key functional gene	0
+Guipuzcoa	Methanogenesis and methanotrophy: acetate => methane, pt 1	6.6
+Guipuzcoa	Methanogenesis and methanotrophy: acetate => methane, pt 2	97.8
+Guipuzcoa	Methanogenesis and methanotrophy: acetate => methane, pt 3	11
+Guipuzcoa	Methanogenesis and methanotrophy: dimethylamine => monomethylamine	0
+Guipuzcoa	Methanogenesis and methanotrophy: methane => methanol, with oxygen (mmo)	0
+Guipuzcoa	Methanogenesis and methanotrophy: methane => methanol, with oxygen (pmo)	0
+Guipuzcoa	Methanogenesis and methanotrophy: methanol => methane	0
+Guipuzcoa	Methanogenesis and methanotrophy: monomethylamine => ammonia	0
+Guipuzcoa	Methanogenesis and methanotrophy: putative but not defining CO2 => methane	0
+Guipuzcoa	Methanogenesis and methanotrophy: trimethylamine => dimethylamine	0
+Guipuzcoa	Nitrogen metabolism: Bacterial (aerobic-specific) ammonia oxidation	0
+Guipuzcoa	Nitrogen metabolism: Bacterial (anaerobic-specific) ammonia oxidation	0
+Guipuzcoa	Nitrogen metabolism: Bacterial/Archaeal ammonia oxidation	0
+Guipuzcoa	Nitrogen metabolism: Dissimilatory nitrite reduction to ammonia (DNRA)	0
+Guipuzcoa	Nitrogen metabolism: Nitrogen fixation altennative	0
+Guipuzcoa	Nitrogen metabolism: ammonia => nitrite	0
+Guipuzcoa	Nitrogen metabolism: nitrate => nitrite	33
+Guipuzcoa	Nitrogen metabolism: nitric oxide => nitrous oxide	0
+Guipuzcoa	Nitrogen metabolism: nitrite => nitric oxide	23.1
+Guipuzcoa	Nitrogen metabolism: nitrite=> nitrate	31.9
+Guipuzcoa	Nitrogen metabolism: nitrogen => ammonia	0
+Guipuzcoa	Nitrogen metabolism: nitrous oxide => nitrogen	0
+Guipuzcoa	Other Reductases: TMAO reductase	0
+Guipuzcoa	Other Reductases: arsenate reduction, pt 1	31.9
+Guipuzcoa	Other Reductases: arsenate reduction, pt 2	0
+Guipuzcoa	Other Reductases: mercury reduction	0
+Guipuzcoa	Other Reductases: selenate/Chlorate reduction	0
+Guipuzcoa	Photosynthesis: Photosystem I	0
+Guipuzcoa	Photosynthesis: Photosystem II	0
+Guipuzcoa	SCFA and alcohol conversions: Alcohol production	75.8
+Guipuzcoa	SCFA and alcohol conversions: Butyrate, pt 1	0
+Guipuzcoa	SCFA and alcohol conversions: Butyrate, pt 2	0
+Guipuzcoa	SCFA and alcohol conversions: Propionate, pt 1	0
+Guipuzcoa	SCFA and alcohol conversions: Propionate, pt 2	0
+Guipuzcoa	SCFA and alcohol conversions: acetate, pt 1	97.8
+Guipuzcoa	SCFA and alcohol conversions: acetate, pt 2	0
+Guipuzcoa	SCFA and alcohol conversions: acetate, pt 3	0
+Guipuzcoa	SCFA and alcohol conversions: lactate D	71.4
+Guipuzcoa	SCFA and alcohol conversions: lactate L	65.9
+Guipuzcoa	SCFA and alcohol conversions: pyruvate => acetyl CoA v1	59.3
+Guipuzcoa	SCFA and alcohol conversions: pyruvate => acetyl CoA v2	1.1
+Guipuzcoa	SCFA and alcohol conversions: pyruvate => acetylCoA f+ formate v3	40.7
+Guipuzcoa	Sulfur metabolism: Thiosulfate oxidation by SOX complex, thiosulfate => sulfate	0
+Guipuzcoa	Sulfur metabolism: dissimilatory sulfate reduction (and oxidation) sulfate => sulfide	0
+Guipuzcoa	Sulfur metabolism: tetrathionate => thiosulfate	0
+Guipuzcoa	Sulfur metabolism: thiosulfate => sulfite	0
+Vizcaya	Methanogenesis and methanotrophy: Key functional gene	0
+Vizcaya	Methanogenesis and methanotrophy: acetate => methane, pt 1	3.4
+Vizcaya	Methanogenesis and methanotrophy: acetate => methane, pt 2	100
+Vizcaya	Methanogenesis and methanotrophy: acetate => methane, pt 3	8.5
+Vizcaya	Methanogenesis and methanotrophy: dimethylamine => monomethylamine	0
+Vizcaya	Methanogenesis and methanotrophy: methane => methanol, with oxygen (mmo)	0
+Vizcaya	Methanogenesis and methanotrophy: methane => methanol, with oxygen (pmo)	0
+Vizcaya	Methanogenesis and methanotrophy: methanol => methane	0
+Vizcaya	Methanogenesis and methanotrophy: monomethylamine => ammonia	0
+Vizcaya	Methanogenesis and methanotrophy: putative but not defining CO2 => methane	0
+Vizcaya	Methanogenesis and methanotrophy: trimethylamine => dimethylamine	0
+Vizcaya	Nitrogen metabolism: Bacterial (aerobic-specific) ammonia oxidation	0
+Vizcaya	Nitrogen metabolism: Bacterial (anaerobic-specific) ammonia oxidation	0
+Vizcaya	Nitrogen metabolism: Bacterial/Archaeal ammonia oxidation	0
+Vizcaya	Nitrogen metabolism: Dissimilatory nitrite reduction to ammonia (DNRA)	0
+Vizcaya	Nitrogen metabolism: Nitrogen fixation altennative	0
+Vizcaya	Nitrogen metabolism: ammonia => nitrite	0
+Vizcaya	Nitrogen metabolism: nitrate => nitrite	39
+Vizcaya	Nitrogen metabolism: nitric oxide => nitrous oxide	0
+Vizcaya	Nitrogen metabolism: nitrite => nitric oxide	35.6
+Vizcaya	Nitrogen metabolism: nitrite=> nitrate	39
+Vizcaya	Nitrogen metabolism: nitrogen => ammonia	0
+Vizcaya	Nitrogen metabolism: nitrous oxide => nitrogen	0
+Vizcaya	Other Reductases: TMAO reductase	0
+Vizcaya	Other Reductases: arsenate reduction, pt 1	39
+Vizcaya	Other Reductases: arsenate reduction, pt 2	0
+Vizcaya	Other Reductases: mercury reduction	0
+Vizcaya	Other Reductases: selenate/Chlorate reduction	0
+Vizcaya	Photosynthesis: Photosystem I	0
+Vizcaya	Photosynthesis: Photosystem II	0
+Vizcaya	SCFA and alcohol conversions: Alcohol production	81.4
+Vizcaya	SCFA and alcohol conversions: Butyrate, pt 1	0
+Vizcaya	SCFA and alcohol conversions: Butyrate, pt 2	0
+Vizcaya	SCFA and alcohol conversions: Propionate, pt 1	0
+Vizcaya	SCFA and alcohol conversions: Propionate, pt 2	0
+Vizcaya	SCFA and alcohol conversions: acetate, pt 1	100
+Vizcaya	SCFA and alcohol conversions: acetate, pt 2	0
+Vizcaya	SCFA and alcohol conversions: acetate, pt 3	0
+Vizcaya	SCFA and alcohol conversions: lactate D	84.7
+Vizcaya	SCFA and alcohol conversions: lactate L	59.3
+Vizcaya	SCFA and alcohol conversions: pyruvate => acetyl CoA v1	71.2
+Vizcaya	SCFA and alcohol conversions: pyruvate => acetyl CoA v2	0
+Vizcaya	SCFA and alcohol conversions: pyruvate => acetylCoA f+ formate v3	45.8
+Vizcaya	Sulfur metabolism: Thiosulfate oxidation by SOX complex, thiosulfate => sulfate	0
+Vizcaya	Sulfur metabolism: dissimilatory sulfate reduction (and oxidation) sulfate => sulfide	0
+Vizcaya	Sulfur metabolism: tetrathionate => thiosulfate	0
+Vizcaya	Sulfur metabolism: thiosulfate => sulfite	0
