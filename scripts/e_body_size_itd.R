@@ -431,3 +431,20 @@ ggbetweenstats(
   type = "nonparametric", pairwise.display = "significant",
   title = "Peso estimado por Provincia x Hábitat (2024 + 2025)"
 ) + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+#Tests de Kruskal-Wallis para comprobar la significancia
+
+# --- Por Hábitat ---
+kruskal.test(Est.Weight ~ Habitat, data = datos_bp_bs24)      # 2024
+kruskal.test(Est.Weight ~ Habitat, data = datos_bp_bs25)      # 2025
+kruskal.test(Est.Weight ~ Habitat, data = datos_unidos)       # 2024+2025
+
+# --- Por Provincia ---
+kruskal.test(Est.Weight ~ Provincias, data = datos_bp_bs24)   # 2024
+kruskal.test(Est.Weight ~ Provincias, data = datos_bp_bs25)   # 2025
+kruskal.test(Est.Weight ~ Provincias, data = datos_unidos)    # 2024+2025
+
+# --- Por Provincia x Hábitat (variable combinada) ---
+kruskal.test(Est.Weight ~ Provincia_Habitat, data = datos_bp_bs24)   # 2024
+kruskal.test(Est.Weight ~ Provincia_Habitat, data = datos_bp_bs25)   # 2025
+kruskal.test(Est.Weight ~ Provincia_Habitat, data = datos_unidos)    # 2024+2025
