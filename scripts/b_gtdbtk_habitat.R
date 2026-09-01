@@ -52,6 +52,11 @@
 ## más abundantes los cuales son principalmente bacterias más típicas de 
 ## las microbiota intestinal
 ##
+## *****5ª parte*****
+##
+## Se hacen test de Chi-cuadrado de los géneros y especies frente al hábitat
+##
+##
 ##=======================================================
 #########################################################
 ##=======================================================
@@ -560,3 +565,53 @@ write_tsv(ranking_genero_habitat_sin_top5, "visualize/ranking_genus_habitat_sin_
 
 #save.image("visualize/b_gtfbtk_habitat.RData")
 
+
+##=======================================================
+#########################################################
+##=======================================================
+######################################################||#
+##                                                    ||#
+## 5ª parte del script                                ||#
+##                                                    ||#
+######################################################||#
+##=======================================================
+#########################################################
+##=======================================================
+
+
+# 35. Crear la tabla de contingencia y correr el test -----------
+analizar_independencia <- function(datos, columna_taxon, etiqueta) {
+  
+  # Tabla de contingencia: filas = Hábitat, columnas = taxón, valores = cantidad de MAGs
+  tabla_contingencia <- datos %>%
+    filter(!is.na(Habitat)) %>%
+    count(Habitat, .data[[columna_taxon]], name = "Cantidad") %>%
+    pivot_wider(names_from = all_of(columna_taxon), values_from = Cantidad, values_fill = 0)
+  
+  matriz <- tabla_contingencia %>% select(-Habitat) %>% as.matrix()
+  rownames(matriz) <- tabla_contingencia$Habitat
+  
+  # Chi-cuadrado con p-valor simulado (Monte Carlo, 10000 permutaciones)
+  # -- necesario porque muchas celdas tienen conteos esperados bajos
+  set.seed(123)
+  test <- chisq.test(matriz, simulate.p.value = TRUE, B = 10000)
+  
+  cat("\n=====", etiqueta, "- Test de independencia (Chi-cuadrado) =====\n")
+  cat("Estadístico X-cuadrado:", round(test$statistic, 2), "\n")
+  cat("p-valor (simulado):", test$p.value, "\n")
+  if (test$p.value < 0.05) {
+    cat("-> Hay evidencia de que la distribución de", etiqueta, "SÍ difiere entre hábitats.\n")
+  } else {
+    cat("-> No hay evidencia suficiente de diferencia entre hábitats.\n")
+  }
+  
+  # Residuos estandarizados: qué combinaciones se alejan más de lo esperado
+  residuos <- as.data.frame(as.table(test$stdres)) %>%
+    rename(Habitat = Var1, Taxon = Var2, Residuo = Freq) %>%
+    arrange(desc(abs(Residuo)))
+  
+  cat("\nTop 10 combinaciones más alejadas de lo esperado (|residuo| más alto):\n")
+  print(head(residuos, 10))
+  
+  list(test = test, tabla_contingencia = tabla_contingencia, residuos = residuos)
+}
