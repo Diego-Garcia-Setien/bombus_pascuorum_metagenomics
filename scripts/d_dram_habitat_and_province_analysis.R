@@ -220,3 +220,162 @@ resumen_booleanas_provincia <- analizar_y_exportar(
   gtdbtk_sin_rejects, dram_especie, columnas_booleanas, "Provincia",
   etiqueta_tipo = "CAZy y genes", top_n = 20
 )
+
+
+
+##=======================================================
+######################################################||#
+## Perfil metabólico por ESPECIE y por GÉNERO (Separados)
+######################################################||#
+##=======================================================
+
+# 1. Asegurar la extracción correcta de Género y Especie --------------------
+# Nota: Si en tu dataset gtdbtk_sin_rejects existe la columna 'Genero',
+# puedes usarla directamente. Si no, extraemos la primera palabra de Especie_final.
+dram_taxonomia <- dram_especie %>%
+  mutate(
+    Especie = Especie_final,
+    Genero = if("Genero" %in% colnames(gtdbtk_sin_rejects)) {
+      gtdbtk_sin_rejects$Genero[match(genome, gtdbtk_sin_rejects$Name)]
+    } else {
+      str_extract(Especie_final, "^[A-Za-z0-9_-]+") # Extrae la primera palabra/género
+    }
+  )
+
+# 2. Función genérica para graficar Heatmaps por Nivel Taxonómico --------------
+graficar_heatmap_taxa <- function(datos_largos, columna_taxa, titulo) {
+  ggplot(datos_largos, aes(x = .data[[columna_taxa]], y = Funcion, fill = Valor)) +
+    geom_tile(color = "gray90", linewidth = 0.2) +
+    scale_fill_gradient(
+      low = "whitesmoke", 
+      high = "darkgreen", 
+      limits = c(0, 1), 
+      labels = scales::percent
+    ) +
+    labs(
+      title = titulo,
+      x = NULL,
+      y = NULL,
+      fill = "Completitud /\nPresencia"
+    ) +
+    theme_minimal() +
+    theme(
+      plot.title = element_text(hjust = 0.5, face = "bold", size = 11),
+      axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, size = 8, face = "italic"),
+      axis.text.y = element_text(size = 6.5),
+      legend.position = "right"
+    )
+}
+
+## -----------------------------------------------------------------------------
+## A) ANÁLISIS A NIVEL DE ESPECIE
+## -----------------------------------------------------------------------------
+
+# Preparar formato largo por Especie
+dram_especie_largo <- dram_taxonomia %>%
+  pivot_longer(
+    cols = c(all_of(columnas_rutas), all_of(columnas_booleanas)),
+    names_to = "Funcion",
+    values_to = "Valor"
+  )
+
+# Heatmap: Rutas por Especie
+p_rutas_especie <- dram_especie_largo %>%
+  filter(Funcion %in% columnas_rutas) %>%
+  graficar_heatmap_taxa(columna_taxa = "Especie", titulo = "Rutas Metabólicas por Especie")
+
+# Heatmap: Genes Marcadores por Especie
+p_genes_especie <- dram_especie_largo %>%
+  filter(Funcion %in% columnas_booleanas) %>%
+  graficar_heatmap_taxa(columna_taxa = "Especie", titulo = "Genes Marcadores y CAZy por Especie")
+
+print(p_rutas_especie)
+print(p_genes_especie)
+
+
+## -----------------------------------------------------------------------------
+## B) ANÁLISIS A NIVEL DE GÉNERO
+## -----------------------------------------------------------------------------
+
+# Agrupar por Género:
+# - Para rutas: Promedio de completitud entre especies del mismo género
+# - Para genes: Presencia (1) si al menos una especie del género lo posee
+dram_genero_resumen <- dram_taxonomia %>%
+  group_by(Genero) %>%
+  summarise(
+    across(all_of(columnas_rutas), ~ round(mean(.x, na.rm = TRUE), 2)),
+    across(all_of(columnas_booleanas), ~ if_else(any(.x == 1, na.rm = TRUE), 1, 0)),
+    .groups = "drop"
+  )
+
+dram_genero_largo <- dram_genero_resumen %>%
+  pivot_longer(
+    cols = -Genero,
+    names_to = "Funcion",
+    values_to = "Valor"
+  )
+
+# Heatmap: Rutas por Género
+p_rutas_genero <- dram_genero_largo %>%
+  filter(Funcion %in% columnas_rutas) %>%
+  graficar_heatmap_taxa(columna_taxa = "Genero", titulo = "Rutas Metabólicas por Género")
+
+# Heatmap: Genes Marcadores por Género
+p_genes_genero <- dram_genero_largo %>%
+  filter(Funcion %in% columnas_booleanas) %>%
+  graficar_heatmap_taxa(columna_taxa = "Genero", titulo = "Genes Marcadores y CAZy por Género")
+
+print(p_rutas_genero)
+print(p_genes_genero)
+
+
+## -----------------------------------------------------------------------------
+## C) EXPORTACIÓN DE RESULTADOS
+## -----------------------------------------------------------------------------
+
+# Guardar Gráficos
+#ggsave("plots/heatmap_rutas_especie.png", p_rutas_especie, width = 10, height = 8, dpi = 300)
+#ggsave("plots/heatmap_genes_especie.png", p_genes_especie, width = 10, height = 10, dpi = 300)
+
+#ggsave("plots/heatmap_rutas_genero.png", p_rutas_genero, width = 9, height = 8, dpi = 300)
+#ggsave("plots/heatmap_genes_genero.png", p_genes_genero, width = 9, height = 10, dpi = 300)
+
+# Guardar Tablas Excel con pestañas separadas
+wb_taxa <- createWorkbook()
+addWorksheet(wb_taxa, "Perfil_Especie")
+writeData(wb_taxa, "Perfil_Especie", dram_taxonomia %>% select(-Genero))
+
+addWorksheet(wb_taxa, "Perfil_Genero")
+writeData(wb_taxa, "Perfil_Genero", dram_genero_resumen)
+
+#saveWorkbook(wb_taxa, "visualize/dram_perfil_taxonomico.xlsx", overwrite = TRUE)
+
+##=======================================================
+######################################################||#
+## Exportación final de resultados en 4 archivos TSV  ||#
+######################################################||#
+##=======================================================
+
+# 1. Rutas metabólicas por ESPECIE
+rutas_especie <- dram_taxonomia %>%
+  select(Especie, all_of(columnas_rutas))
+
+write_tsv(rutas_especie, "visualize/dram_rutas_por_especie.tsv")
+
+# 2. Genes marcadores y CAZy por ESPECIE
+genes_especie <- dram_taxonomia %>%
+  select(Especie, all_of(columnas_booleanas))
+
+write_tsv(genes_especie, "visualize/dram_genes_por_especie.tsv")
+
+# 3. Rutas metabólicas por GÉNERO
+rutas_genero <- dram_genero_resumen %>%
+  select(Genero, all_of(columnas_rutas))
+
+write_tsv(rutas_genero, "visualize/dram_rutas_por_genero.tsv")
+
+# 4. Genes marcadores y CAZy por GÉNERO
+genes_genero <- dram_genero_resumen %>%
+  select(Genero, all_of(columnas_booleanas))
+
+write_tsv(genes_genero, "visualize/dram_genes_por_genero.tsv")
