@@ -23,6 +23,7 @@ library(stringr)
 library(tidyr)
 library(openxlsx)
 library(ggplot2)
+library(ragg)
 
 # 2. Leer el archivo de DRAM y el de taxonomía sin Rejects -------------------
 dram <- read_tsv("visualize/DRAMR_product.tsv")
@@ -108,37 +109,31 @@ calcular_nivel_ponderado <- function(gtdbtk_sin_rejects, dram_largo, columna_gru
   list(resultado = resultado, cobertura = cobertura)
 }
 
-graficar_heatmap_ponderado <- function(resumen, titulo) {
-  ggplot(resumen, aes(x = Grupo, y = Funcion, fill = Nivel_ponderado_pct)) +
-    geom_tile(color = "white") +
-    geom_text(aes(label = paste0(Nivel_ponderado_pct, "%")), size = 2, color = "black") +
-    scale_fill_gradient(low = "white", high = "darkgreen", limits = c(0, 100)) +
-    labs(title = titulo, x = NULL, y = NULL, fill = "% ponderado\npor abundancia") +
+# Reemplazar la función existente para aumentar el tamaño de texto:
+graficar_heatmap_taxa <- function(datos_largos, columna_taxa, titulo) {
+  ggplot(datos_largos, aes(x = .data[[columna_taxa]], y = Funcion, fill = Valor)) +
+    geom_tile(color = "gray90", linewidth = 0.3) +
+    scale_fill_gradient(
+      low = "whitesmoke", 
+      high = "darkgreen", 
+      limits = c(0, 1), 
+      labels = scales::percent
+    ) +
+    labs(
+      title = titulo,
+      x = NULL,
+      y = NULL,
+      fill = "Completitud /\nPresencia"
+    ) +
     theme_minimal() +
-    theme(plot.title = element_text(hjust = 0.5, face = "bold"), axis.text.y = element_text(size = 6))
-}
-
-graficar_barras_top_ponderado <- function(resumen, top_n = 15, titulo) {
-  rangos <- resumen %>%
-    group_by(Funcion) %>%
-    summarise(Rango = max(Nivel_ponderado_pct) - min(Nivel_ponderado_pct)) %>%
-    filter(Rango > 0)   # descarta funciones sin ninguna variación entre grupos
-  
-  funciones_top <- rangos %>%
-    slice_max(Rango, n = top_n, with_ties = FALSE) %>%
-    pull(Funcion)
-  
-  datos_plot <- resumen %>%
-    filter(Funcion %in% funciones_top) %>%
-    left_join(rangos, by = "Funcion")
-  
-  ggplot(datos_plot, aes(x = reorder(Funcion, Rango), y = Nivel_ponderado_pct, fill = Grupo)) +
-    geom_col(position = position_dodge(width = 0.8), width = 0.7) +
-    coord_flip() +
-    scale_y_continuous(limits = c(0, 100), labels = function(x) paste0(x, "%")) +
-    labs(title = titulo, x = NULL, y = "% ponderado por abundancia", fill = NULL) +
-    theme_minimal() +
-    theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+    theme(
+      plot.title = element_text(hjust = 0.5, face = "bold", size = 16),
+      axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, size = 15, face = "italic", color = "black"), # Géneros/Especies
+      axis.text.y = element_text(size = 15, color = "black"), # Rutas y Genes
+      legend.title = element_text(size = 11, face = "bold"),
+      legend.text = element_text(size = 10),
+      legend.position = "right"
+    )
 }
 
 # Envuelve todo el proceso: calcular + graficar + exportar, para un tipo
@@ -256,13 +251,15 @@ graficar_heatmap_taxa <- function(datos_largos, columna_taxa, titulo) {
       title = titulo,
       x = NULL,
       y = NULL,
-      fill = "Completitud /\nPresencia"
+      fill = "Completitud"
     ) +
     theme_minimal() +
     theme(
-      plot.title = element_text(hjust = 0.5, face = "bold", size = 11),
-      axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, size = 8, face = "italic"),
-      axis.text.y = element_text(size = 6.5),
+      plot.title = element_text(hjust = 0.5, face = "bold", size = 16),
+      axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, size = 12, face = "italic", color = "black"),
+      axis.text.y = element_text(size = 10, color = "black"),
+      legend.title = element_text(size = 11, face = "bold"),
+      legend.text = element_text(size = 10),
       legend.position = "right"
     )
 }
@@ -364,10 +361,32 @@ p_rutas_genero <- dram_genero_largo %>%
   graficar_heatmap_taxa(columna_taxa = "Genero", titulo = "Rutas Metabólicas por Género")
 
 # 5. Heatmap: Genes Marcadores por Género
+# 5. Heatmap: Genes Marcadores por Género (con leyenda en 2 bloques discretos)
 p_genes_genero <- dram_genero_largo %>%
   filter(Funcion %in% columnas_booleanas) %>%
-  graficar_heatmap_taxa(columna_taxa = "Genero", titulo = "Genes Marcadores y CAZy por Género")
-
+  # Convertimos el Valor en factor para que ggplot dibuje bloques discretos
+  mutate(Valor = factor(Valor, levels = c(1, 0), labels = c("Presente", "Ausente"))) %>%
+  ggplot(aes(x = Genero, y = Funcion, fill = Valor)) +
+  geom_tile(color = "gray90", linewidth = 0.3) +
+  scale_fill_manual(
+    values = c("Ausente" = "whitesmoke", "Presente" = "darkgreen"),
+    drop = FALSE
+  ) +
+  labs(
+    title = "Genes Marcadores por Género",
+    x = NULL,
+    y = NULL,
+    fill = "Estado"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 16),
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, size = 12, face = "italic", color = "black"),
+    axis.text.y = element_text(size = 10, color = "black"),
+    legend.title = element_text(size = 11, face = "bold"),
+    legend.text = element_text(size = 10),
+    legend.position = "right"
+  )
 print(p_rutas_genero)
 print(p_genes_genero)
 
@@ -377,8 +396,8 @@ print(p_genes_genero)
 
 #ggsave("plots/heatmap_rutas_especie.png", p_rutas_especie, width = 10, height = 8, dpi = 300)
 #ggsave("plots/heatmap_genes_especie.png", p_genes_especie, width = 10, height = 10, dpi = 300)
-#ggsave("plots/heatmap_rutas_genero.png", p_rutas_genero, width = 9, height = 8, dpi = 300)
-#ggsave("plots/heatmap_genes_genero.png", p_genes_genero, width = 9, height = 10, dpi = 300)
+ggsave("plots/heatmap_rutas_genero.png", p_rutas_genero, width = 12, height = 10, dpi = 300, device = ragg::agg_png)
+ggsave("plots/heatmap_genes_genero.png", p_genes_genero, width = 12, height = 10, dpi = 300, device = ragg::agg_png)
 
 wb_taxa <- createWorkbook()
 addWorksheet(wb_taxa, "Perfil_Especie")
