@@ -230,3 +230,94 @@ print(p_conjunto)
 
 
 #save.image("visualize/a_checkm2_classification.RData")
+
+
+# ============================================================
+#
+# 3ª parte del script (añadida)
+#
+# Clasificación de MAGs por AÑO, en paralelo a la ya existente
+# por Hábitat (pasos 12 y 14)
+#
+# ============================================================
+
+# 15. Resumen de calidad por Año (tabla cruzada) ------------------------------
+resumen_anio <- checkm2_metadatos %>%
+  count(Anio, Categoria) %>%
+  pivot_wider(names_from = Categoria, values_from = n, values_fill = 0)
+
+resumen_anio
+
+# 16. Exportar el resumen por año a Excel y TSV -------------------------------
+# (añadimos una hoja nueva al mismo libro que ya se creó en el paso 13;
+#  si el script se ejecuta de una sola vez, wb ya existe en el entorno.
+#  Si se ejecuta este bloque de forma aislada, descomenta la línea de abajo
+#  para recrear el libro a partir del ya guardado)
+
+# wb <- loadWorkbook("excels/MAGs_metadatos_habitat.xlsx")
+
+#addWorksheet(wb, "Resumen_Anio")
+#writeData(wb, "Resumen_Anio", resumen_anio)
+
+#saveWorkbook(wb, "excels/MAGs_metadatos_habitat.xlsx", overwrite = TRUE)
+
+#write_tsv(resumen_anio, "visualize/Resumen_Anio.tsv")
+
+# 17. Diagramas de quesitos (pie charts) por Año ------------------------------
+# Mismo diseño que los de Hábitat (paso 14), pero agrupando por Anio.
+
+datos_pie_anio <- checkm2_metadatos %>%
+  filter(!is.na(Anio)) %>%
+  count(Anio, Categoria) %>%
+  group_by(Anio) %>%
+  mutate(
+    Porcentaje = n / sum(n) * 100,
+    Etiqueta   = paste0(Categoria, "\n", n, " (", round(Porcentaje, 1), "%)")
+  ) %>%
+  ungroup()
+
+anios <- unique(datos_pie_anio$Anio)
+
+for (a in anios) {
+  
+  datos_a <- datos_pie_anio %>% filter(Anio == a)
+  
+  p <- ggplot(datos_a, aes(x = "", y = n, fill = Categoria)) +
+    geom_bar(stat = "identity", width = 1, color = "white") +
+    coord_polar("y") +
+    geom_text(aes(label = Etiqueta),
+              position = position_stack(vjust = 0.5), size = 2.5) +
+    labs(title = paste("Calidad de MAGs -", a),
+         x = NULL, y = NULL, fill = "Categoría") +
+    theme_void() +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+  
+  print(p)
+  
+  #ggsave(filename = paste0("plots/pie_calidad_", a, ".png"), plot = p, width = 6, height = 6, dpi = 300)
+  #ggsave(filename = paste0("plots/pie_calidad_", a, ".pdf"), plot = p, width = 6, height = 6)
+  #ggsave(filename = paste0("plots/pie_calidad_", a, ".svg"), plot = p, width = 6, height = 6)
+  #ggsave(filename = paste0("plots/pie_calidad_", a, ".eps"), plot = p, width = 6, height = 6, device = cairo_ps)
+}
+
+# 17b. Un único gráfico con los quesitos de ambos años juntos ----------------
+p_conjunto_anio <- ggplot(datos_pie_anio, aes(x = "", y = n, fill = Categoria)) +
+  geom_bar(stat = "identity", width = 1, color = "white") +
+  coord_polar("y") +
+  geom_text(aes(label = Etiqueta),
+            position = position_stack(vjust = 0.5), size = 3) +
+  facet_wrap(~ Anio) +
+  labs(title = "Calidad de MAGs por Año",
+       x = NULL, y = NULL, fill = "Categoría") +
+  theme_void() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    strip.text = element_text(face = "bold", size = 12)
+  )
+
+print(p_conjunto_anio)
+
+#ggsave(filename = "plots/pie_calidad_por_anio.png", plot = p_conjunto_anio, width = 12, height = 5, dpi = 300)
+#ggsave(filename = "plots/pie_calidad_por_anio.pdf", plot = p_conjunto_anio, width = 12, height = 5)
+#ggsave(filename = "plots/pie_calidad_por_anio.svg", plot = p_conjunto_anio, width = 12, height = 5)
+#ggsave(filename = "plots/pie_calidad_por_anio.eps", plot = p_conjunto_anio, width = 12, height = 5, device = cairo_ps)

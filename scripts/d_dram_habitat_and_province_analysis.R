@@ -136,6 +136,62 @@ graficar_heatmap_taxa <- function(datos_largos, columna_taxa, titulo) {
     )
 }
 
+# Heatmap de nivel ponderado (Grupo x Funcion), con escala 0-100%
+graficar_heatmap_ponderado <- function(resumen, titulo) {
+  ggplot(resumen, aes(x = Grupo, y = Funcion, fill = Nivel_ponderado_pct)) +
+    geom_tile(color = "gray90", linewidth = 0.3) +
+    scale_fill_gradient(
+      low = "whitesmoke",
+      high = "darkgreen",
+      limits = c(0, 100)
+    ) +
+    labs(
+      title = titulo,
+      x = NULL,
+      y = NULL,
+      fill = "Nivel\nponderado (%)"
+    ) +
+    theme_minimal() +
+    theme(
+      plot.title = element_text(hjust = 0.5, face = "bold", size = 16),
+      axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, size = 12, color = "black"),
+      axis.text.y = element_text(size = 10, color = "black"),
+      legend.title = element_text(size = 11, face = "bold"),
+      legend.text = element_text(size = 10),
+      legend.position = "right"
+    )
+}
+
+# Gráfico de barras con las funciones donde MÁS difiere el nivel ponderado
+# entre los grupos (usa el rango max-min como criterio de "diferencia")
+graficar_barras_top_ponderado <- function(resumen, top_n = 15, titulo) {
+  funciones_top <- resumen %>%
+    group_by(Funcion) %>%
+    summarise(Diferencia = max(Nivel_ponderado_pct) - min(Nivel_ponderado_pct), .groups = "drop") %>%
+    arrange(desc(Diferencia)) %>%
+    slice_head(n = top_n) %>%
+    pull(Funcion)
+  
+  resumen %>%
+    filter(Funcion %in% funciones_top) %>%
+    mutate(Funcion = factor(Funcion, levels = rev(funciones_top))) %>%
+    ggplot(aes(x = Funcion, y = Nivel_ponderado_pct, fill = Grupo)) +
+    geom_col(position = "dodge") +
+    coord_flip() +
+    labs(
+      title = titulo,
+      x = NULL,
+      y = "Nivel ponderado (%)",
+      fill = NULL
+    ) +
+    theme_minimal() +
+    theme(
+      plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
+      axis.text.y = element_text(size = 10, color = "black"),
+      legend.position = "top"
+    )
+}
+
 # Envuelve todo el proceso: calcular + graficar + exportar, para un tipo
 # de columnas (rutas o booleanas) y un grupo (Habitat o Provincia)
 analizar_y_exportar <- function(gtdbtk_sin_rejects, dram_especie, columnas, columna_grupo,
@@ -425,3 +481,51 @@ rutas_genero <- dram_genero_resumen %>% select(Genero, all_of(columnas_rutas))
 # 4. Genes marcadores por GÉNERO
 genes_genero <- dram_genero_resumen %>% select(Genero, all_of(columnas_booleanas))
 #write_tsv(genes_genero, "visualize/dram_genes_por_genero.tsv")
+
+
+# 1. ¿Cuántas rutas hay en total y qué rango de diferencia tiene cada una?
+diferencias_habitat <- resumen_rutas_habitat %>%
+  group_by(Funcion) %>%
+  summarise(
+    Min = min(Nivel_ponderado_pct),
+    Max = max(Nivel_ponderado_pct),
+    Diferencia = Max - Min
+  ) %>%
+  arrange(desc(Diferencia))
+
+print(diferencias_habitat, n = 32)  # ver las 32 rutas completas
+
+# 2. ¿Cuántas rutas tienen diferencia menor a 6-8%? (para chequear "la mayoría estable")
+diferencias_habitat %>%
+  summarise(
+    n_total = n(),
+    n_menor_6 = sum(Diferencia < 6),
+    n_menor_8 = sum(Diferencia < 8)
+  )
+
+# 3. ¿Cuáles son las rutas con MÁS diferencia? (para chequear qué categorías aparecen)
+diferencias_habitat %>% slice_max(Diferencia, n = 10)
+
+# 4. Repetir para Provincia
+diferencias_provincia <- resumen_rutas_provincia %>%
+  group_by(Funcion) %>%
+  summarise(Diferencia = max(Nivel_ponderado_pct) - min(Nivel_ponderado_pct)) %>%
+  arrange(desc(Diferencia))
+print(diferencias_provincia, n = 32)
+
+# 5. Ver específicamente si "Urbano" es el más alto en Complejo I / IV
+resumen_rutas_habitat %>%
+  filter(str_detect(Funcion, "Complex I|Complex IV|Complejo I|Complejo IV"))
+
+# 6. Ver específicamente nitrógeno y lactato
+resumen_rutas_habitat %>%
+  filter(str_detect(Funcion, regex("nitrogen|nitrato|nitrog|lactate|lactato", ignore_case = TRUE)))
+
+resumen_rutas_habitat %>%
+  filter(Funcion %in% c(
+    "Complex I: NADH:quinone oxidoreductase, prokaryotes",
+    "Complex IV Low affinity: Cytochrome o ubiquinol oxidase",
+    "Complex III: Cytochrome bc1 complex respiratory unit",
+    "Citrate cycle (TCA cycle, Krebs cycle)"
+  )) %>%
+  pivot_wider(names_from = Grupo, values_from = Nivel_ponderado_pct)

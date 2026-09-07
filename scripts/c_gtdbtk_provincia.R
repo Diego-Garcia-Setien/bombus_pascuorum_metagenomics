@@ -39,6 +39,13 @@ library(patchwork)
 # 2. Leer el archivo intermedio ya filtrado (sin Rejects) --------------------
 gtdbtk_sin_rejects <- readRDS("visualize/gtdbtk_sin_rejects.rds")
 
+# Corregir nombres de provincias a su forma en euskera
+gtdbtk_sin_rejects <- gtdbtk_sin_rejects %>%
+  mutate(Provincia = recode(Provincia,
+                            "Guipuzcoa" = "Gipuzkoa",
+                            "Vizcaya"   = "Bizkaia"))
+
+
 # Chequeo rápido: confirmar que la columna Provincia está presente y sin NA
 table(gtdbtk_sin_rejects$Provincia, useNA = "always")
 
@@ -51,6 +58,28 @@ preparar_datos_stack <- function(ranking_tabla, columna_taxon, columna_grupo) {
     ungroup()
 }
 
+# Función auxiliar: separa el nombre en parte "científica" (cursiva) y
+# sufijo no-cursiva (sp., sp1, sp23, _H, _B, indeterminado, etc.)
+formatear_etiqueta_cursiva <- function(nombre) {
+  
+  if (nombre == "Sin determinar") return(nombre)
+  
+  patron_sufijo <- "(\\s*sp\\.?\\d*|_[A-Z]|\\s*indeterminado)$"
+  
+  if (str_detect(nombre, patron_sufijo)) {
+    sufijo        <- str_extract(nombre, patron_sufijo)
+    parte_cursiva <- str_remove(nombre, patron_sufijo)
+    
+    if (nchar(trimws(parte_cursiva)) > 0) {
+      return(paste0("*", parte_cursiva, "*", sufijo))
+    } else {
+      return(nombre)
+    }
+  } else {
+    return(paste0("*", nombre, "*"))
+  }
+}
+
 graficar_stack_grupo <- function(datos, titulo) {
   
   orden_taxones <- datos %>%
@@ -61,23 +90,36 @@ graficar_stack_grupo <- function(datos, titulo) {
   orden_taxones <- c(setdiff(orden_taxones, "Sin determinar"), "Sin determinar")
   datos$TaxonPlot <- factor(datos$TaxonPlot, levels = orden_taxones)
   
+  # Etiquetas con cursiva solo en la parte científica del nombre
+  etiquetas_cursiva <- sapply(orden_taxones, formatear_etiqueta_cursiva)
+  names(etiquetas_cursiva) <- orden_taxones
+  
+  mi_tema <- theme_minimal() +
+    theme(
+      legend.text  = element_markdown(size = 10, color = "black"),
+      axis.text.x  = element_text(size = 10, color = "black"),
+      axis.text.y  = element_text(size = 11, color = "black")
+    )
+  
   p_abs <- ggplot(datos, aes(x = GrupoPlot, y = Cantidad, fill = TaxonPlot)) +
     geom_col(position = "stack", color = "white") +
     coord_flip() +
+    scale_fill_discrete(labels = etiquetas_cursiva) +
     labs(x = NULL, y = "Cantidad de MAGs", fill = NULL) +
-    theme_minimal()
+    mi_tema
   
   p_pct <- ggplot(datos, aes(x = GrupoPlot, y = Cantidad, fill = TaxonPlot)) +
     geom_col(position = "fill", color = "white") +
     coord_flip() +
     scale_y_continuous(labels = scales::percent) +
+    scale_fill_discrete(labels = etiquetas_cursiva) +
     labs(x = NULL, y = "Porcentaje", fill = NULL) +
-    theme_minimal()
+    mi_tema
   
   (p_abs + p_pct) +
     plot_layout(guides = "collect") +
     plot_annotation(title = titulo,
-                    theme = theme(plot.title = element_text(hjust = 0.5, face = "bold")))
+                    theme = theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 16)))
 }
 
 ##=======================================================
@@ -134,7 +176,7 @@ write_tsv(ranking_especie_provincia_without_rejects, "visualize/ranking_species_
 
 # 7. Gráficos de barras apiladas horizontales, por provincia, sin Rejects --
 datos_stack_genero_sr <- preparar_datos_stack(ranking_genero_provincia_without_rejects, "Genero", "Provincia")
-p_genero_sr <- graficar_stack_grupo(datos_stack_genero_sr, "Composición de Géneros por Provincia (sin Rejects)")
+p_genero_sr <- graficar_stack_grupo(datos_stack_genero_sr, "Composición de Géneros por Provincia")
 print(p_genero_sr)
 #ggsave(filename = "plots/stacked_bars_genus_provincia_without_rejects.png", plot = p_genero_sr, width = 12, height = 5, dpi = 300)
 #ggsave(filename = "plots/stacked_bars_genus_provincia_without_rejects.pdf", plot = p_genero_sr, width = 12, height = 5)
@@ -142,7 +184,7 @@ print(p_genero_sr)
 #ggsave(filename = "plots/stacked_bars_genus_provincia_without_rejects.eps", plot = p_genero_sr, width = 12, height = 5, device = cairo_ps)
 
 datos_stack_especie_sr <- preparar_datos_stack(ranking_especie_provincia_without_rejects, "Especie_final", "Provincia")
-p_especie_sr <- graficar_stack_grupo(datos_stack_especie_sr, "Composición de Especies por Provincia (sin Rejects)")
+p_especie_sr <- graficar_stack_grupo(datos_stack_especie_sr, "Composición de Especies por Provincia")
 print(p_especie_sr)
 #ggsave(filename = "plots/stacked_bars_species_provincia_without_rejects.png", plot = p_especie_sr, width = 12, height = 5, dpi = 300)
 #ggsave(filename = "plots/stacked_bars_species_provincia_without_rejects.pdf", plot = p_especie_sr, width = 12, height = 5)
@@ -232,7 +274,7 @@ ranking_especie_provincia_sin_top5
 datos_stack_especie_sin_top5 <- preparar_datos_stack(ranking_especie_provincia_sin_top5, "Especie_final", "Provincia")
 p_especie_sin_top5 <- graficar_stack_grupo(
   datos_stack_especie_sin_top5,
-  "Composición de Especies por Provincia (sin Rejects, sin top 5 especies)"
+  "Composición de Especies minoritarias por Provincia"
 )
 print(p_especie_sin_top5)
 

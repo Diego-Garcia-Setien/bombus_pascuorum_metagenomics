@@ -80,6 +80,7 @@ library(openxlsx)
 library(ggplot2)
 library(scales)
 library(patchwork)
+library(ggtext)
 
 # 2. Leer el archivo TSV de GTDB-Tk ------------------------------------------
 gtdbtk <- read_tsv("visualize/gtdbtk.bac120.summary.tsv")
@@ -172,14 +173,14 @@ gtdbtk %>%
 # 8. Cruzar con la tabla de localización / provincia / hábitat --------------
 tabla_localizaciones <- tribble(
   ~Localizacion, ~Locality,          ~Provincia,   ~Habitat,
-  "VAL",         "Valderejo",        "Araba",      "Natural",
-  "KAR",         "Karkamo",          "Araba",      "Agricola",
+  "VAL",         "Valderejo",        "Araba",      "Semi-natural",
+  "KAR",         "Karkamo",          "Araba",      "Agrícola",
   "GAS",         "Vitoria_Gasteiz",  "Araba",      "Urbano",
-  "GOR",         "Gorbea",           "Vizcaya",    "Natural",
-  "ZEB",         "Zeberio",          "Vizcaya",    "Agricola",
+  "GOR",         "Gorbea",           "Vizcaya",    "Semi-natural",
+  "ZEB",         "Zeberio",          "Vizcaya",    "Agrícola",
   "BIL",         "Bilbao",           "Vizcaya",    "Urbano",
-  "ART",         "Artikutza",        "Guipuzcoa",  "Natural",
-  "ATZ",         "Asteazu",          "Guipuzcoa",  "Agricola",
+  "ART",         "Artikutza",        "Guipuzcoa",  "Semi-natural",
+  "ATZ",         "Asteazu",          "Guipuzcoa",  "Agrícola",
   "DON",         "Donostia",         "Guipuzcoa",  "Urbano"
 )
 
@@ -248,6 +249,34 @@ preparar_datos_stack <- function(ranking_tabla, columna_taxon) {
     ungroup()
 }
 
+# Función auxiliar: separa el nombre en parte "científica" (cursiva) y
+# sufijo no-cursiva (sp., sp1, sp23, _H, _B, indeterminado, etc.)
+formatear_etiqueta_cursiva <- function(nombre) {
+  
+  if (nombre == "Sin determinar") return(nombre)
+  
+  # Captura sufijos que NO deben ir en cursiva:
+  #  - "sp." o "sp" seguido opcionalmente de un punto y/o números -> sp., sp1, sp23
+  #  - "_" seguido de una letra mayúscula -> _H, _B, _A, etc. (sufijos de GTDB)
+  #  - "indeterminado"
+  patron_sufijo <- "(\\s*sp\\.?\\d*|_[A-Z]|\\s*indeterminado)$"
+  
+  if (str_detect(nombre, patron_sufijo)) {
+    sufijo        <- str_extract(nombre, patron_sufijo)
+    parte_cursiva <- str_remove(nombre, patron_sufijo)
+    
+    if (nchar(trimws(parte_cursiva)) > 0) {
+      return(paste0("*", parte_cursiva, "*", sufijo))
+    } else {
+      # Por si acaso el nombre entero fuera solo el sufijo (caso raro)
+      return(nombre)
+    }
+  } else {
+    # Nombre "normal" (Genero + especie determinada) -> todo en cursiva
+    return(paste0("*", nombre, "*"))
+  }
+}
+
 graficar_stack_habitat <- function(datos, titulo) {
   
   orden_taxones <- datos %>%
@@ -258,29 +287,40 @@ graficar_stack_habitat <- function(datos, titulo) {
   orden_taxones <- c(setdiff(orden_taxones, "Sin determinar"), "Sin determinar")
   datos$TaxonPlot <- factor(datos$TaxonPlot, levels = orden_taxones)
   
+  # Etiquetas con cursiva solo en la parte científica del nombre
+  etiquetas_cursiva <- sapply(orden_taxones, formatear_etiqueta_cursiva)
+  names(etiquetas_cursiva) <- orden_taxones
+  
   p_abs <- ggplot(datos, aes(x = Habitat, y = Cantidad, fill = TaxonPlot)) +
     geom_col(position = "stack", color = "white") +
     coord_flip() +
+    scale_fill_discrete(labels = etiquetas_cursiva) +
     labs(x = NULL, y = "Cantidad de MAGs", fill = NULL) +
-    theme_minimal()
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 16),legend.text = element_markdown(size = 10, colour = "black"),
+          axis.text.x = element_text(size = 10, color = "black"),
+          axis.text.y = element_text(size = 11, color = "black"))
   
   p_pct <- ggplot(datos, aes(x = Habitat, y = Cantidad, fill = TaxonPlot)) +
     geom_col(position = "fill", color = "white") +
     coord_flip() +
     scale_y_continuous(labels = scales::percent) +
+    scale_fill_discrete(labels = etiquetas_cursiva) +
     labs(x = NULL, y = "Porcentaje", fill = NULL) +
-    theme_minimal()
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 16),legend.text = element_markdown(size = 10, colour = "black"),
+          axis.text.x = element_text(size = 10, color = "black"),
+          axis.text.y = element_text(size = 11, color = "black"))
   
   (p_abs + p_pct) +
     plot_layout(guides = "collect") +
     plot_annotation(title = titulo,
-                    theme = theme(plot.title = element_text(hjust = 0.5, face = "bold")))
+                    theme = theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 16)))
 }
-
 # Género --------------------------------------------------------------------
 datos_stack_genero <- preparar_datos_stack(ranking_genero_habitat, "Genero")
 p_genero <- graficar_stack_habitat(datos_stack_genero, "Composición de Géneros por Hábitat")
-print(p_genero)
+#print(p_genero)
 #ggsave(filename = "plots/barras_apiladas_genero_habitat.png", plot = p_genero, width = 12, height = 5, dpi = 300)
 #ggsave(filename = "plots/barras_apiladas_genero_habitat.pdf", plot = p_genero, width = 12, height = 5)
 #ggsave(filename = "plots/barras_apiladas_genero_habitat.svg", plot = p_genero, width = 12, height = 5)
@@ -289,7 +329,7 @@ print(p_genero)
 # Especie ---------------------------------------------------------------------
 datos_stack_especie <- preparar_datos_stack(ranking_especie_habitat, "Especie_final")
 p_especie <- graficar_stack_habitat(datos_stack_especie, "Composición de Especies por Hábitat")
-print(p_especie)
+#print(p_especie)
 #ggsave(filename = "plots/barras_apiladas_especie_habitat.png", plot = p_especie, width = 12, height = 5, dpi = 300)
 #ggsave(filename = "plots/barras_apiladas_especie_habitat.pdf", plot = p_especie, width = 12, height = 5)
 #ggsave(filename = "plots/barras_apiladas_especie_habitat.svg", plot = p_especie, width = 12, height = 5)
@@ -373,7 +413,7 @@ write_tsv(ranking_especie_habitat_without_rejects, "visualize/ranking_species_ha
 # definidas en la 2ª parte -- no hace falta redefinirlas.
 
 datos_stack_genero_sr <- preparar_datos_stack(ranking_genero_habitat_without_rejects, "Genero")
-p_genero_sr <- graficar_stack_habitat(datos_stack_genero_sr, "Composición de Géneros por Hábitat (sin Rejects)")
+p_genero_sr <- graficar_stack_habitat(datos_stack_genero_sr, "Composición de Géneros por Hábitat")
 print(p_genero_sr)
 #ggsave(filename = "plots/stacked_bars_genus_habitat_without_rejects.png", plot = p_genero_sr, width = 12, height = 5, dpi = 300)
 #ggsave(filename = "plots/stacked_bars_genus_habitat_without_rejects.pdf", plot = p_genero_sr, width = 12, height = 5)
@@ -381,7 +421,7 @@ print(p_genero_sr)
 #ggsave(filename = "plots/stacked_bars_genus_habitat_without_rejects.eps", plot = p_genero_sr, width = 12, height = 5, device = cairo_ps)
 
 datos_stack_especie_sr <- preparar_datos_stack(ranking_especie_habitat_without_rejects, "Especie_final")
-p_especie_sr <- graficar_stack_habitat(datos_stack_especie_sr, "Composición de Especies por Hábitat (sin Rejects)")
+p_especie_sr <- graficar_stack_habitat(datos_stack_especie_sr, "Composición de Especies por Hábitat")
 print(p_especie_sr)
 #ggsave(filename = "plots/stacked_bars_species_habitat_without_rejects.png", plot = p_especie_sr, width = 12, height = 5, dpi = 300)
 #ggsave(filename = "plots/stacked_bars_species_habitat_without_rejects.pdf", plot = p_especie_sr, width = 12, height = 5)
@@ -472,7 +512,7 @@ ranking_especie_habitat_sin_top5
 datos_stack_especie_sin_top5 <- preparar_datos_stack(ranking_especie_habitat_sin_top5, "Especie_final")
 p_especie_sin_top5 <- graficar_stack_habitat(
   datos_stack_especie_sin_top5,
-  "Composición de Especies por Hábitat (sin Rejects, sin top 5 especies)"
+  "Composición de Especies minoritarias por Hábitat"
 )
 print(p_especie_sin_top5)
 

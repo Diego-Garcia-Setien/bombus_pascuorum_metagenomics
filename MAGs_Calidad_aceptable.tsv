@@ -1,0 +1,19 @@
+Name	Completeness	Contamination	Completeness_Model_Used	Translation_Table_Used	Coding_Density	Contig_N50	Average_Gene_Length	Genome_Size	GC_Content	Total_Coding_Sequences	Total_Contigs	Max_Contig_Length	Additional_Notes	Categoria
+BPART241017M.MAGScoT_cleanbin_000005	68.78	11.58	Gradient Boost (General Model)	11	0.751	3491	225.52738249245365	2083368	0.33	2319	753	33891	None	Calidad aceptable
+BPART251001.MAGScoT_cleanbin_000003	66.72	11.24	Gradient Boost (General Model)	11	0.864	2071	231.50443717888837	1717040	0.44	2141	879	9639	None	Calidad aceptable
+BPATZ241116.MAGScoT_cleanbin_000004	87.08	10.56	Neural Network (Specific Model)	11	0.87	5477	262.3421154591244	2331256	0.36	2581	598	42991	None	Calidad aceptable
+BPATZ251103.MAGScoT_cleanbin_000002	95.69	11.62	Neural Network (Specific Model)	11	0.847	6025	270.51878021569354	2571577	0.36	2689	642	29724	None	Calidad aceptable
+BPBIL250801.MAGScoT_cleanbin_000002	84.26	12.49	Neural Network (Specific Model)	11	0.866	7333	285.79515151515153	2446837	0.36	2475	371	31156	None	Calidad aceptable
+BPBIL250805.MAGScoT_cleanbin_000002	76.56	14.1	Neural Network (Specific Model)	11	0.863	4603	266.80747588424435	2304182	0.35	2488	524	50133	None	Calidad aceptable
+BPDON250902.MAGScoT_cleanbin_000003	75.24	12.78	Neural Network (Specific Model)	11	0.866	4736	257.7338998211091	1994132	0.36	2236	569	27890	None	Calidad aceptable
+BPDON250905.MAGScoT_cleanbin_000004	82.24	14.85	Neural Network (Specific Model)	11	0.894	4414	269.1655235482396	3944950	0.55	4374	985	24595	None	Calidad aceptable
+BPDON250905.MAGScoT_cleanbin_000005	63.14	11.69	Gradient Boost (General Model)	11	0.861	2082	214.58219669777455	2078758	0.35	2786	1063	12745	None	Calidad aceptable
+BPGAS240904.MAGScoT_cleanbin_000002	98.3	12	Gradient Boost (General Model)	11	0.756	2817	231.33427543679343	3565593	0.37	3892	1538	15694	None	Calidad aceptable
+BPGOR241409M.MAGScoT_cleanbin_000002	97.05	13.01	Neural Network (Specific Model)	11	0.83	8008	266.48210023866346	2819793	0.36	2933	567	46607	None	Calidad aceptable
+BPKAR240404.MAGScoT_cleanbin_000003	94.77	12.48	Gradient Boost (General Model)	11	0.782	3687	244.82435897435897	2191995	0.34	2340	823	29695	None	Calidad aceptable
+BPKAR250406.MAGScoT_cleanbin_000002	86.15	10.5	Neural Network (Specific Model)	11	0.863	3341	241.63734902446575	2705854	0.36	3229	988	19860	None	Calidad aceptable
+BPVAL240221.MAGScoT_cleanbin_000001	88.52	10.65	Neural Network (Specific Model)	11	0.768	2725	227.36737400530504	2672393	0.36	3016	1133	19138	None	Calidad aceptable
+BPVAL240225.MAGScoT_cleanbin_000004	77.13	14.68	Neural Network (Specific Model)	11	0.84	8843	264.1633175009134	2579218	0.35	2737	491	60178	None	Calidad aceptable
+BPVAL250101.MAGScoT_cleanbin_000002	69.94	10.13	Neural Network (Specific Model)	11	0.88	2946	259.20665742024966	1908154	0.37	2163	739	19544	None	Calidad aceptable
+BPVAL250103.MAGScoT_cleanbin_000002	92.11	11.74	Neural Network (Specific Model)	11	0.868	6582	273.6398452611219	2440782	0.36	2585	490	30054	None	Calidad aceptable
+BPZEB240717M.MAGScoT_cleanbin_000005	66.86	10.76	Neural Network (Specific Model)	11	0.85	3894	231.43711931207451	2275610	0.36	2791	781	41693	None	Calidad aceptable

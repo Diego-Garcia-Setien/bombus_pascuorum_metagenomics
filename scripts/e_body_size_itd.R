@@ -79,6 +79,10 @@ datos_bp_bs25 <- read_excel("body_size_B.pascuorum_25.xlsx")
 
 datos_bp_bs25$Año<-"2025"
 
+# Corregir nombre de hábitat
+datos_bp_bs25 <- datos_bp_bs25 %>%
+  mutate(Habitat = recode(Habitat, "Natural" = "Semi-natural"))
+
 #Análisis25
 
 mod25=lm(Est.Weight~Habitat, data = datos_bp_bs25)
@@ -130,6 +134,10 @@ write_xlsx(body_size.B_pascuorum24,"body_size_B.pascuorum_24.xlsx")
 datos_bp_bs24 <- read_excel("body_size_B.pascuorum_24.xlsx")
 
 datos_bp_bs24$Año<-"2024"
+
+# Corregir nombre de hábitat
+datos_bp_bs24 <- datos_bp_bs24 %>%
+  mutate(Habitat = recode(Habitat, "Natural" = "Semi-natural"))
 
 #Gráfico de modelo 25
 eff25 <- ggpredict(mod25, terms = "Habitat")
@@ -345,19 +353,19 @@ ggbetweenstats(
   data = datos_bp_bs24, x = Habitat, y = Est.Weight,
   type = "nonparametric", pairwise.display = "significant",
   title = "Peso estimado por Hábitat (2024)"
-)
+) + labs(y = "Peso estimado")
 
 ggbetweenstats(
   data = datos_bp_bs25, x = Habitat, y = Est.Weight,
   type = "nonparametric", pairwise.display = "significant",
   title = "Peso estimado por Hábitat (2025)"
-)
+) + labs(y = "Peso estimado")
 
 ggbetweenstats(
   data = datos_unidos, x = Habitat, y = Est.Weight,
   type = "nonparametric", pairwise.display = "significant",
   title = "Peso estimado por Hábitat (2024 + 2025)"
-)
+) + labs(y = "Peso estimado")
 
 # Test de normalidad mediante Shapirp_Wilk de los residuos del modelo de provincias
 
@@ -378,19 +386,19 @@ ggbetweenstats(
   data = datos_bp_bs24, x = Provincias, y = Est.Weight,
   type = "nonparametric", pairwise.display = "significant",
   title = "Peso estimado por Provincia (2024)"
-)
+) + labs(y = "Peso estimado")
 
 ggbetweenstats(
   data = datos_bp_bs25, x = Provincias, y = Est.Weight,
   type = "nonparametric", pairwise.display = "significant",
   title = "Peso estimado por Provincia (2025)"
-)
+) + labs(y = "Peso estimado")
 
 ggbetweenstats(
   data = datos_unidos, x = Provincias, y = Est.Weight,
   type = "nonparametric", pairwise.display = "significant",
   title = "Peso estimado por Provincia (2024 + 2025)"
-)
+) + labs(y = "Peso estimado")
 
 
 # Shapiro-Wilk sobre los residuos de cada uno del modelo de provincias x habitat
@@ -419,18 +427,21 @@ ggbetweenstats(
   type = "nonparametric", pairwise.display = "significant",
   title = "Peso estimado por Provincia x Hábitat (2024)"
 ) + theme(axis.text.x = element_text(angle = 45, hjust = 1))
++ labs(y = "Peso estimado")
 
 ggbetweenstats(
   data = datos_bp_bs25, x = Provincia_Habitat, y = Est.Weight,
   type = "nonparametric", pairwise.display = "significant",
   title = "Peso estimado por Provincia x Hábitat (2025)"
 ) + theme(axis.text.x = element_text(angle = 45, hjust = 1))
++ labs(y = "Peso estimado")
 
 ggbetweenstats(
   data = datos_unidos, x = Provincia_Habitat, y = Est.Weight,
   type = "nonparametric", pairwise.display = "significant",
   title = "Peso estimado por Provincia x Hábitat (2024 + 2025)"
 ) + theme(axis.text.x = element_text(angle = 45, hjust = 1))
++ labs(y = "Peso estimado")
 
 #Tests de Kruskal-Wallis para comprobar la significancia
 
