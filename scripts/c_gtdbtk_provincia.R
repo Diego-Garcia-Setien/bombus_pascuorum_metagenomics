@@ -176,7 +176,7 @@ write_tsv(ranking_especie_provincia_without_rejects, "visualize/ranking_species_
 
 # 7. Gráficos de barras apiladas horizontales, por provincia, sin Rejects --
 datos_stack_genero_sr <- preparar_datos_stack(ranking_genero_provincia_without_rejects, "Genero", "Provincia")
-p_genero_sr <- graficar_stack_grupo(datos_stack_genero_sr, "Composición de Géneros por Provincia")
+p_genero_sr <- graficar_stack_grupo(datos_stack_genero_sr, "Composición de MAGs ensamblados a nivel de Género por Provincia")
 print(p_genero_sr)
 #ggsave(filename = "plots/stacked_bars_genus_provincia_without_rejects.png", plot = p_genero_sr, width = 12, height = 5, dpi = 300)
 #ggsave(filename = "plots/stacked_bars_genus_provincia_without_rejects.pdf", plot = p_genero_sr, width = 12, height = 5)
@@ -184,7 +184,7 @@ print(p_genero_sr)
 #ggsave(filename = "plots/stacked_bars_genus_provincia_without_rejects.eps", plot = p_genero_sr, width = 12, height = 5, device = cairo_ps)
 
 datos_stack_especie_sr <- preparar_datos_stack(ranking_especie_provincia_without_rejects, "Especie_final", "Provincia")
-p_especie_sr <- graficar_stack_grupo(datos_stack_especie_sr, "Composición de Especies por Provincia")
+p_especie_sr <- graficar_stack_grupo(datos_stack_especie_sr, "Composición de MAGs ensamblados a nivel de Especie por Provincia")
 print(p_especie_sr)
 #ggsave(filename = "plots/stacked_bars_species_provincia_without_rejects.png", plot = p_especie_sr, width = 12, height = 5, dpi = 300)
 #ggsave(filename = "plots/stacked_bars_species_provincia_without_rejects.pdf", plot = p_especie_sr, width = 12, height = 5)
@@ -274,7 +274,7 @@ ranking_especie_provincia_sin_top5
 datos_stack_especie_sin_top5 <- preparar_datos_stack(ranking_especie_provincia_sin_top5, "Especie_final", "Provincia")
 p_especie_sin_top5 <- graficar_stack_grupo(
   datos_stack_especie_sin_top5,
-  "Composición de Especies minoritarias por Provincia"
+  "Composición de MAGs ensamblados de especies minoritarias por Provincia"
 )
 print(p_especie_sin_top5)
 
@@ -337,7 +337,7 @@ p_genero_sin_top5 <- graficar_stack_grupo(
   datos_stack_genero_sin_top5,
   "Composición de Géneros por Provincia (sin Rejects, sin top 5 géneros)"
 )
-print(p_genero_sin_top5)
+#print(p_genero_sin_top5)
 
 #ggsave(filename = "plots/stacked_bars_genus_provincia_sin_top5.png", plot = p_genero_sin_top5, width = 12, height = 5, dpi = 300)
 #ggsave(filename = "plots/stacked_bars_genus_provincia_sin_top5.pdf", plot = p_genero_sin_top5, width = 12, height = 5)

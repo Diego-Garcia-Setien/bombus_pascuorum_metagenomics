@@ -319,7 +319,7 @@ graficar_stack_habitat <- function(datos, titulo) {
 }
 # Género --------------------------------------------------------------------
 datos_stack_genero <- preparar_datos_stack(ranking_genero_habitat, "Genero")
-p_genero <- graficar_stack_habitat(datos_stack_genero, "Composición de Géneros por Hábitat")
+p_genero <- graficar_stack_habitat(datos_stack_genero, "Este no se usa")
 #print(p_genero)
 #ggsave(filename = "plots/barras_apiladas_genero_habitat.png", plot = p_genero, width = 12, height = 5, dpi = 300)
 #ggsave(filename = "plots/barras_apiladas_genero_habitat.pdf", plot = p_genero, width = 12, height = 5)
@@ -328,7 +328,7 @@ p_genero <- graficar_stack_habitat(datos_stack_genero, "Composición de Géneros
 
 # Especie ---------------------------------------------------------------------
 datos_stack_especie <- preparar_datos_stack(ranking_especie_habitat, "Especie_final")
-p_especie <- graficar_stack_habitat(datos_stack_especie, "Composición de Especies por Hábitat")
+p_especie <- graficar_stack_habitat(datos_stack_especie, "Este no se usa")
 #print(p_especie)
 #ggsave(filename = "plots/barras_apiladas_especie_habitat.png", plot = p_especie, width = 12, height = 5, dpi = 300)
 #ggsave(filename = "plots/barras_apiladas_especie_habitat.pdf", plot = p_especie, width = 12, height = 5)
@@ -413,7 +413,7 @@ write_tsv(ranking_especie_habitat_without_rejects, "visualize/ranking_species_ha
 # definidas en la 2ª parte -- no hace falta redefinirlas.
 
 datos_stack_genero_sr <- preparar_datos_stack(ranking_genero_habitat_without_rejects, "Genero")
-p_genero_sr <- graficar_stack_habitat(datos_stack_genero_sr, "Composición de Géneros por Hábitat")
+p_genero_sr <- graficar_stack_habitat(datos_stack_genero_sr, "Composición de MAGs ensamblados a nivel de  Género por Hábitat")
 print(p_genero_sr)
 #ggsave(filename = "plots/stacked_bars_genus_habitat_without_rejects.png", plot = p_genero_sr, width = 12, height = 5, dpi = 300)
 #ggsave(filename = "plots/stacked_bars_genus_habitat_without_rejects.pdf", plot = p_genero_sr, width = 12, height = 5)
@@ -421,7 +421,7 @@ print(p_genero_sr)
 #ggsave(filename = "plots/stacked_bars_genus_habitat_without_rejects.eps", plot = p_genero_sr, width = 12, height = 5, device = cairo_ps)
 
 datos_stack_especie_sr <- preparar_datos_stack(ranking_especie_habitat_without_rejects, "Especie_final")
-p_especie_sr <- graficar_stack_habitat(datos_stack_especie_sr, "Composición de Especies por Hábitat")
+p_especie_sr <- graficar_stack_habitat(datos_stack_especie_sr, "Composición de MAGs ensamblados a nivel de Especie por Hábitat")
 print(p_especie_sr)
 #ggsave(filename = "plots/stacked_bars_species_habitat_without_rejects.png", plot = p_especie_sr, width = 12, height = 5, dpi = 300)
 #ggsave(filename = "plots/stacked_bars_species_habitat_without_rejects.pdf", plot = p_especie_sr, width = 12, height = 5)
@@ -512,7 +512,7 @@ ranking_especie_habitat_sin_top5
 datos_stack_especie_sin_top5 <- preparar_datos_stack(ranking_especie_habitat_sin_top5, "Especie_final")
 p_especie_sin_top5 <- graficar_stack_habitat(
   datos_stack_especie_sin_top5,
-  "Composición de Especies minoritarias por Hábitat"
+  "Composición de MAGs ensamblados de las especies minoritarias por Hábitat"
 )
 print(p_especie_sin_top5)
 

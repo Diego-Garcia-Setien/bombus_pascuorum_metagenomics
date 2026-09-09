@@ -44,7 +44,7 @@ library(car)
 library(ggeffects)
 library(patchwork)
 library(ggstatsplot)
-
+packageVersion("ggstatsplot")
 #data25
 B_pascuorum_samples25 <- read_excel("B.pascuorum_samples_metadata.xlsx")
 #View(B_pascuorum_samples25)
